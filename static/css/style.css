@@ -1,0 +1,2580 @@
+@charset "UTF-8";
+/*====================================================== 
+@Template Name: Coroso - Health & Covid19 HTML Template
+@Author: WebQoda
+@Author URL: https://webqoda.com/
+
+====================Table Of Contents===================
+
+01. General CSS
+    a. Global CSS
+    b. Header Section
+    c. Footer Section
+    d. Inner Pages Banner Section
+    e. Preloader CSS
+02. Homepage One CSS
+03. About Page CSS
+04. 404 Error Page CSS
+05. FAQ Page CSS
+06. Contact Page CSS
+07. Cart Page CSS
+08. Shop Page CSS
+09. Shop Detail Page CSS
+10. Team Page CSS
+11. News Pages CSS
+12. News Detail Page CSS
+13. Homepage Two CSS
+14. Homepage Three CSS
+15. Testimonial Page CSS
+16. Landing Page CSS
+
+========================================================*/
+
+/*==================== 01. General CSS ====================*/
+
+/*========== a. Global CSS ==========*/
+body {
+    font-family: 'Circe', sans-serif;
+    color: #091e3f;
+}
+.overflow-hidden {
+    overflow:hidden;
+}
+.btn,
+button,  
+a:focus, 
+.btn:hover, 
+.btn:focus, 
+button:hover, 
+button:focus {
+    text-decoration: none;
+    outline: none;
+    box-shadow: none;
+}
+a {
+    color: rgba(9, 30, 63, 0.7);
+    transition: 0.3s all linear;
+    text-decoration: none;
+}
+a:hover {
+    color:#3625d3;
+    text-decoration: none;
+}
+h2 {
+    font-size: 46px;
+}
+h3 {
+    font-size: 30px;
+}
+h4, 
+h5 {
+    line-height: 1.5;
+}
+p {
+    font-size: 17px;
+    line-height: 26px;
+}
+.ms-title-15 {
+    font-size: 15px;
+    color: rgba(9, 30, 63, 0.7);
+    font-weight: bold;
+}
+.ms-spacer-30, 
+.ms-spacer-40, 
+.ms-spacer-60, 
+.ms-spacer-70, 
+.ms-spacer-80, 
+.ms-spacer-90, 
+.ms-spacer-100 {
+    display: block;
+    clear: both;
+    overflow: hidden;
+}
+.ms-spacer-30 {
+    height: 30px;
+}
+.ms-spacer-40 {
+    height: 40px;
+}
+.ms-spacer-60 {
+    height: 60px;
+}
+.ms-spacer-70 {
+    height: 70px;
+}
+.ms-spacer-80 {
+    height: 80px;
+}
+.ms-spacer-90 {
+    height: 90px;
+}
+.ms-spacer-100 {
+    height: 100px;
+}
+.ms-theme-color {
+    color: #3625d3;
+}
+.ms-primary-btn, 
+.ms-secondary-btn {
+    font-size: 17px;
+    font-weight: bold;    
+    transition: all 0.3s linear;
+    -webkit-transition:  all 0.3s linear;
+    padding:12px 30px;
+    border-radius: 5px;
+}
+.ms-primary-btn {
+    color: #fff;
+    border:2px solid #3625d3;
+    background: #3625d3;
+}
+.ms-primary-btn:hover {
+    background: #fff;
+    color: #3625d3;
+}
+.ms-secondary-btn {
+    color: #3625d3;
+    border:2px solid #fff;
+    background: #fff;
+}
+.ms-secondary-btn:hover {
+    color: #fff;
+    background: #3625d3;
+}
+.add-cart-btn {
+    color: #091e3f;
+    font-size: 15px;
+    font-weight: bold;
+    background: #fff;
+    transition: all 0.3s linear;
+    -webkit-transition:  all 0.3s linear;
+    padding: 12px 25px;
+}
+.add-cart-btn:hover {
+    color: #fff;
+    background: #3625d3;
+}
+.ms-sec-pad {
+    padding:60px 0;
+}
+@media (min-width: 992px) {
+    .container {
+        max-width: 980px;
+    }
+}
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1170px;
+    }
+}
+.grey-body-bg {
+    background: #f4f7fa;
+}
+.extra-space {
+    margin: 0 50px;
+}
+.pad-100 {
+    padding: 100px 0;
+}
+
+/*========== b. Header Section CSS ==========*/
+header {
+    left: 0;
+    right: 0;
+    z-index: 99;
+    padding: 20px 30px;
+}
+header nav ul .nav-item {
+    margin: 0 20px;
+    padding: 14px 0;
+}
+header nav ul .nav-item:first-child {
+    margin-left: 0;
+}
+header nav ul .nav-item:last-child {
+    margin-right: 0;
+}
+#homepage-one header nav ul li a {
+    color: #fff;
+}
+#homepage-one header .navbar-nav li.dropdown .dropdown-menu .dropdown-item {
+    color: #091e3f;
+}
+#homepage-one header .navbar-nav li.dropdown .dropdown-menu .dropdown-item:hover, 
+header .navbar-nav li.dropdown .dropdown-menu .dropdown-item:hover {
+    color: #3625d3;
+}
+
+header nav ul li a {
+    color: #fff;
+    font-size: 15px;
+    transition: all 0.3s linear;
+    -webkit-transition:  all 0.3s linear;
+    font-weight: bold;}
+header nav ul li a:hover {
+    color:#fff;
+}
+header .icons .ms-header-icon {
+    color: #091e3f;
+    margin: 0 5px;
+}
+header nav button {
+    position: relative;
+    bottom: 15px;
+    left: 90%;
+}
+header nav {
+    width: 100%;
+}
+header .navbar-nav li.dropdown .dropdown-menu .dropdown-item {
+    padding: 10px 20px;
+    font-weight: bold;
+}
+header .navbar-nav li.dropdown .dropdown-menu {
+    border: 0;
+    border-radius: 0;
+    box-shadow: 1px 0px 7px 0px rgba(22, 43, 70, 0.1);
+    transition: all 300ms linear 0s;
+    -webkit-transition: all 300ms linear 0s;
+    -o-transition: all 300ms linear 0s;
+    transform: rotateX(-90deg);
+    transform-origin: top;
+    padding: 0;
+}
+header nav ul li.dropdown {
+    backface-visibility: hidden;
+}
+header .navbar-nav li:hover.dropdown .dropdown-menu {
+    transform: rotateX(0deg);
+    -webkit-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+}
+header .navbar-nav li.dropdown .dropdown-menu {
+    top: 58px;
+}
+/* header nav li.dropdown .dropdown-menu:before {
+    content: "\f0d7";
+    font-family: 'Font Awesome 5 Free';
+    font-size: 30px;
+    font-weight: 900;
+    position: absolute;
+    top: -20px;
+    left: 8px;
+    color: rgba(22, 43, 70, 0.1);
+} */
+@media (min-width: 991px) {
+    header .navbar-nav li.dropdown .dropdown-menu {
+        display: block;
+        min-width: 150px;
+    }
+}
+@media (max-width:767px) {
+    .ms-inner-page-header button ~ div {
+        position: absolute;
+        width: 100%;
+        top: 40px;
+    }
+}
+
+/*---------- hamburger menu css ----------*/
+.navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+}
+.menu_toggle {
+    width: 22px;
+    height: 22px;
+    position: relative;
+    cursor: pointer;
+    display: block;
+}  
+.menu_toggle .hamburger {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+#homepage-one .menu_toggle .hamburger span, 
+#homepage-one .menu_toggle .hamburger-cross span {
+    background: #fff;
+}
+.menu_toggle .hamburger span {
+    width: 0%;
+    height: 2px;
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 4px 0;
+    display: block;
+    background: #091e3f;
+    border-radius: 3px;
+    -webkit-transition: .2s ease-in-out;
+    -o-transition: .2s ease-in-out;
+    transition: .2s ease-in-out;
+}
+.menu_toggle .hamburger span:nth-child(1) {
+    -webkit-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    transition-delay: 0s;
+}
+.menu_toggle .hamburger span:nth-child(2) {
+    -webkit-transition-delay: .125s;
+    -o-transition-delay: .125s;
+    transition-delay: .125s;
+}
+.menu_toggle .hamburger span:nth-child(3) {
+    -webkit-transition-delay: .2s;
+    -o-transition-delay: .2s;
+    transition-delay: .2s;
+}
+.menu_toggle .hamburger-cross {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    display: block;
+}
+.menu_toggle .hamburger-cross span {
+    display: block;
+    background: #091e3f;
+    border-radius: 3px;
+    -webkit-transition: .2s ease-in-out;
+    -o-transition: .2s ease-in-out;
+    transition: .2s ease-in-out;
+}
+.menu_toggle .hamburger-cross span:nth-child(1) {
+    height: 100%;
+    width: 2px;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    -webkit-transition-delay: .3s;
+    -o-transition-delay: .3s;
+    transition-delay: .3s;
+}
+.menu_toggle .hamburger-cross span:nth-child(2) {
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    top: 10px;
+    -webkit-transition-delay: .4s;
+    -o-transition-delay: .4s;
+    transition-delay: .4s;
+}
+.collapsed .menu_toggle .hamburger span {
+    width: 100%;
+}
+.collapsed .menu_toggle .hamburger span:nth-child(1) {
+    -webkit-transition-delay: .3s;
+    -o-transition-delay: .3s;
+    transition-delay: .3s;
+}
+.collapsed .menu_toggle .hamburger span:nth-child(2) {
+    -webkit-transition-delay: .4s;
+    -o-transition-delay: .4s;
+    transition-delay: .4s;
+}
+.collapsed .menu_toggle .hamburger span:nth-child(3) {
+    -webkit-transition-delay: .5s;
+    -o-transition-delay: .5s;
+    transition-delay: .5s;
+}
+.collapsed .menu_toggle .hamburger-cross span:nth-child(1) {
+    height: 0%;
+    -webkit-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    transition-delay: 0s;
+}
+.collapsed .menu_toggle .hamburger-cross span:nth-child(2) {
+    width: 0%;
+    -webkit-transition-delay: .2s;
+    -o-transition-delay: .2s;
+    transition-delay: .2s;
+}
+
+/*========== c. Footer Section CSS ==========*/
+footer {
+    padding: 60px 0 30px;
+    background-image: url('../images/footer-image.jpg');
+    background-size: cover;
+}
+footer .ms-footer-seperator {
+    background: #283b59;
+    width: 100%;
+    height: 1px;
+}
+footer p, 
+footer p a, 
+footer a {
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.7);
+    transition: 0.5s;
+}
+footer p a:hover, 
+footer a:hover {
+    color: #fff;
+}
+footer h2 {
+    font-size: 36px;
+}
+footer form input {
+    width: 100%;
+    padding: 14px 200px 14px 25px;
+    border: 0;
+    border-radius: 8px;
+}
+footer form button {
+    bottom: 0;
+    right: 15px;
+}
+/* footer ul {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+} */
+footer ul li {
+    list-style: none;
+}
+footer ul li a {
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
+    margin: 0 10px;
+    display: block;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #fff;
+    z-index: 1;
+}
+footer ul li a .icon {
+    position: relative;
+    color: #262626;
+    transition: .5s;
+    z-index: 3;
+}
+footer ul li a:hover .icon {
+    color: #fff;
+    transform: rotateY(360deg);
+}
+footer ul li a:before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: .5s;
+    z-index: 2;
+}
+footer ul li a:hover:before {
+    top: 0;
+}
+footer ul li:nth-child(1) a:before{
+    background: #3b5999;
+}
+footer ul li:nth-child(2) a:before{
+    background: #55acee;
+}
+footer ul li:nth-child(3) a:before {
+    background: #0077b5;
+}
+footer ul li:nth-child(4) a:before {
+    background: #dd4b39;
+}
+footer span.copyright {
+    color: rgba(255, 255, 255, 0.7);
+}
+footer .ms-primary-btn {
+    right: 0;
+}
+
+/*========== d. Inner Pages banner section ==========*/
+.inner-bnr {
+    background: url('../images/banner-image.jpg') no-repeat center;
+    padding: 150px 0 120px 0;
+    background-size: cover;
+}
+
+/*========== e. Preloader CSS==========*/
+.preloader {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 999999;
+    background-color:#fff;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url('../images/loader.gif');
+}
+
+/*==================== 02. Homepage CSS ====================*/
+/*---------- Banner Section ----------*/
+#ms-bnr-sec  {
+    background: url('../images/banner.jpg') center;
+    background-size: cover;
+    padding-top: 50px;
+}
+.ms-home-bnr {
+    background-image: url('../images/bnr-hero-image.png');
+    background-repeat: no-repeat;
+    background-position: right center;
+    height: 800px;
+    background-position-x: 90%;
+}
+#ms-bnr-sec .ms-bnr-tag {
+    background: rgba(238,239,241, 0.1);
+    border-radius: 35px;
+}
+.hero-text {
+    font-size: 100px;
+    font-weight: bold;
+    line-height: 1;
+}
+
+/*---------- About Section ----------*/
+#ms-abt-sec {
+    padding-top: 100px;
+}
+.ms-abt-img {
+    background-image: url('../images/about-image.png');
+    background-repeat: no-repeat;
+    background-position: right center;
+    padding-bottom: 200px;
+}
+#ms-abt-sec .ms-secondary-btn:hover {
+    border:2px solid #3625d3;
+}
+
+/*---------- Why Choose Section ----------*/
+#ms-choose-sec {
+    padding-top: 100px;
+}
+
+/*---------- Featured Products Section ----------*/
+#ms-featured {
+    padding-bottom: 80px;
+}
+.ms-shop-box {
+    cursor: pointer;
+}
+.ms-shop-box .ms-hover {
+    position: absolute;
+    bottom: 22%;
+    left: 18%;
+    opacity: 0;
+    padding: 10px 25px 8px;
+    -webkit-transition: all .5s ease-out;
+    transition: all .5s ease-out;
+}
+.ms-shop-box:hover .ms-hover {
+    opacity: 1; 
+    bottom: 28%;
+    left:18%;
+}
+.ms-shop-box .ms-sold-out {
+    position: absolute;
+    bottom: 32%;
+    left: 33%;
+}
+.ms-shop-box .ms-sold-out span {
+    color: #091e3f;
+    font-size: 15px;
+    font-weight: bold;
+    background: #fff;
+    padding: 12px 25px;
+    border-radius: 4px;
+}
+.ms-shop-box .ms-box-content {
+    padding:20px;
+}
+.ms-shop-box .rating {
+    font-size: 12px;
+}
+.ms-shop-box p span {
+    font-size: 15px;
+}
+
+/*---------- Protect Section ----------*/
+#ms-protect-sec .ms-bg-img {
+    background: url('../images/protect-bg-img.jpg');
+    max-width: 1520px; 
+    height:600px; 
+    margin-left: auto;
+}
+#ms-protect-sec span {
+    font-size: 15px;
+    margin-top: 40px;
+}
+#ms-protect-sec .protect-container {
+    margin-top: -600px;
+}
+.protect-box {
+    padding: 70px 0px 60px 100px;    
+}
+#ms-protect-sec .protect-box h3 {
+    font-size: 36px;
+}
+#ms-protect-sec .icon-box {
+    padding: 41px;
+}
+#ms-protect-sec .icon-box h5 {
+    line-height: 1;
+}
+#ms-protect-sec .icon-box.avoid, 
+#ms-protect-sec .icon-box.clean {
+    background: #3625d3;
+}
+#ms-protect-sec .icon-box.stay {
+    background: #2d1eb8;
+}
+#ms-protect-sec .icon-box.wear {
+    background: #4835f9;
+}
+
+/*---------- Testimonials Section ----------*/
+#ms-testimonial-sec .bg-color {
+    max-width: 1520px; 
+    height:550px; 
+    background: #eeeff1;
+}
+#ms-testimonial-sec .testimonial-container {
+    padding: 100px 0;
+}
+#ms-testimonial-sec .testimonial-container {
+    margin-top: -550px;
+}
+#ms-testimonial-sec span {
+    font-size: 15px;
+    position: relative;
+    top: 48px;
+    left: 110px;
+}
+#ms-testimonial-sec .owl-carousel {
+    padding-left: 60px;
+    padding-right: 100px;
+}
+#ms-testimonial-sec .testimonial-box {
+    background: url('../images/quote-icon.png');
+    background-repeat: no-repeat;
+    background-position: 0px 105px;
+}
+#ms-testimonial-sec .img-area {
+    width: 8%;
+    float: left;
+}
+#ms-testimonial-sec .position-area {
+    width: 60%;
+    float: left;
+    margin-left: 15px;
+    position: relative;
+    top: 6px;
+}
+#ms-testimonial-sec .position-area h5 {
+    line-height: 1;
+}
+#ms-testimonial-sec .position-area p {
+    color:rgba(9, 30, 63, 0.7);
+}
+#ms-testimonial-sec .img-area img {
+    border-radius: 4px;
+}
+#ms-testimonial-sec .nav-btn {
+    height: 35px;
+    width: 35px;
+}
+#ms-testimonial-sec .nav-btn.prev-slide {
+    display: none;
+}
+#ms-testimonial-sec .nav-btn.next-slide {
+    background: url('../images/arrow_right.svg') no-repeat center;
+    border: 2px solid #c0c5cd;
+    border-radius: 40px;
+    padding: 24px 40px;
+    position: relative;
+    right: 180px;    
+    bottom: 150px;
+}
+
+/*---------- News Feed Section ----------*/
+#ms-news article .meta-data p {
+    color: rgba(9,30,63,0.7);
+    font-size: 15px;
+    font-weight: bold;
+}
+#ms-news article {
+    margin-bottom: 30px;
+}
+#ms-news .hover-icon {
+    font-size: 25px;
+    display: flex;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    cursor: pointer;
+    border-radius: 50%;
+    color: #000;
+    padding: 4px 6px;
+    text-align: center;
+    transition: 0.3s all linear;
+}
+#ms-news .hover-icon:hover {
+    background: #3625d3;
+    color: #fff;    
+}
+
+/*---------- Clients Section ----------*/
+#ms-clients {
+    padding-bottom: 100px;
+}
+#ms-clients .bottom-shadow {
+    box-shadow: 0px 16px 18.4px 1.6px rgba(54, 37, 211, 0.06);
+    height: 150px;
+    width: 260px;
+    border-bottom-left-radius: 300px;
+    border-bottom-right-radius: 300px;
+    margin: 0 auto;
+}
+#ms-clients .square-shadow {
+    border-radius: 10px;
+    position: relative;
+}
+#ms-clients .square-shadow.first-logo {
+    box-shadow: 0px 20px 18px 1.6px rgba(131, 85, 36, 0.1);
+    bottom: 180px;
+}
+#ms-clients .square-shadow.second-logo {
+    box-shadow: 0px 20px 18px 1.6px rgba(110, 157, 50, 0.1);
+    bottom: 90px;
+}
+#ms-clients .square-shadow.third-logo {
+    box-shadow: 0px 20px 18px 1.6px rgba(245, 148, 32, 0.1);
+}
+#ms-clients .square-shadow.fourth-logo {
+    box-shadow: 0px 20px 18px 1.6px rgba(15, 101, 123, 0.1);
+    bottom: 90px;
+}
+#ms-clients .square-shadow.fifth-logo {
+    box-shadow: 0px 20px 18px 1.6px rgba(228, 211, 25, 0.1);
+    bottom: 180px;
+}
+
+/*---------- Contact Section ----------*/
+#ms-contact-sec {
+    background: url('../images/newsletter-bg.jpg') center;
+    background-size: cover;
+    padding: 120px 0;
+}
+#ms-contact-sec .contact-info {
+    box-shadow: 0px 20px 18.4px 1.6px rgba(9, 30, 63, 0.4);
+    background: #fff;
+    border-radius: 5px;
+    padding: 30px 40px;
+}
+#ms-contact-sec .contact-info p {
+    color: rgba(9,30,63,0.7);
+    font-size: 15px;
+    font-weight: bold;
+}
+#ms-contact-sec .contact-info a {
+    color: #091e3f;
+    transition: 0.3s;
+}
+#ms-contact-sec .contact-info a:hover {
+    color:#3625d3 ;
+}
+
+/*==================== 03. About Page CSS ====================*/
+
+/*---------- Coronavirus Disease Section ----------*/
+#ms-disease-sec {
+    padding: 100px 0;
+}
+#ms-disease-sec .floating-img {
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    margin-left: 30px;
+    margin-top: 5px;
+    position: relative;
+    bottom: 300px;
+    left: 150px;
+}
+@keyframes floating {
+    from { transform: translate(0,  0px); }
+    65%  { transform: translate(0, 30px); }
+    to   { transform: translate(0, -0px); }    
+}
+.cases {
+    margin-top: -200px;
+    position: relative;
+    bottom: 50px;
+}
+.cases .ms-case-box {
+    background: #fff;
+    box-shadow: 0px 20px 36.8px 3.2px rgba(33, 37, 40, 0.1);
+    border-radius: 8px;
+    padding: 10px;
+}
+.cases .ms-case-box img {
+    position: relative;
+    left: 10px;
+}
+.cases .ms-case-box.box-one h5 {
+    color: #9271e9;
+}
+.cases .ms-case-box.box-two {
+    position: relative;
+    left: 60px;
+}
+.cases .ms-case-box.box-two h5 {
+    color: #57d88b;
+}
+.cases .ms-case-box.box-third h5 {
+    color: #ff4848;
+}
+
+/*---------- Coronavirus Virus Symptoms ----------*/
+#ms-symptoms-sec .virus-width {
+    max-width: 1470px; 
+    height: 600px; 
+    background: #3625d3;
+}
+#ms-symptoms-sec .symptom-container {
+    margin-top: -530px;
+}
+#ms-symptoms-sec .icon-box {
+    padding: 20px;
+}
+#ms-symptoms-sec .special-pad-right {
+    padding-right: 100px;
+}
+#ms-symptoms-sec .special-pad {
+    padding: 20px 200px 20px 20px;
+    z-index: 99;
+}
+#ms-symptoms-sec .special-image {
+    background: url('../images/symptoms-img.png') no-repeat right;
+    padding: 280px;
+    margin-top: -450px;
+    background-size: 28%;
+}
+
+/*---------- Team Section ----------*/
+.ms-team-box {
+    cursor: pointer;
+    position: relative;
+    margin-bottom: 30px;
+}
+.ms-team-box img {
+    width: 100%;
+}
+.ms-team-box .phone-box {
+    position: absolute;
+    top: 65%;
+    left: 8%;
+}
+.ms-team-box .phone {
+    position: relative;
+    z-index: 9;    
+}
+.ms-team-box .phone .icon-phone {
+    padding: 10px 13px 8px;
+    border-radius: 5px;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    transition: all 0.4s linear;
+    background-image: linear-gradient(100deg, #00d0ff, #3625d3);
+    color: #fff;
+}
+.ms-team-box .phone span {
+    position: absolute;
+    min-width: 160px;
+    top: 0;
+    left: 40px;
+    color: #091e3f;
+    font-size: 17px;
+    font-weight: bold;
+    opacity: 0;
+    background: #fff;
+    padding: 14px 10px 11px 25px;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    transition: all .3s linear;
+    transform: rotateY(-90deg);
+    transform-origin: left;
+    z-index: -1;
+}
+.ms-team-box .phone:hover span {
+    opacity: 1;
+    transform: rotateY(0deg);
+}
+.ms-team-box:hover .phone span {
+    opacity: 1;
+    transform: rotateY(0deg);
+}
+.ms-team-box .ms-team-content {
+    color: #091e3f;
+    background: #fff;
+    padding: 30px;
+    transition:0.5s linear all; 
+    -webkit-transition:0.5s linear all;
+}
+.ms-team-box:hover .ms-team-content {
+    background: #3625d3;
+    color: #fff;
+}
+
+/*---------- Protect Yourself Section ----------*/
+#protect-yourself {
+    padding: 100px 0 70px 0;
+}
+#protect-yourself .icon-box {
+    padding: 50px 30px;
+}
+#protect-yourself .icon-box.one, 
+#protect-yourself .icon-box.three {
+    background: #00bee9;
+}
+#protect-yourself .icon-box.two, 
+#protect-yourself .icon-box.four, 
+#protect-yourself .icon-box.six {
+    background: #00d0ff;
+}
+#protect-yourself .icon-box.five {
+    background: #30d9ff;
+}
+#protect-yourself .special-pad {
+    padding: 0px 100px 0 50px;
+}
+
+/*---------- Emergency Contact Section ----------*/
+#ms-emergency-sec {
+    padding-bottom: 100px;
+}
+#ms-emergency-sec .bg-img {
+    background: url('../images/emergency-bg.png') center no-repeat;
+    background-size: cover;
+    padding: 60px 200px;
+    border-radius: 20px;
+}
+
+/*==================== 05. FAQ Page CSS ====================*/
+
+#ms-faq-sec form input {
+    box-shadow: 0px 0px 18.4px 1.6px rgba(9, 30, 63, 0.06);
+    border-radius: 5px;
+    font-size: 15px;
+    color: #091e3f;
+    padding: 14px 25px 14px 25px;
+    border: none;
+}
+#ms-faq-sec ::placeholder {
+    color: rgba(9, 30, 63, 0.5);
+}
+.accordion {
+    padding: 0 30px;
+}
+.accordion .card,
+.accordion  .card .card-header {
+    background: transparent;
+    border-width: 0px;
+}
+.accordion  .card .card-header {
+    padding: 0 10px;
+}
+.accordion  .card .card-body {
+    padding: 10px 10px 20px;
+}
+.accordion .card .card-header .card-title button {
+    color:#091e3f;
+    font-weight: bold;
+    padding: 0;
+    font-size: 20px;
+    text-align: left;
+}
+.accordion .card .card-header .card-title button:hover {
+    color: #3625d3;
+}
+.accordion .card-header .card-title button:after {
+    content: '-';
+    margin-left: 10px;
+    font-size: 18px;
+}
+.accordion .card-header .card-title button.collapsed:after {
+    content: '+';
+    margin-left: 10px;
+    font-size: 18px;
+}
+
+/*==================== 06. Contact Page CSS ====================*/
+#ms-form-sec .contact-bnr {
+    background: url('../images/contact-girl-image.png') no-repeat center right;
+    background-position-x: 97%;
+}
+#ms-form-sec {
+    padding-bottom:150px;
+}
+#ms-touch-sec {
+    padding: 150px 0;
+    background: #f6f7f8;
+}
+#ms-touch-sec .heading {
+    color: rgba(9,30,63,0.5);
+}
+#get-touch-sec {
+    margin-bottom: 80px;
+}
+.map-section {
+    margin-top: -680px;
+}
+#get-touch-sec .map-section iframe {
+    width:100%;
+    height:800px;
+}
+/*========== Form Design ==========*/
+input, textarea, select {
+    font-size:17px;
+    padding:10px 5px 10px 5px;
+    display:block;
+    width: 100%;
+    border:none;
+    border-bottom:1px solid #bebfc1;
+    color: #091e3f;
+}
+input:focus, 
+textarea:focus { 
+    outline:none;
+}
+label {
+    color:#bebfc1;
+    font-size:17px;
+    font-weight: 300;
+    position:absolute;
+    left:15px;
+    top:10px;
+    transition:0.2s ease all; 
+    -webkit-transition:0.2s ease all;
+}
+input:focus ~ label, 
+input:valid ~ label, 
+textarea:focus ~ label, 
+textarea:valid ~ label {
+    top:-10px;
+    font-size:17px;
+    color:#ced2d9;
+}
+.bar { 
+    position:relative; 
+    display:block; 
+    width:100%; 
+}
+.bar:before, 
+.bar:after {
+    content:'';
+    height:1px; 
+    width:0;
+    bottom:0px; 
+    position:absolute;
+    background:#091e3f; 
+    transition:0.2s ease all; 
+    -webkit-transition:0.2s ease all;
+}
+input:focus ~ .bar:before, 
+input:focus ~ .bar:after, 
+textarea:focus ~ .bar:before, 
+textarea:focus ~ .bar:after {
+    width:100%;
+}
+
+/*==================== 07. Cart Page CSS ====================*/
+#ms-cart-sec .ms-title {
+    color: rgba(9, 30, 63, 0.7);
+}
+#ms-cart-sec .ms-seperator {
+    background:#dbdee1;
+    width: 100%;
+    height: 1px;
+    margin: 30px auto;
+}
+#ms-cart-sec a.remove {
+    color: rgba(9, 30, 63, 0.7);
+    transition: 0.5s;
+}
+#ms-cart-sec a.remove:hover {
+    color: rgba(9, 30, 63, 1);
+}
+
+/*==================== 08. Shop Page CSS ====================*/
+#ms-special-product {
+    margin: 150px 0 100px 0;
+}
+#ms-special-product .ms-bg {
+    background: #3625d3;
+    padding: 70px 90px;
+    border-radius: 20px;
+}
+.ms-shop-box h4 a {
+    color: #091e3f;
+}
+.pagination a:focus {
+    box-shadow: none;
+}
+.pagination .page-link {
+    background-color: transparent;
+    border-width: 0px;
+    padding: 5px;
+    color: #091e3f;
+    font-weight: bold;
+    font-size: 15px;
+}
+#ms-special-product .special-image {
+    background: url('../images/spacial-products-image.png') no-repeat right;
+    padding: 300px;
+    margin-top: -500px
+}
+
+/*==================== 09. Shop Detail Page CSS ====================*/
+#ms-shop-detail-section .carousel-item .thumb {
+    width: 32%;
+	cursor: pointer;
+	float: left;
+}
+#ms-shop-detail-section .carousel-item img {
+    width: 100%;
+    border:1px solid #cecece;
+}
+#ms-shop-detail-section .carousel-item .thumb {
+    margin-right:11px;
+    margin-top:10px;
+}
+#ms-shop-detail-section .carousel-item .thumb:last-child {
+    margin-right:0px;
+}
+#ms-shop-detail-section h3 {
+    font-size: 36px;
+}
+#ms-shop-detail-section h3.blue-text {
+    color:#3625d3;
+}
+#ms-shop-detail-section .card {
+    padding-bottom: 10px;
+}
+#ms-shop-detail-section .card .card-header, 
+#ms-shop-detail-section .card .card-body, 
+#ms-shop-detail-section .accordion {
+    padding: 0;
+}
+#ms-shop-detail-section input {
+    padding-top: 11px;
+    padding-bottom: 11px;
+}
+#ms-shop-detail-section select, 
+#ms-shop-detail-section input {
+    border-radius: 5px;
+    border: 0;
+    font-size: 17px;
+    font-weight: bold;
+}
+#ms-shop-detail-section select:focus {
+    outline: 0;
+}
+#ms-shop-detail-section .ms-minus, 
+#ms-shop-detail-section .ms-plus {
+    width: 40px;    
+    border-radius: 0;
+    padding: 5px;
+    font-weight: bold;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 22px;
+    cursor: pointer;
+}
+#ms-shop-detail-section .ms-minus {
+    z-index: 999;
+    bottom: 2px;
+}
+#ms-shop-detail-section .ms-plus {
+    bottom: 0;
+    right: 10px;
+}
+#ms-shop-detail-section .special-pad {
+    padding-left: 50px;
+}
+
+/*==================== 10. Team Page CSS ====================*/
+#team-cta-sec {
+    margin: 100px 0;
+}
+#team-cta-sec .ms-bg {
+    background: #3625d3;
+    padding: 120px 90px;
+    border-radius: 20px;
+}
+#team-cta-sec .special-left-image {
+    background: url('../images/join-team-img.png') no-repeat;
+    padding: 240px;
+    margin-top: -470px;
+}
+/* #team-cta-sec a {
+    border: 1px solid #5e51dc;
+    display: inline-block;
+    color: #fff;
+    font-size: 35px;
+    width: 80px;
+    height: 45px;
+    border-radius:35px;
+    text-align: center;
+    transition: linear all 0.3s;
+} */
+/* #team-cta-sec a:hover {
+    background: #fff;
+    border: 1px solid #fff;
+    color: #091e3f;
+} */
+#team-cta-sec a span {
+    display: none;
+}
+
+/*==================== 11. News Pages CSS ====================*/
+article .ms-content-area {
+    padding: 40px;
+}
+article {
+    transition: 0.3s all linear;
+    margin-bottom: 50px;
+    text-align: left;
+}
+article .ms-news-title a {
+    color:#091e3f;
+}
+article:hover {
+    box-shadow: 0px 16px 18.4px 1.6px rgba(9, 30, 63, 0.14);
+}
+article.no-hover-shadow {
+    box-shadow: none;
+}
+article .ms-image-sec {
+    height: 100%;
+}
+article .ms-image-sec img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.form-control:focus {
+    box-shadow: none;
+    border-color: #3625d3;
+    background-color: transparent;
+}
+aside {
+    padding-left: 50px;
+}
+aside form input.form-control {
+    padding: 13px 95px 13px 13px;
+    background-color: transparent;
+    border-color: #777c89;
+}
+aside .ms-search-btn {
+    background: transparent;
+    bottom: 0;
+    right: 0;
+    font-size: 22px;
+    color: #3625d3;
+    /* transform: scaleX(-1);
+    -webkit-transform: scaleX(-1); */
+}
+aside form input.form-control::placeholder {
+    color: #9ca3b8;
+    font-size: 17px;
+    font-family: 'Circe', sans-serif;
+}
+aside .ms-search-btn .fs1 span {
+    display: none;
+}
+aside .widget {
+    margin-bottom: 50px;
+}
+aside .widget:last-child {
+    margin-bottom: 0;
+}
+aside .widget-post ul {
+    list-style: none;
+}
+aside .widget-post ul li {
+    margin-bottom: 30px;
+}
+aside .widget-post ul li:last-child {
+    margin-bottom: 0;
+}
+aside .widget-post h5 a {
+    line-height: 24px;
+    color: #2a303a;
+}
+aside .widget-categories ul {
+    list-style: none;
+}
+aside .widget-categories .color-text {
+    color: #777c89;
+}
+aside .widget-categories ul li {
+    border-bottom: 1px solid #e2e6ed;
+}
+aside .widget-tags ul {
+    list-style: none;
+}
+aside .widget-tags .ms-tag-btn {
+    background: #e8ecf2;
+    color: #2a2f39;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 8px 20px;
+    transition: 0.3s all linear;
+    margin-right: 5px;
+    margin-bottom: 10px;
+}
+aside .widget-tags .ms-tag-btn:hover, 
+aside .widget-tags .ms-tag-btn.active {
+    background: #3625d3;
+    color: #fff;
+}
+aside .ms-checkup-bg {
+    padding: 40px;
+    background: url('../images/sidebar-bg.jpg') no-repeat;
+    background-size: cover;
+    border-radius: 5px;
+}
+aside .ms-checkup-bg h3 {
+    font-size: 36px;
+    font-weight: bold;
+}
+article .ms-news-title {
+    font-size: 30px;
+    line-height: 1.35em;;
+}
+@media (max-width:797px) {
+    article .ms-news-title {
+        font-size: 24px;
+    }
+}
+/* News List sidebar page */
+article.ms-news-list-sidebar .ms-content-area {
+    padding: 30px;
+}
+/* News Grid Sidebar page */
+article.ms-news-grid-sidebar {
+    margin-bottom: 30px;
+}
+/* News Masonry page */
+article.ms-news-masonry {
+    margin-bottom: 30px;
+}
+
+/*==================== 12. News Detail Page CSS ====================*/
+.ms-news-detail-page .ms-content-area .grey-body-bg {
+    padding: 40px;
+}
+.ms-news-detail-page .ms-content-area .grey-body-bg h4 {
+    color: #3625d3;
+    line-height: 30px;
+}
+article.ms-news-detail-page {
+    margin-bottom: 30px;
+}
+.ms-btn-with-icon {
+    padding:4px 30px 12px;
+}
+.ms-btn-with-icon:before {
+    content: "\23";
+    font-family: 'ElegantIcons';
+    font-size: 22px;
+    position: relative;
+    top: 4px;
+    margin-right: 10px;
+}
+.news-share-icon {
+    font-size: 15px;
+    background: #dce0e5;
+    color: #091e3f;
+    padding: 1px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    text-align: center;
+    line-height: 40px;
+    margin-right: 5px;
+    transition: 0.3s all linear;
+}
+.news-share-icon:hover {
+    background:#3625d3;
+    color: #fff;
+}
+
+/*==================== 13. Homepage Two CSS ====================*/
+.home-two-main-color {
+    color: #2a303a;
+}
+.seperator-line {
+    color: #9ca3b8;
+    font-size: 15px;
+    font-weight: bold;
+    position: relative;
+    padding-left: 60px;
+    letter-spacing: 3px;
+}
+.seperator-line:before {
+    position: absolute;
+    content: '';
+    width: 50px;
+    height: 1px;
+    background: #9ca3b8;
+    left: 0;
+    top: 10px;
+}
+.ms-dark-btn, 
+.ms-red-btn {    
+    font-size: 17px;
+    font-weight: bold;    
+    transition: all 0.3s linear;
+    -webkit-transition:  all 0.3s linear;
+    padding:12px 30px;
+    border-radius: 5px;
+}
+.ms-dark-btn {
+    background: #2a303a;
+    color: #fff;
+}
+.ms-dark-btn:hover {
+    background: #f82c45;
+    color:#fff;
+}
+.ms-red-btn {
+    background: #f82c45;
+    color:#fff;
+}
+.ms-icon-btn {
+    position: relative;
+    /* padding: 12px 55px 12px 30px; */
+}
+.ms-icon-btn span {
+    font-size: 22px;
+    position: absolute;
+}
+.ms-icon-btn span span {
+    display: none;
+}
+.ms-red-btn:hover {
+    background: #2a303a;
+    color:#fff;
+}
+
+/*---------- Header CSS ----------*/
+#homepage-two header nav ul li a {
+    font-weight: bold;
+    color: #2a303a;
+}
+#homepage-two header .navbar-nav li.dropdown .dropdown-menu .dropdown-item:hover {
+    color: #3025d3;
+}
+/*---------- Banner CSS ----------*/
+#home-two-bnr {
+    padding: 400px 0 350px 0;
+    background: url('../images/slider-01.png') no-repeat center #2a303a;
+    background-size: cover;
+}
+#home-two-bnr .seperator-line {
+    color: #2a303a;
+}
+#home-two-bnr .seperator-line:before {
+    background: #2a303a;
+}
+/*---------- Live Update CSS ----------*/
+#ms-update-sec {
+    background: url('../images/doctor-img.png') no-repeat right #2a303a;
+    padding-top: 0;
+}
+#ms-update-sec .live-update {
+    padding: 60px;
+    position: relative;
+    bottom: 120px;
+    margin-bottom: -20px;
+}
+#ms-update-sec .live-update .blue-text {
+    font-size: 46px;
+    color:#0683cb;
+}
+#ms-update-sec .live-update .green-text {
+    font-size: 46px;
+    color:#4fe88f;
+}
+#ms-update-sec .live-update .red-text {
+    font-size: 46px;
+    color:#f92d45;
+}
+#ms-update-sec p.update-para {
+    color: rgba(255, 255, 255, 0.8);
+}
+/*---------- Symptoms Section CSS ----------*/
+#home-two-corona-symptom .first-img {
+    width: 65%;
+    float: right;
+    animation-name: floating;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+#home-two-corona-symptom .ms-symptom-box {
+    position: relative;
+    overflow: hidden;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+#home-two-corona-symptom .ms-symptom-box:hover {
+    border-bottom-right-radius: 50px;
+}
+#home-two-corona-symptom .ms-symptom-box .ms-content-overlay {
+    background: rgba(101,120,229,0.8);
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+#home-two-corona-symptom .ms-symptom-box:hover .ms-content-overlay {
+    opacity: 1;
+}
+#home-two-corona-symptom .ms-symptom-box .ms-content-details {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    opacity: 0;
+    width: 80%;
+    text-align: center;
+    -webkit-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+}
+#home-two-corona-symptom .ms-symptom-box:hover .ms-content-details {
+    top: 22%;
+    left: 10%;
+    opacity: 1;
+    width: 80%;
+    text-align: center;
+}
+#home-two-corona-symptom .ms-white-btn {
+    color: #2a303a;
+    background: #fff;
+}
+#home-two-corona-symptom .ms-symptom-box.box-2 {
+    margin-top: 100px;
+}
+#home-two-corona-symptom .ms-symptom-box.box-3 {
+    margin-top: -100px;
+}
+/*---------- Our Clients Section CSS ----------*/
+#home-two-clients-sec {
+    background: url('../images/home2_client_bg.jpg') no-repeat;
+    background-size: cover;
+}
+/*---------- Virus Spread Section CSS ----------*/
+#home-two-spread-sec {
+    padding-bottom: 0px;
+}
+#home-two-spread-sec .text-one {
+    position: relative;
+    top: 20px;
+    right: 60px;
+}
+#home-two-spread-sec .text-two {
+    position: relative;
+    top: 35px;
+    right:10px;
+}
+#home-two-spread-sec .text-three {
+    top: 50px;
+    right:10px;
+    position: relative;
+}
+#home-two-spread-sec .text-four {
+    position: relative;
+    top: 60px;
+    right: 70px;
+}
+/*---------- Prevention Section CSS ----------*/
+#ms-prevention-sec .ms-blue-bg {
+    max-width: 1520px;
+    height: 850px;
+    background: #6578e5;
+    border-bottom-right-radius: 50px;
+}
+#ms-prevention-sec .protect-container {
+    margin-top:-750px;
+}
+#ms-prevention-sec .side-image {
+    position: absolute;
+    left: 1320px;
+    bottom: 20px;
+    width: 40%;
+}
+#ms-prevention-sec .home2-special-pad {
+    padding-right: 300px;
+}
+/*---------- Shop Section CSS ----------*/
+#home-two-ms-shop-sec {
+    padding-top: 190px;
+}
+#home-two-ms-shop-sec .ms-shop-box .ms-box-content {
+    padding: 30px;
+}
+#home-two-ms-shop-sec .ms-shop-box {
+    background: #f9f9f9;
+    transition: 0.4s all linear;
+    -webkit-transition: 0.4s all linear;
+}
+#home-two-ms-shop-sec .ms-shop-box:hover {
+    background: #fff;
+    border-bottom-right-radius: 50px;
+    box-shadow: 0px 4px 15px 1px rgba(9, 30, 63, 0.14);
+}
+#home-two-ms-shop-sec .ms-shop-box .ms-hover {
+    bottom: 30%;
+    left: 14.5%;
+}
+#home-two-ms-shop-sec .ms-shop-box:hover .ms-hover {
+    bottom: 36%;
+}
+#home-two-ms-shop-sec .ms-box-content h5 a {
+    color: #091e3f;
+    transition: 0.3s all linear;
+    -webkit-transition: 0.3s all linear;
+}
+#home-two-ms-shop-sec .ms-box-content h5 a:hover {
+    color: #f92d45;
+}
+/*---------- Team Section CSS ----------*/
+#home-two-team-sec {
+    background: #f0f1f2;
+    padding-left: 180px;
+    padding-right: 180px;
+}
+#home-two-team-sec .ms-team-box-2 {
+    background: #f9f9f9;
+    transition: 0.4s all linear;
+    -webkit-transition: 0.4s all linear;
+}
+#home-two-team-sec .ms-team-box-2:hover  {
+    background: #fff;
+    border-bottom-right-radius: 50px;
+    box-shadow: 0px 4px 15px 1px rgba(9, 30, 63, 0.14);
+}
+#home-two-team-sec .ms-team-box-2 .ms-hover {
+    position: absolute;
+    bottom: 20%;
+    left: 23%;
+    opacity: 0;
+    padding: 10px 25px 8px;
+    -webkit-transition: all .5s ease-out;
+    transition: all .5s ease-out;
+}
+#home-two-team-sec .ms-team-box-2:hover .ms-hover {
+    opacity: 1;
+    bottom: 26%;
+    left: 23%;
+}
+#home-two-team-sec .ms-team-box-2 .ms-box-content {
+    padding:20px 40px;
+    background: #2a303a;
+    transition: 0.4s all linear;
+    -webkit-transition: 0.4s all linear;
+}
+#home-two-team-sec .ms-team-box-2:hover .ms-box-content {
+    background: #f92d45;
+    border-bottom-right-radius: 50px;
+}
+#home-two-team-sec .ms-team-box-2 .ms-box-content h4 {
+    line-height: 1.1;
+}
+#home-two-team-sec .ms-team-box-2 .ms-box-content p {
+    color: #9ca3b8;
+    transition: 0.4s;
+    -webkit-transition: 0.4s;
+}
+#home-two-team-sec .ms-team-box-2:hover .ms-box-content p {
+    color:#fff;
+}
+#home-two-team-sec .ms-team-box-2 .ms-box-content p:before {
+    position: absolute;
+    content: '';
+    width: 18px;
+    height: 1px;
+    background: #9ca3b8;
+    left: 0;
+    top: 10px;
+}
+#home-two-team-sec .ms-team-box-2 .ms-hover .btn.icon {
+    background: #2a303a;
+    width: 40px;
+    height: 40px;
+    border-radius: 0;
+    line-height: 28px;
+    color: #fff;
+    font-size: 18px;
+    margin-right: 8px;
+    transition: 0.3s all linear;
+    -webkit-transition: 0.3s all linear;
+}
+#home-two-team-sec .ms-team-box-2 .ms-hover .btn.icon:hover {
+    background: #f92d45;
+}
+/*---------- Blog Section CSS ----------*/
+#home-two-blog-sec .ms-blog-box {
+    position: relative;
+    overflow: hidden;
+}
+#home-two-blog-sec .ms-main-box .ms-blog-box .content-overlay{
+    background: rgba(0,0,0,0.4);
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+#home-two-blog-sec .ms-main-box:hover .ms-blog-box .content-overlay {
+    opacity: 1;
+}
+#home-two-blog-sec .ms-main-box .ms-blog-box .content-overlay .content-button {
+    position: absolute;
+    top: 80%;
+    left: 27%;
+    opacity: 0;
+    width: 90%;
+    -webkit-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+}
+#home-two-blog-sec .ms-main-box:hover .ms-blog-box .content-overlay .content-button {
+    top: 40%;
+    left: 27%;
+    opacity: 1;
+    width: 100%;
+}
+#home-two-blog-sec .ms-main-box h4 {
+    line-height: 1.3;
+}
+#home-two-blog-sec .ms-main-box h4 a {    
+    color: #2a303a;
+}
+#home-two-blog-sec .ms-main-box {
+    padding-left: 20px;
+}
+#home-two-blog-sec .ms-main-box .ms-title-15.ms-vertical-text {
+    transform: rotate(-90deg);
+    position: absolute;
+    top: 50px;
+    left: -52px;
+    color: #f92d45;
+}
+/*---------- Footer CSS ----------*/
+#footer-home-two {
+    background: #262c36;
+    padding: 100px 0 15px;
+}
+#footer-home-two .contact-info {
+    box-shadow: 0px 20px 18.4px 1.6px rgba(9, 30, 63, 0.4);
+    background: #fff;
+    border-radius: 10px;
+    padding: 25px 50px;
+}
+#footer-home-two .contact-info a {
+    color: #091e3f;
+    transition: 0.3s all linear;
+    -webkit-transition: 0.3s all linear;
+    font-size: 20px;
+}
+#footer-home-two .contact-info a:hover {
+    color: #f82c45;
+}
+#footer-home-two .footer-main {
+    padding: 50px;
+    border-radius: 20px;
+}
+footer#footer-home-two p.contact-text, 
+footer#footer-home-two p a {
+    color: #262c36;
+}
+footer#footer-home-two p a:hover {
+    color: #f82c45;
+}
+#footer-home-two .footer-main .footer-title {
+    color: #262c36;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    position: relative;
+    padding-left: 40px;
+    margin-bottom: 30px;
+} 
+#footer-home-two .footer-main .footer-title:before {
+    position: absolute;
+    content: '';
+    width: 30px;
+    height: 1px;
+    background: #9ca3b8;
+    left: 0;
+    top:10px;
+}
+#footer-home-two .footer-main .links {
+    padding-left: 40px;
+}
+#footer-home-two .footer-main input {
+    background: #e9e9eb;
+    padding: 15px 180px 15px 25px;
+    font-size: 15px;
+}
+#footer-home-two .footer-main button {
+    bottom: 1px;
+    right: 0;
+} 
+
+/*==================== 14. Homepage Three CSS ====================*/
+.three-subheading {
+    color: #9ca3b8;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 0.4em;
+}
+.ms-gradient-btn {
+    font-size: 15px;
+    color: #fff;
+    cursor: pointer;
+    text-align:center;
+    border: none;
+    background-size: 150% 100%;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    background-image: linear-gradient(to right, #0f9ff2, #3625d3);
+    padding: 15px 40px;
+    border-radius: 0;
+}
+.ms-gradient-btn:hover {
+    background-position: 100% 0;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    color: #fff;
+}
+.ms-three-white-btn {
+    background: #fff;
+    color: #091e3f;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    border: 1px solid #fff;
+    font-size: 15px;
+}
+.ms-three-white-btn:hover {
+    color: #091e3f;
+}
+.ms-gradient-btn:focus {
+    outline: none;
+}
+/*---------- Header CSS ----------*/
+#homepage-three .ms-header-bg {
+    background: #fff;
+    padding-right: 0;
+    box-shadow: 0px 0px 34px 0px rgba(0, 0, 0, 0.1);
+}
+#homepage-three .ms-header-bg nav {
+    padding-right: 0;
+}
+#homepage-three .ms-header-bg nav ul li:last-child a {
+    background:#091e3f;
+    color: #fff;
+    padding: 24px 40px;
+    transition: 0.3s all linear;
+    -webkit-transition: 0.3s all linear;
+}
+#homepage-three .ms-header-bg nav ul li:after  {
+    content: '';
+	display: block;
+	margin: auto;
+	height: 1px;
+	width: 0px;
+	background: transparent;
+	transition: width .3s ease, background-color .3s ease;
+}
+#homepage-three .ms-header-bg nav ul li:hover:after {
+    width: 60%;
+	background: #3366FF;
+}
+#homepage-three .ms-header-bg nav ul li:last-child a:hover {
+    background: #3625d3;
+}
+#homepage-three header .navbar-nav li.dropdown .dropdown-menu {
+    top: 50px;
+}
+/*---------- Slider Section CSS ----------*/
+#msvideobox .modal-dialog {
+    max-width: 50%;
+}
+#msvideobox .modal-dialog iframe {
+    height: 500px;
+}
+#ms-hero-slider img.ms-slide-img {
+    min-height: 600px;
+    object-fit: cover;
+}
+#ms-hero-slider .carousel-caption {
+    right: 25%;
+    left: 25%;
+    bottom: 26%;
+}
+#ms-hero-slider .hero-text, #ms-hero-slider .carousel-caption h5 {
+    color:#091e3f;
+    line-height: 1.1;
+}
+#ms-hero-slider .carousel-caption h5 {
+    padding-left: 25%;
+    padding-right: 25%;
+    line-height: 1.4;
+}
+#ms-hero-slider .carousel-indicators {
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    bottom: 49.2%;
+    right: -90%;
+}
+#ms-hero-slider .carousel-indicators-numbers li {
+    text-indent: 0;
+    margin: 0 15px;
+    color: #9ca3b8;
+    background: transparent;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+}
+#ms-hero-slider .carousel-indicators-numbers li.active,
+#ms-hero-slider .carousel-indicators-numbers li:hover {
+    color: #091e3f;    
+}
+#ms-hero-slider .carousel-indicators-numbers li:after {
+    width: 1px;
+    height: 30px;
+    background: #9ca3b8;
+    bottom: -50px;
+    left: 8px;
+}
+#ms-hero-slider .carousel-indicators-numbers li:last-child:after {
+    background: transparent;
+}
+#ms-hero-slider .carousel-control-next, .carousel-control-prev {
+    width: 5%;
+}
+#ms-hero-slider .carousel-control-next-icon,
+#ms-hero-slider .carousel-control-prev-icon {
+    width: 35px;
+    height: 35px;
+}
+#ms-hero-slider .carousel-control-next-icon {
+    background-image: url('../images/arrow_right.svg');
+}
+#ms-hero-slider .carousel-control-prev-icon {
+    background-image: url('../images/arrow_left.svg');
+}
+/*---------- Blue Section CSS ----------*/
+#home-three-blue-sec {
+    background: #3625d3;
+    padding: 100px 0 60px 0;
+}
+/*---------- What is coronavirus Section CSS ----------*/
+#home-three-coronavirus-sec {
+    padding: 60px 0 100px 0;
+}
+#home-three-coronavirus-sec .ms-icon-box {
+    margin-bottom: 30px;
+}
+#home-three-coronavirus-sec #home-3-blue-carousel {
+    margin-top: -290px;
+}
+#home-three-coronavirus-sec #home-3-blue-carousel .carousel-control-next, 
+#home-three-coronavirus-sec #home-3-blue-carousel .carousel-control-prev {
+    opacity: 1;
+    top: 700px;
+    width: 12%;
+    height: 45px;
+    background-color: #3625d3;
+}
+#home-three-coronavirus-sec #home-3-blue-carousel .carousel-control-next {
+    right: -66px;
+}
+#home-three-coronavirus-sec #home-3-blue-carousel .carousel-control-prev {
+    left: 492px;
+}
+#home-three-coronavirus-sec #home-3-blue-carousel .carousel-control-prev-icon,
+#home-three-coronavirus-sec #home-3-blue-carousel .carousel-control-next-icon {
+    
+    width: 36px;
+    height: 40px;
+}
+#home-three-coronavirus-sec #home-3-blue-carousel .carousel-control-prev-icon {
+    background-image: url('../images/home-3-blue-carousel-arrow-left.svg');
+}
+#home-three-coronavirus-sec #home-3-blue-carousel .carousel-control-next-icon {
+    background-image: url('../images/home-3-blue-carousel-arrow-right.svg');    
+}
+/*---------- Coronavirus Symptoms Section CSS ----------*/
+#home-three-symptoms-sec {
+    background: #eeeff1;
+}
+#home-three-symptoms-sec .ms-three-symptom-box {
+    padding: 40px 30px;
+    background-image: url('../images/home-three-symptom-grey-bg.jpg');
+    transition: all 0.4s linear;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 100px;
+}
+#home-three-symptoms-sec .ms-three-symptom-box:hover {
+    background-position: center;
+    background-image: url('../images/home_3_symptom_box_bg.jpg');
+}
+#home-three-symptoms-sec .ms-three-symptom-box h4 {
+    transition: all 0.4s linear;
+    display: inline-block;
+	position: relative;
+    text-decoration: none;
+}
+#home-three-symptoms-sec .ms-three-symptom-box h4:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    border-bottom: 1px solid #fff;
+    transition: 0.4s;
+}
+#home-three-symptoms-sec .ms-three-symptom-box:hover h4:after {
+    width: 60%;
+}
+#home-three-symptoms-sec .ms-three-symptom-box:hover h4 {
+    color: #fff;    
+}
+#home-three-symptoms-sec .ms-three-symptom-box p {
+    transition: all 0.3s linear;
+    color:rgba(42,48,58,0.7);
+}
+#home-three-symptoms-sec .ms-three-symptom-box:hover p {
+    color: rgba(255,255,255,0.7);
+}
+#home-three-symptoms-sec .ms-three-symptom-box a {
+    opacity: 0;
+    transition: all 0.3s linear;
+}
+#home-three-symptoms-sec .ms-three-symptom-box a .ms-right-arrow {
+    position: relative;
+    margin-left: 6px;
+    top: 2px;
+}
+#home-three-symptoms-sec .ms-three-symptom-box:hover a {
+    opacity: 1;
+}
+#home-three-symptoms-sec .ms-three-symptom-box img.symptom-img {
+    top: -60px;
+    right: 10px;
+}
+/*---------- Shop Section CSS ----------*/
+#home-three-shop-sec .ms-shop-box .price {
+    font-size: 36px;
+    font-weight: bold;
+}
+#home-three-shop-sec .ms-shop-box.special-right-pad {
+    padding-right: 50px;
+}
+#home-three-shop-sec .ms-shop-box.special-left-pad {
+    padding-left: 50px;
+}
+/*---------- Call TO Action Section CSS ----------*/
+#home-three-cta-sec {
+    background: url('../images/home-3-cta-bg.jpg') no-repeat;
+    background-size: cover;
+}
+#home-three-cta-sec .ms-cta {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+#home-three-cta-sec .ms-clients {
+    padding-left: 6%;
+    padding-right: 6%;
+}
+#home-three-cta-sec .ms-client-img {
+    padding:15px;
+}
+/*---------- Team Section CSS ----------*/
+#home-three-team-sec {
+    padding-bottom: 160px;
+}
+#home-three-team-sec .three-team-box {
+    position: relative;
+    left: 60px;
+    cursor: pointer;
+}
+#home-three-team-sec .three-team-box.team-1 {
+    margin-top: 80px;
+}
+#home-three-team-sec .three-team-box.team-3,
+#home-three-team-sec .three-team-box.team-5 {
+    margin-top: 120px;
+}
+#home-three-team-sec .three-team-box.team-4 {
+    margin-top: 100px;
+}
+#home-three-team-sec .three-team-box .hover-content {
+    width: 300px;
+    background:#3624d2;
+    padding: 40px;
+    position: absolute;
+    left: -60px;
+    top: 60px;
+    opacity: 0;
+    transition: 0.5s all linear;
+    -webkit-transition: 0.5s all linear;
+}
+#home-three-team-sec .three-team-box:hover .hover-content {
+    opacity: 1;
+}
+#home-three-team-sec .three-team-box .hover-content hr {
+    border-top: 1px solid #5e50db;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#home-three-team-sec .three-team-box .hover-content p a {
+    color: rgba(255, 255, 255, 0.6);
+    transition: 0.3s all linear;
+    -webkit-transition: 0.3s all linear;
+}
+#home-three-team-sec .three-team-box .hover-content p a:hover {
+    color: #fff;
+}
+#home-three-team-sec .three-team-box .hover-content .social-icons .icon {
+    width: 40px;
+    height: 40px;
+    padding: 11px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    color: #fff;
+    transition: 0.3s all linear;
+    -webkit-transition: 0.3s all linear;
+}
+#home-three-team-sec .three-team-box .hover-content .social-icons .icon:hover {
+    background: #fff;
+    color: #3624d2;
+}
+/*---------- Virus Spread Section CSS ----------*/
+#home-three-spread-sec {
+    background: url('../images/home-3-virus-spread-bg.jpg') no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding-bottom: 50px;
+}
+#home-three-spread-sec .spread-box {
+    margin-left: 50px;
+    margin-right: 30px;
+    margin-bottom: 100px;
+    position: relative;
+}
+#home-three-spread-sec .spread-box .three-title-box {
+    color: #fff;
+    width: 370px;
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 17px 40px;
+    position: absolute;
+    bottom: -35px;
+    left: -40px;
+    background-size: 220% 100%;    
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    background-image: linear-gradient(to right, #0f9ff2, #3625d3);
+}
+#home-three-spread-sec .spread-box:hover .three-title-box {
+    background-position: 100% 0;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    color: #fff;
+}
+#home-three-spread-sec .special-pos {
+    position: relative;
+    left: 60px;
+}
+/*---------- Tracking Cases Section CSS ----------*/
+#home-three-tracking-sec {
+    background: url('../images/home-3-map-bg.png') center bottom no-repeat;
+    background-position-y: 90%;
+}
+#home-three-tracking-sec .ms-cases {
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 1;
+}
+#home-three-tracking-sec .ms-recovered {
+    position: relative;
+    top: 400px;
+    left: 100px;
+}
+#home-three-tracking-sec .ms-deaths {
+    position: relative;
+    top: 400px;
+    right: 90px;
+} 
+/*---------- Our Blog Section CSS ----------*/
+#home-three-blog-sec {
+    background: #f5f6f7;
+    padding-bottom: 50px;
+}
+#home-three-blog-sec #ms_three_blog .ms-title-15 a {
+    color: rgba(255,255,255,0.7);
+    font-weight: 500;
+    transition: 0.3s all linear;
+    -webkit-transition: 0.3s all linear;
+}
+#home-three-blog-sec #ms_three_blog .ms-title-15 a:hover {
+    color: #fff;
+}
+#home-three-blog-sec #ms_three_blog .owl-nav.disabled {
+    display: block;
+    position: relative;
+    bottom: 200px;
+}
+#home-three-blog-sec #ms_three_blog .ms-blog-1 {
+    background:linear-gradient(0deg, rgba(9, 30, 63, 0.75), rgba(9, 30, 63, 0.75)), url('../images/home-3-blog-bg-001.png');
+    padding: 60px 40px;
+    background-size: cover;
+}
+#home-three-blog-sec #ms_three_blog .ms-blog-2 {
+    background:linear-gradient(0deg, rgba(54, 37, 211, 0.75), rgba(54, 37, 211, 0.75)), url('../images/home-3-blog-bg-002.png');
+    padding: 60px 40px;
+    background-size: cover;
+}
+#home-three-blog-sec #ms_three_blog .ms-icon-btn {
+    padding: 12px 22px 12px 25px;
+}
+#home-three-blog-sec #ms_three_blog .ms-icon-btn span {
+    font-size: 26px;
+    top: 6px;
+}
+#home-three-blog-sec #ms_three_blog .nav-btn.prev-slide {
+    display: none;
+}
+#home-three-blog-sec #ms_three_blog .nav-btn.next-slide {
+    background: url('../images/arrow_right.svg') no-repeat center;
+    padding: 25px;
+    position: relative;
+    right: -770px;
+    bottom: 50px;
+}
+#home-three-blog-sec .owl-carousel .owl-item img {
+    display: inherit;
+    width: 30px;
+}
+/*---------- Newsletter Section CSS ----------*/
+#home-three-newsletter-sec form button {
+    bottom: 0;
+    right: 0;
+}
+#home-three-newsletter-sec form input {
+    padding: 13px 170px 13px 15px;
+    box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.1);
+    border-bottom: 0;
+}
+/*---------- Footer CSS ----------*/
+#footer-home-three {
+    background: #081e3e;
+}
+#footer-home-three h6.footer-nav-heading {
+    font-size: 15px;
+    font-weight: bold;
+    color: rgba(255,255,255,0.2);
+}
+#footer-home-three p a, #footer-home-three p {
+    font-size: 17px;
+    transition: 0.3s all linear;
+    color: #fff;
+}
+#footer-home-three p a:hover {
+    text-decoration: underline;    
+}
+#footer-home-three .ms-border-right:before {
+    position: absolute;
+    content: '';
+    width: 180px;
+    height: 1px;
+    background: rgba(255,255,255,0.2);
+    transform: rotate(90deg);
+    left: 80px;
+    top: 42px;
+}
+
+/*==================== 15. Testimonial Page CSS ====================*/
+.ms-testimonial-box {
+    padding: 40px 30px;
+    transition: 0.3s all linear;
+    -webkit-transition: 0.3s all linear;
+}
+.ms-testimonial-box:hover {
+    box-shadow: 0px 16px 18.4px 1.6px rgba(9, 30, 63, 0.14);
+}
+.ms-testimonial-box .ms-border-radius {
+    border-radius: 50%;
+}
+
+/*==================== 16. Landing Page CSS ====================*/
+.ms-landing-btn {
+    color: #fff;
+    background:#7ca81f;
+    font-size: 15px;
+    font-weight:bold;
+    padding: 12px 25px 10px;
+    transition: 0.3s all linear;
+}
+.ms-landing-btn:hover {
+    color: #fff;
+    background:#6e9b10;
+    transform: translateY(-3px);
+}
+.ms-landing-banner {
+    background: url('../images/landing-banner.png');
+    padding: 200px 0 50px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    clip-path: polygon(0 0, 100% 0, 100% 70%, 0% 100%);
+}
+.ms-landing-banner .ms-left-txt {
+    padding-top: 110px;
+}
+.ms-landing-banner h1 {
+    font-size: 100px;
+    font-weight: bold;
+    color: #00d0ff;
+}
+.ms-landing-banner .ms-second-text {
+    top: -2px;
+    left: -2px;
+}
+.ms-landing-banner .ms-second-text h1 {
+    color: #091e3f;
+}
+.ms-browse-btn {
+    font-size: 15px;
+    font-weight:bold;
+    background: #3625d3;
+    color: #fff;
+    padding: 12px 25px 10px;
+    transition: 0.3s all linear;
+}
+.ms-browse-btn:hover {
+    color: #fff;
+    background: #2810ff;
+    transform: translateY(-3px);
+}
+.ms-landing-headline {
+    font-size: 46px;
+    font-weight: bold;
+    color:#3625d3;
+}
+.ms-landing-three {
+    color:#00d0ff;
+    font-size: 100px;
+    font-weight: bold;
+}
+#ms-landing-page h4 {
+    color:#3625d3;
+}
+.ms-landing-second-section {
+    padding:0 0 100px;
+}
+.ms-pages img {
+    border-radius: 10px;
+    transition: 0.4s all linear;
+    border:1px solid rgba(0, 0, 0, 0.1);
+}
+.ms-pages:hover img {
+    box-shadow: 0px 5px 25px rgba(100, 96, 96, 0.15);
+    transform: translateY(-10px);
+}
+.ms-landing-parallax {
+    padding: 130px 0;
+    background: url('../images/landing-bg-img.jpg');
+}
+.ms-prlx-txt h3 {
+    color: #ffcc00;
+    font-size: 72px;
+}
+.ms-prlx-txt h4 {
+    line-height: 1.3;
+}
+.ms-landing-inner-section {
+    padding: 100px 0;
+}
+.ms-landing-inside-section {
+    background: #091e3f;
+    padding: 80px 0;
+}
+.ms-landing-inside-section .ms-icon-box {
+    background: #fff;
+    padding:45px 10px;
+    border-radius: 10px;
+}
+.ms-landing-inside-section .ms-icon-box img {
+    width: 70px;
+    margin-bottom: 40px;
+}
+.ms-landing-mockup-section {
+    padding: 100px 0;
+}
+.ms-landing-footer {
+    padding: 20px 0;
+}
+.ms-landing-footer span {
+    color:#fff;
+    font-size: 15px;
+}
+.ms-icon-box-two {
+    margin-bottom: 30px;
+}
+.ms-icon-box-two img {
+    width: 80px;
+    margin-right: 20px;
+}
+.ms-landing-fixed-btn {
+    position: fixed;
+    bottom: 60px;
+    right: 60px;
+    animation: animate 3s linear infinite;
+    border-radius: 50%;
+}
+.ms-landing-fixed-btn img {
+    width: 60px;
+}
+@keyframes animate {
+    0% {
+        box-shadow: 0 0 0 0 rgba(124, 180, 66, .7), 0 0 0 0 rgba(124, 180, 66, .7);
+    }
+    40% {
+        box-shadow: 0 0 0 20px rgba(124, 180, 66, 0), 0 0 0 0 rgba(124, 180, 66, .7);
+    }
+    80% {
+        box-shadow: 0 0 0 20px rgba(124, 180, 66, 0), 0 0 0 30px rgba(124, 180, 66, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(124, 180, 66, .7), 0 0 0 30px rgba(124, 180, 66, 0);
+    }
+}
+@media (max-width:1100px) {
+    .ms-landing-banner {
+        clip-path: polygon(0 0, 100% 0, 100% 75%, 0% 100%);
+        padding:150px 0 50px;
+    }
+    .ms-landing-banner .ms-left-txt {
+        padding-top: 50px;
+    }
+    .ms-landing-banner h1 {
+        font-size: 80px;
+    }
+}
+@media (max-width:850px) {
+    #ms-landing-page header {
+        padding: 10px 0;
+    }
+    .ms-landing-banner h1 {
+        font-size: 50px;
+    }
+    .ms-landing-banner {
+        padding:130px 0 50px;
+    }
+    .ms-landing-headline {
+        font-size: 38px;
+    }
+    .ms-landing-inside-section .ms-icon-box {
+        margin: 13px 0;
+    }
+    .ms-pages {
+        margin-bottom: 30px;
+    }
+    .ms-page-last {
+        margin: 0;
+    }
+}
+@media (max-width:600px) {
+    .ms-landing-btn {
+        padding: 12px 18px 10px;
+    }
+    .ms-landing-banner .ms-left-txt {
+        padding-top: 0;
+    }
+    .ms-landing-banner {
+        clip-path: polygon(0 0, 100% 0, 100% 82%, 0% 100%);
+        padding: 100px 0 0;
+    }
+    .ms-landing-banner img {
+        margin-top: 30px;
+    }
+    .ms-landing-headline {
+        font-size: 30px;
+    }
+    .ms-landing-three {
+        font-size: 80px;
+        line-height: 1.1;
+    }
+    .ms-landing-second-section {
+        padding: 0 0 50px;
+    }
+    .ms-landing-parallax,
+    .ms-landing-inner-section,
+    .ms-landing-inside-section,
+    .ms-landing-mockup-section {
+        padding: 50px 0;
+    }
+    .ms-icon-box-two img {
+        margin-right: 15px;
+        width: 65px;
+    }
+    .ms-icon-box-two-last {
+        margin: 0;
+    }
+    .ms-landing-footer {
+        padding: 15px 10px;
+    }
+    .ms-landing-fixed-btn {
+        bottom: 30px;
+        right: 30px;
+    }
+    .ms-landing-fixed-btn img {
+        width: 55px;
+    }
+}
+
+/* header nav ul li a{ 
+    color: #dd4b39;
+
+} */
+

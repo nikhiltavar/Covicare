@@ -1,0 +1,1374 @@
+/*==================== Media Queries for all the devices ====================*/
+
+@media (max-width:1600px) {
+    /*==================== 02. Homepage CSS ====================*/
+    /*---------- Banner Section ----------*/
+    .ms-home-bnr {
+        background-size: 45%;
+    }
+    /*---------- About Section ----------*/
+    .ms-abt-img {
+        background-size: 40%;
+        padding-bottom: 0px;
+    }
+    /*---------- Protect Section ----------*/
+    .protect-box {
+        padding: 70px 0px 60px 00px;
+    }
+
+    /*==================== 03. About Page CSS ====================*/
+    #ms-symptoms-sec .special-image {
+        padding: 200px;
+        margin-top: -220px;
+    }
+
+    /*==================== 08. Shop Page CSS ====================*/
+    #ms-special-product .special-image {
+        background-size: 55%;
+    }
+
+    /*==================== 10. Team Page CSS ====================*/
+    #team-cta-sec {
+        margin: 60px 0 100px;
+    }
+    #team-cta-sec .special-left-image {
+        background-size: 50%;
+        padding: 210px;
+        margin-top: -412px;
+    }
+
+    /*==================== 13. Homepage Two CSS ====================*/
+    /*---------- Prevention Section ----------*/
+    #ms-prevention-sec .side-image {
+        left: 1000px;
+        bottom: 50px;
+    }
+    /*---------- Shop Section ----------*/
+    #ms-shop-sec .ms-shop-box .ms-hover {
+        left: 18%;
+    }
+    /*---------- Team Section ----------*/
+    #home-two-team-sec {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    /*==================== 14. Homepage Three CSS ====================*/
+    /*---------- Slider Section CSS ----------*/
+    #ms-hero-slider .carousel-caption h5 {
+        padding-right: 15%;
+        padding-left: 15%;
+    }
+    #ms-hero-slider .carousel-caption {
+        bottom: 5%;
+    }
+    /*---------- Call TO Action Section CSS ----------*/
+    #home-three-cta-sec .col-md-6.ms-cta, #home-three-cta-sec .ms-clients {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+        text-align: center;
+    }
+    #home-three-cta-sec .col-md-6.ms-cta {
+        margin-bottom: 100px;
+    }
+
+}
+
+@media (max-width:1400px) {
+    /*==================== 03. About Page CSS ====================*/
+    #ms-disease-sec .floating-img {
+        left: 100px;
+    }
+
+    /*==================== 10. Team Page CSS ====================*/
+    #team-cta-sec .special-left-image {
+        margin-top: -388px;
+    }
+
+    /*==================== 14. Homepage Three CSS ====================*/
+    /*---------- Slider Section CSS ----------*/
+    #ms-hero-slider .carousel-caption {
+        right: 20%;
+        left: 20%;
+    }
+
+}
+
+@media (max-width:1300px) {
+    /*==================== 02. Homepage CSS ====================*/
+    /*---------- Banner Section ----------*/
+    .ms-home-bnr {
+        height: 700px;
+    }
+    .ms-abt-img {
+        background-position-y: 0;
+    }
+    /*---------- Featured Products Section ----------*/
+    #ms-featured {
+        padding-top: 40px;
+    }
+    /*---------- Testimonials Section ----------*/
+    #ms-testimonial-sec .owl-carousel {
+        padding-right: 60px;
+    }
+
+    /*==================== 03. About Page CSS ====================*/
+    #ms-disease-sec .floating-img {
+        left: 70px;
+    }
+
+    /*==================== 10. Team Page CSS ====================*/
+    #team-cta-sec .ms-bg {
+        padding: 100px 90px;
+    }
+    #team-cta-sec {
+        margin: 50px 0 50px;
+    }
+    #team-cta-sec .special-left-image {
+        margin-top: -362px;
+    }
+
+    /*==================== 13. Homepage Two CSS ====================*/
+    /*---------- Prevention Section ----------*/
+    #ms-prevention-sec .side-image {
+        left: 920px;
+        bottom: 70px;
+    }
+    /*---------- Shop Section ----------*/
+    #home-two-team-sec .ms-team-box-2 .ms-hover {
+        left: 19%;
+    }
+    #home-two-team-sec .ms-team-box-2:hover .ms-hover {
+        left: 19%;
+    }
+
+    /*==================== 14. Homepage Three CSS ====================*/
+    /*---------- Our Blog Section ----------*/
+    #home-three-blog-sec #ms_three_blog .nav-btn.next-slide {
+        right: -755px;
+    }
+
+}
+
+@media (max-width:1200px) {
+    /*==================== 01. General CSS ====================*/
+    h2 {
+        font-size: 40px;
+    }
+    .extra-space {
+        margin: 0 40px;
+    }
+
+    /*==================== 02. Homepage CSS ====================*/
+    /*---------- Banner Section ----------*/
+    .ms-home-bnr {
+        height: 600px;
+    }
+    .hero-text {
+        font-size: 60px;
+    }
+
+    /*---------- Protect Section ----------*/
+    .protect-box {
+        padding: 70px 0px 57px 00px;
+    }
+
+    /*---------- Testimonials Section ----------*/
+    #ms-testimonial-sec span {
+        top: 65px;
+        left: 70px;
+    }
+    #ms-testimonial-sec .nav-btn.next-slide {
+        right: 170px;
+        bottom: 170px;
+    }
+    #ms-testimonial-sec .owl-carousel {
+        padding-right: 0px;
+    }
+
+    /*---------- News Feed Section ----------*/
+    #ms-news {
+        padding-top: 20px;
+    }
+
+    /*==================== 03. About Page CSS ====================*/
+    #ms-disease-sec .floating-img {
+        left: 30px;
+    }
+    .cases {
+        margin-top: -100px;
+    }
+    #ms-symptoms-sec .special-pad-right {
+        padding-right: 0;
+    }
+    #ms-symptoms-sec .special-pad {
+        padding: 20px 40px 20px 20px;
+    }
+    #ms-symptoms-sec .special-image {
+        background-size: 30%;
+        padding: 150px;
+        margin-top: -130px;
+    }
+    /*---------- Team Section ----------*/
+    .ms-team-box .phone-box {
+        top: 60%;
+    }
+    /*---------- Protect Yourself Section ----------*/
+    #protect-yourself .special-pad {
+        padding: 0 50px;
+    }
+    #protect-yourself .icon-box {
+        padding: 40px;
+    }
+
+    /*==================== 06. Contact Page CSS ====================*/
+    #ms-form-sec .contact-bnr {
+        background-size: 50%;
+    }
+    #ms-form-sec {
+        padding-bottom: 100px;
+    }
+
+    /*==================== 08. Shop Page CSS ====================*/
+    .ms-shop-box .ms-hover {
+        left: 10%;
+        bottom: 28%;        
+    }
+    .ms-shop-box:hover .ms-hover {
+        left: 10%;
+        bottom: 34%;
+    }
+    .ms-shop-box .ms-sold-out {
+        left: 30%;
+        bottom: 38%;
+    }
+    #ms-special-product .ms-bg {
+        padding: 70px 50px;
+    }
+    #ms-special-product .special-image {
+        background-size: 55%;
+        padding: 240px;
+    }   
+    
+    /*==================== 09. Shop Detail Page CSS ====================*/
+    #ms-shop-detail-section .carousel-item .thumb {
+        width: 31.5%;
+    }
+    #ms-shop-detail-section .ms-spacer-60 {
+        height: 30px;
+    }
+
+    /*==================== 10. Team Page CSS ====================*/
+    #team-cta-sec .special-left-image {
+        margin-top: -294px;
+        padding: 170px;
+    }
+    #team-cta-sec .ms-bg {
+        padding: 80px 90px;
+    }
+    #team-cta-sec {
+        margin: 0 0 50px;
+    }
+
+    /*==================== 11. News Full Sidebar Page CSS ====================*/
+    aside {
+        padding-left: 0;
+    }
+
+    /*==================== 12. News Detail Page CSS ====================*/
+    article .ms-spacer-40 {
+        height: 0px;
+    }
+    
+    /*==================== 13. Homepage Two CSS ====================*/
+    /*---------- Banner Section CSS ----------*/
+    #home-two-bnr {
+        padding: 300px 0 200px 0;
+    }
+    /*---------- Live Update Section CSS ----------*/
+    #ms-update-sec {
+        background-position-y: 15px;
+    }
+    /*---------- Prevention Section CSS ----------*/
+    #ms-prevention-sec .home2-special-pad {
+        padding-right: 0;
+    }
+    #ms-prevention-sec .side-image {
+        display: none;
+    }
+    /*---------- Team Section CSS ----------*/
+    #home-two-team-sec {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    /*---------- Virus Spread Section CSS ----------*/
+    #home-two-spread-sec .text-two {
+        top: 12px;
+        right: 10px;
+    }
+    #home-two-spread-sec .text-three {
+        top:5px;
+        right: 10px;
+    }
+    #home-two-spread-sec .text-four {
+        top: -10px;
+    }
+    /*---------- Shop Section CSS ----------*/
+    #ms-shop-sec .ms-shop-box .ms-hover {
+        left: 11%;
+    }
+    /*---------- Team Section CSS ----------*/
+    #home-two-team-sec .ms-team-box-2 .ms-hover {
+        left: 11%;
+        bottom: 30%;
+    }
+    #home-two-team-sec .ms-team-box-2:hover .ms-hover {
+        left: 11%;
+        bottom: 35%;
+    }
+    #home-two-corona-symptom .ms-symptom-box:hover .ms-content-details {
+        top: 19%;
+    }
+    #home-two-ms-shop-sec .ms-shop-box .ms-hover {
+        left:8.5%;
+    }
+
+    /*==================== 14. Homepage Three CSS ====================*/
+    /*---------- Header CSS ----------*/
+    #homepage-three .ms-header-bg nav ul li:last-child a {
+        padding: 24px 30px;
+    }
+    /*---------- Slider Section CSS ----------*/
+    #ms-hero-slider .carousel-caption {
+        bottom: 16%;
+    }
+    /*---------- What is coronavirus Section CSS ----------*/
+    #home-three-coronavirus-sec #home-3-blue-carousel .carousel-control-next, 
+    #home-three-coronavirus-sec #home-3-blue-carousel .carousel-control-prev {
+        top: 600px;
+    }
+    #home-three-coronavirus-sec #home-3-blue-carousel .carousel-control-prev {
+        left: 355px;
+    }
+    #home-three-coronavirus-sec #home-3-blue-carousel .carousel-control-next {
+        right: 0;
+    }
+    /*---------- Team Section CSS ----------*/
+    #home-three-team-sec .three-team-box {
+        left: 0;
+    }
+    #home-three-team-sec .three-team-box .hover-content {
+        left: -15px;
+        top: 30px;
+    }
+    /*---------- Tracking Cases Section CSS ----------*/
+    #home-three-tracking-sec .ms-recovered {
+        left: 60px;
+    }
+    #home-three-tracking-sec .ms-deaths {
+        right: 45px;
+    }
+    /*---------- Our Blog Section CSS ----------*/
+    #home-three-blog-sec #ms_three_blog .nav-btn.next-slide {
+        right: -615px;
+    }
+    /*---------- Footer CSS ----------*/
+    #footer-home-three .ms-border-right:before {
+        left: 60px;
+    }
+}
+
+@media (max-width:800px) {
+    /*==================== 01. General CSS ====================*/
+    h2 {
+        font-size: 36px;
+    }
+    h4 {
+        font-size: 20px;
+    }
+    h5 {
+        font-size: 18px;
+    }
+    .pad-100 {
+        padding: 80px 0;
+    }
+    .extra-space {
+        margin: 0 30px;
+    }
+
+    /*---------- Header Section ----------*/
+    header nav ul .nav-item {
+        margin: 0 15px;
+    }
+
+    /*==================== 02. Homepage CSS ====================*/
+    /*---------- Banner Section ----------*/
+    .hero-text {
+        font-size: 50px;
+    }
+    /*---------- About Section ----------*/
+    #ms-abt-sec {
+        padding-top: 80px;
+    }
+    .ms-abt-img {
+        background-size: 50%;
+    }
+    /*---------- Choose Us Section ----------*/
+    #ms-choose-sec {
+        padding-top: 80px;
+    }
+    /*---------- Featured Products Section ----------*/
+    #ms-featured {
+        padding-top: 20px;
+    }
+    #ms-featured .ms-spacer-30 {
+        height: 20px;
+    }
+    /*---------- Protect Section ----------*/
+    #ms-protect-sec .protect-box {
+        padding: 50px 0px 50px 00px;
+    }
+    #ms-protect-sec .ms-spacer-70 {
+        height: 50px;
+    }
+    /*---------- Testimonials Section ----------*/
+    #ms-testimonial-sec .owl-carousel {
+        padding-left: 0;
+    }
+    #ms-testimonial-sec span {
+        top: 67px;
+        left: 10px;
+    }
+    
+    /*==================== 03. About Page CSS ====================*/
+    #ms-disease-sec .floating-img {
+        width: 40%;
+        left: 350px;
+        bottom: 0;
+    }
+    .cases {
+        margin-top: -200px;
+        bottom: 0;
+    }
+    #ms-disease-sec {
+        padding: 80px 0;
+    }
+    #ms-symptoms-sec .virus-width {
+        height: 820px;
+    }
+    #ms-symptoms-sec .symptom-container {
+        margin-top: -770px;
+    }
+    #ms-symptoms-sec .special-image {
+        background-size: 40%;
+        margin-top: -80px;
+    }
+    #ms-symptoms-sec .special-pad {
+        padding: 20px 100px;
+    }
+    #protect-yourself {
+        padding: 80px 0;
+    }
+    #protect-yourself .special-pad {
+        padding: 0 50px 50px;
+    }
+    .ms-team-box .phone-box {
+        top: 63%;
+    }
+
+    /*---------- Emergency Contact Section ----------*/
+    #ms-emergency-sec {
+        padding-bottom: 80px;
+    }
+    #ms-emergency-sec .bg-img {
+        padding: 60px;
+    }
+
+    /*==================== 04. 404 Error Page CSS ====================*/
+    
+    /*==================== 05. FAQ Page CSS ====================*/
+    .accordion {
+        padding: 0;
+    }
+
+    /*==================== 06. Contact Page CSS ====================*/
+    #ms-form-sec {
+        padding-bottom: 0px;
+    }
+    #ms-touch-sec {
+        padding: 80px 0;
+    }
+    .map-section {
+        margin-top: 80px;
+    }
+
+    /*==================== 08. Shop Page CSS ====================*/
+    .ms-shop-box .ms-hover {
+        left: 14%;
+        bottom: 28%;        
+    }
+    .ms-shop-box:hover .ms-hover {
+        left: 14%;
+        bottom: 34%;
+    }
+    #ms-special-product {
+        margin: 60px 0 100px 0;
+    }
+
+    /*==================== 09. Shop Detail Page CSS ====================*/
+    #ms-shop-detail-section h3 {
+        font-size: 28px;
+    }
+    #ms-shop-detail-section .carousel-item .thumb {
+        width: 31%;
+    }
+    #ms-shop-detail-section .special-pad {
+        padding-left: 20px;
+    }
+
+    /*==================== 10. Team Page CSS ====================*/
+    #team-cta-sec .ms-bg {
+        padding: 50px 90px;
+    }
+    #team-cta-sec .special-left-image {
+        margin-top: -220px;
+        padding: 120px;
+    }
+
+    /*==================== 11. News Full Sidebar Page CSS ====================*/
+    article .ms-content-area {
+        padding: 30px;
+    }
+    .primary-content-area .ms-spacer-30 {
+        height: 0;
+    }
+    aside {
+        margin-top: 80px;
+    }
+
+    /*==================== 13. Homepage Two CSS ====================*/
+    /*---------- Symptoms Section CSS ----------*/
+    #home-two-corona-symptom .first-img {
+        width: 45%;
+    }
+    /*---------- Virus Spread Section CSS ----------*/
+    #home-two-spread-sec {
+        padding-bottom: 80px;
+    }
+    #home-two-spread-sec .text-one {
+        right: 10px;
+        top: 30px;
+    }
+    #home-two-spread-sec .text-two {
+        top: 20px;
+    }
+    #home-two-spread-sec .text-three {
+        top: 10px;
+    }
+    #home-two-spread-sec .text-four {
+        right: 10px;
+        top: 0;
+    }
+    /*---------- Shop Section CSS ----------*/
+    #ms-shop-sec .ms-shop-box .ms-hover {
+        left: 15%;
+    }
+    /*---------- Our Clients Section CSS ----------*/
+    #home-two-clients-sec {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    /*---------- Virus Spread Section CSS ----------*/
+    #home-two-spread-sec {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    /*---------- Shop Section CSS Start ----------*/
+    #home-two-ms-shop-sec .ms-shop-box .ms-hover {
+        left: 12.5%;
+    }
+    /*---------- Team Section CSS ----------*/
+    #home-two-team-sec .ms-spacer-60 {
+        height: 40px;
+    }
+    #home-two-team-sec .ms-team-box-2 .ms-hover {
+        left: 23%;
+        bottom: 25%;
+    }
+    #home-two-team-sec .ms-team-box-2:hover .ms-hover {
+        left: 23%;
+        bottom: 30%;
+    }
+    /*---------- Blog Section CSS ----------*/
+    #home-two-blog-sec .ms-main-box .ms-blog-box .content-overlay .content-button {
+        top: 80%;
+        left: 10%;
+    }
+    #home-two-blog-sec .ms-main-box:hover .ms-blog-box .content-overlay .content-button {
+        top: 35%;
+        left: 10%;
+    }
+    /*---------- Footer CSS ----------*/
+    #footer-home-two {
+        padding: 80px 0 15px;
+    }
+
+    /*==================== 15. Testimonial Page CSS ====================*/
+    .ms-testimonial-box .ms-border-radius {
+        width: 50%;
+        margin-bottom: 20px;
+    }
+
+    /*==================== 14. Homepage Three CSS ====================*/
+    /*---------- Header CSS ----------*/
+    #homepage-three header {
+        padding: 20px;
+    }
+    #homepage-three header nav .navbar-collapse {
+        background: #0b2041;
+        padding: 20px 30px;
+        color: #fff;
+    }
+    #homepage-three .ms-header-bg {
+        background: transparent;
+        box-shadow: none;
+        padding-right: 15px;
+    }
+    #homepage-three .ms-header-bg nav {
+        padding-right: 15px;
+    }
+    #homepage-three header nav ul .nav-item {
+        margin-left: 0;
+        margin-bottom: 5px;
+    }
+    #homepage-three header nav ul li a {
+        color: #fff;
+    }
+    #homepage-three header nav ul li.dropdown .dropdown-menu a {
+        color: #fff;
+    }
+    #homepage-three .ms-header-bg nav ul li:after {
+        height: 0;
+    }
+    #homepage-three .ms-header-bg nav ul li:last-child a {
+        padding: 0;
+        background: transparent;
+    }
+    #homepage-three .ms-header-bg nav ul li:last-child a:hover {
+        background: transparent;
+    }
+    #homepage-three header nav button {
+        bottom: 55px;
+        left: 95%;
+    }
+    /*---------- Slider Section CSS ----------*/
+    #ms-hero-slider .carousel-caption {
+        right: 16%;
+        left: 16%;
+        bottom: 18%;
+    }
+    #ms-hero-slider .carousel-caption h5 {
+        padding-right: 5%;
+        padding-left: 5%;
+    }
+    /*---------- Blue Section ----------*/
+    #home-three-blue-sec {
+        padding: 80px 0 60px 0;
+    }
+    /*---------- What is coronavirus Section ----------*/
+    #home-three-coronavirus-sec {
+        padding: 60px 0 80px 0;
+    }
+    #home-three-coronavirus-sec #home-3-blue-carousel {
+        margin-top: 60px;
+    }
+    #home-three-coronavirus-sec #home-3-blue-carousel .carousel-control-next, 
+    #home-three-coronavirus-sec #home-3-blue-carousel .carousel-control-prev {
+        top: 900px;
+    }
+    #home-three-coronavirus-sec #home-3-blue-carousel .carousel-control-prev {
+        left: 525px;
+    }
+    /*---------- Our Shop Section ----------*/
+    #home-three-shop-sec .ms-shop-box.special-right-pad {
+        padding-right: 0;
+    }
+    #home-three-shop-sec .ms-shop-box.special-left-pad {
+        padding-left: 0;
+    }
+    /*---------- Team Section ----------*/
+    #home-three-team-sec {
+        padding-bottom: 130px;
+    }
+    #home-three-team-sec .three-team-box .hover-content {
+        width: 210px;
+        padding: 20px;
+    }
+    #home-three-team-sec .three-team-box .hover-content .ms-spacer-80 {
+        height: 35px;
+    }
+    /*---------- Virus Spread Section ----------*/
+    #home-three-spread-sec {
+        padding-bottom: 30px;
+    }
+    #home-three-spread-sec .spread-box {
+        margin-left: 10px;
+        margin-right: 0px;
+    }
+    #home-three-spread-sec .spread-box .three-title-box {
+        width: 300px;
+        padding: 15px 30px;
+        left: -15px
+    }
+    #home-three-spread-sec .special-pos {
+        left: 0;
+    }
+    /*---------- Tracking Cases Section ----------*/
+    #home-three-tracking-sec .ms-spacer-70 {
+        height: 50px;
+    }
+    #home-three-tracking-sec .ms-recovered {
+        top: 300px;
+        left: 40px;
+    }
+    #home-three-tracking-sec .ms-deaths {
+        top: 300px;
+        right: 35px;
+    }
+    /*---------- Blog Section ----------*/
+    #home-three-blog-sec {
+        padding-bottom: 30px;
+    }
+    #home-three-blog-sec #ms_three_blog {
+        margin-top: 60px;
+    }
+    #home-three-blog-sec #ms_three_blog .nav-btn.next-slide {
+        right: -635px;
+    }
+    #home-three-blog-sec #ms_three_blog .nav-btn.prev-slide {
+        display: block;
+        background: url('../images/arrow_left.svg') no-repeat center;
+        padding: 25px;
+        position: relative;
+        bottom: 50px;
+        left: -45px;
+    }
+    /*---------- Footer CSS ----------*/
+    #footer-home-three .ms-border-right:before {
+        display: none;
+    }
+
+}
+
+@media (max-width:767px) {
+    /*==================== 01. General CSS ====================*/
+    h2 {
+        font-size: 30px;
+    }
+    h3 {
+        font-size: 24px;
+    }
+    h4 {
+        font-size: 18px;
+    }
+    .pad-100 {
+        padding: 60px 0;
+    }
+    .extra-space {
+        margin: 0 20px;
+    }
+
+    /*---------- Header Section ----------*/
+    header {
+        padding: 15px;
+    }
+    header nav.navbar  {
+        padding: 0px;
+        margin-top: -20px;
+    }
+    header nav .navbar-collapse {
+        background: #0b2041;
+        padding: 10px 10px 10px 10px;
+        color: #fff;
+    }
+    header nav ul li a, header nav ul li a:hover {
+        color: #fff;
+    }
+    header nav ul .nav-item:first-child {
+        margin-left: 15px;
+    }
+    /*---------- Footer Section ----------*/
+    footer {
+        padding-bottom: 30px;
+    }
+    footer h2 {
+        font-size: 30px;
+    }
+    footer .ms-spacer-90 {
+        height: 70px;
+    }
+    footer span.copyright {
+        line-height: 2;
+    }
+
+    /*==================== 02. Homepage CSS ====================*/
+    /*---------- Banner Section ----------*/
+    .hero-text {
+        font-size: 45px;
+    }
+    #ms-bnr-sec .container {
+        padding-top: 300px;
+    }
+    .ms-home-bnr {
+        background-size: 85%;
+        background-position-x: 40%;
+        background-position-y: 7%;
+        height: 800px;
+    }    
+    /*---------- About Section ----------*/
+    .ms-abt-img {
+        background:none;
+    }
+    /*---------- Why Choose Us Section ----------*/
+    #ms-choose-sec {
+        padding-top: 60px;
+    }
+    #ms-choose-sec .ms-spacer-30.second {
+        height: 0;
+    }
+    /*---------- Protect Section ----------*/
+    #ms-protect-sec .protect-box {
+        padding: 50px 10px;
+    }
+    /*---------- Testimonials Section ----------*/
+    #ms-testimonial-sec .testimonial-container {
+        padding: 60px 0;
+        margin-top: -640px;
+    }
+    #ms-testimonial-sec .bg-color {
+        height: 650px;
+    }
+    #ms-testimonial-sec .img-area {
+        width: 15%;
+    }
+    #ms-testimonial-sec .nav-btn.next-slide {
+        right: -250px;
+        bottom: 465px;
+    }
+    #ms-testimonial-sec span {
+        top: -80px;
+        left: 190px;
+    }
+    /*---------- Clients Section ----------*/
+    #ms-clients .square-shadow.first-logo, #ms-clients .square-shadow.second-logo {
+        bottom: 60px;
+    }
+    #ms-clients .square-shadow.fourth-logo {
+        bottom: 0;
+    }
+    #ms-clients .square-shadow.fifth-logo {
+        bottom: -40px;
+    }
+    /*---------- Contact Section ----------*/
+    #ms-contact-sec {
+        padding: 60px 0;
+    }
+    #ms-contact-sec .contact-info {
+        padding: 20px;
+        margin-top: 30px;
+    }
+
+    /*==================== 03. About Page CSS ====================*/
+    .cases {
+        margin-top: 50px;
+    }
+    .cases .ms-case-box.box-two {
+        left: 0;
+    }
+    #ms-disease-sec {
+        padding: 60px 0;
+    }
+    #ms-symptoms-sec .special-pad {
+        padding: 18px;
+    }
+    #ms-symptoms-sec .virus-width {
+        height: 1300px;
+    }
+    #ms-symptoms-sec .symptom-container {
+        margin-top: -1290px;
+    }
+    #ms-team-section {
+        padding-top: 100px;
+    }
+    /*---------- Emergency Contact Section ----------*/
+    #ms-emergency-sec {
+        padding-bottom: 60px;
+    }
+    #ms-emergency-sec .bg-img {
+        padding: 50px 20px;
+    }
+
+    /*==================== 06. Contact Page CSS ====================*/
+    #ms-form-sec .contact-bnr {
+        background-size: 80%;
+        background-position-x: 50%;
+        background-position-y: 0%;
+        padding-top: 320px;
+    }
+    #ms-form-sec {
+        padding-bottom: 10px;
+    }
+     #ms-touch-sec {
+        padding: 60px 0;
+    }
+    .map-section {
+        margin: 60px 20px 0 20px;
+    }
+    .map-section iframe {
+        height: 450px;
+    }
+    #get-touch-sec {
+        margin-bottom: 60px;
+    }
+
+    /*==================== 08. Shop Page CSS ====================*/
+    .ms-shop-box img {
+        width: 100%;
+    }
+    .ms-shop-box .ms-hover {
+        left: 19%;
+        bottom: 22%;        
+    }
+    .ms-shop-box:hover .ms-hover {
+        left: 19%;
+        bottom: 30%;
+    }
+    .ms-shop-box .ms-sold-out {
+        left: 35%;
+        bottom: 32%;
+    }
+    #ms-special-product {
+        margin: 120px 0 320px 0;
+    }
+    #ms-special-product .special-image {
+        background-size: 70%;
+        padding: 120px;
+    }
+    #ms-special-product .ms-bg {
+        padding: 120px 50px 60px;
+    }
+
+    /*==================== 09. Shop Detail Page CSS ====================*/
+    #ms-shop-detail-section .special-pad {
+        padding-top: 50px;
+    }
+    #ms-shop-detail-section h3 {
+        font-size: 24px;
+    }
+
+    /*==================== 10. Team Page CSS ====================*/
+    #team-cta-sec .ms-bg {
+        padding: 40px 40px 200px 40px;
+    }
+    #team-cta-sec .special-left-image {
+        background-size: 80%;
+        margin-top: -186px;
+        padding: 100px;
+    }
+
+    /*==================== 11. News Page CSS ====================*/
+    aside .widget {
+        margin-bottom: 50px;
+    }
+    article .ms-news-title {
+        font-size: 24px;
+    }
+    
+    /*==================== 13. Homepage Two CSS ====================*/
+    /*---------- Header CSS ----------*/
+    #homepage-three header nav button {
+        bottom: 30px;
+    }
+    /*---------- Banner Section CSS ----------*/
+    #home-two-bnr {
+        padding: 170px 0 200px 0;
+    }
+    /*---------- Live Update Section CSS ----------*/
+    #ms-update-sec {
+        background-position-x: 620px;
+    }
+    #ms-update-sec .live-update {
+        margin-bottom: -50px;
+    }
+    /*---------- Symptoms Section CSS ----------*/
+    #home-two-corona-symptom .first-img {
+        position: relative;
+        bottom: 50px;
+        right: 30px;
+    }
+    #home-two-corona-symptom .ms-symptom-box.box-2, 
+    #home-two-corona-symptom .ms-symptom-box.box-3, 
+    #home-two-corona-symptom .ms-symptom-box.box-4 {
+        margin-top: 30px;
+    }
+    /*---------- Our Cliets Section CSS ----------*/
+    #home-two-clients-sec {
+        padding-left: 15px;
+        padding-right: 15px;;
+    }
+    /*---------- Virus Spread Section CSS ----------*/
+    #home-two-spread-sec {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    #home-two-spread-sec .text-one, 
+    #home-two-spread-sec .text-two, 
+    #home-two-spread-sec .text-three, 
+    #home-two-spread-sec .text-four {
+        padding-left: 0px;
+        padding-right: 0px;
+        right: 0px;
+    }
+    #home-two-spread-sec .text-two {
+        top: 25px;
+    }
+    #home-two-spread-sec .text-three, #home-two-spread-sec .text-four {
+        top: 20px;
+    }
+    /*---------- Prevention Section CSS ----------*/
+    #ms-prevention-sec .ms-blue-bg {
+        height: 1850px;
+    }
+    #ms-prevention-sec .protect-container {
+        margin-top: -1780px;
+    }
+    /*---------- Our Shop Section CSS ----------*/
+    #ms-shop-sec {
+        padding-top: 140px;
+    }
+    #ms-shop-sec .ms-shop-box .ms-hover {
+        left: 18%;
+    }
+    #ms-shop-sec .ms-shop-box:hover .ms-hover {
+        left: 18%;
+    }
+    /*---------- Team Section CSS ----------*/
+    .ms-team-box-2 {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    /*---------- Blog Section CSS ----------*/
+    #home-two-blog-sec .ms-main-box {
+        margin-bottom: 30px;
+    }
+    #home-two-blog-sec .ms-main-box .ms-blog-box .content-overlay .content-button {
+        top: 80%;
+        left: 28%;
+    }
+    #home-two-blog-sec .ms-main-box:hover .ms-blog-box .content-overlay .content-button {
+        top: 35%;
+        left: 28%;
+    }
+    /*---------- Footer CSS ----------*/
+    #footer-home-two {
+        padding: 60px 0 15px;
+    }
+    #footer-home-two .footer-main {
+        padding: 50px 25px;
+    }
+    #footer-home-two .contact-info {
+        padding: 25px 30px;
+    }
+    #footer-home-two .ms-spacer-60 {
+        height: 30px;
+    } 
+
+    /*==================== 14. Homepage Three CSS ====================*/
+    /*---------- Slider Section CSS ----------*/
+    #ms-hero-slider .carousel-caption {
+        left: 5%;
+        right: 5%;
+    }
+    #ms-hero-slider .carousel-indicators {
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        right: 0;
+        bottom: 7%;
+    }
+    #ms-hero-slider .carousel-control-prev {
+        left: 2%;
+    }
+    #ms-hero-slider .carousel-control-next {
+        right: 2%;
+    }
+    #ms-hero-slider .carousel-indicators-numbers li {
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+    }
+    #ms-hero-slider .carousel-indicators-numbers li:after {
+        bottom: -23px;
+        left: 37px;
+        transform: rotate(90deg);
+        -webkit-transform: rotate(90deg);
+    }
+    /*---------- Blue Section ----------*/
+    #home-three-blue-sec {
+        padding: 60px 0 50px 0;
+    }
+    /*---------- What is coronavirus Section ----------*/
+    #home-three-coronavirus-sec {
+        padding: 60px 0;
+    }
+    #home-three-coronavirus-sec #home-3-blue-carousel .carousel-control-next, 
+    #home-three-coronavirus-sec #home-3-blue-carousel .carousel-control-prev {
+        top: 460px;
+    }
+    #home-three-coronavirus-sec #home-3-blue-carousel .carousel-control-prev {
+        left: 296px;
+    }
+    /*---------- Our Shop Section ----------*/
+    #home-three-shop-sec .ms-shop-box .price {
+        font-size: 30px;
+    }
+    /*---------- Call To Action Section ----------*/
+    #home-three-cta-sec .ms-spacer-30 {
+        height: 0;
+    }
+    /*---------- Team Section ----------*/
+    #home-three-team-sec {
+        padding-bottom: 60px;
+    }
+    #home-three-team-sec .three-team-box img {
+        width: 100%;
+    }
+    #home-three-team-sec .three-team-box.team-1, 
+    #home-three-team-sec .three-team-box.team-2,
+    #home-three-team-sec .three-team-box.team-3,
+    #home-three-team-sec .three-team-box.team-4,
+    #home-three-team-sec .three-team-box.team-5 {
+        margin-top: 50px;
+    }
+    #home-three-team-sec .three-team-box .hover-content {
+        width: 100%;
+        padding: 40px;
+    }
+    #home-three-team-sec .three-team-box .hover-content .ms-spacer-80 {
+        height: 20px;
+    }
+    #home-three-team-sec .three-team-box .hover-content {
+        left: 0;
+        bottom: 0;
+        top: 180px;
+    }
+    /*---------- Virus Spread Section ----------*/
+    #home-three-spread-sec .spread-box {
+        margin-left: 0;
+    }
+    #home-three-spread-sec .spread-box .three-title-box {
+        left: 0;
+        width: 320px;
+    }
+    /*---------- Tracking Cases Section ----------*/
+    #home-three-tracking-sec .ms-spacer-70 {
+        height: 0;
+    }
+    #home-three-tracking-sec img {
+        width: 60%;
+    }
+    #home-three-tracking-sec .ms-cases {
+        font-size: 30px;
+    }
+    #home-three-tracking-sec h5 {
+        font-size: 16px;
+    }
+    #home-three-tracking-sec .ms-recovered {
+        top: 325px;
+        left: -250px;
+    }
+    #home-three-tracking-sec .ms-deaths {
+        top: -30px;
+        right: -260px;
+    }
+    /*---------- Blog Section ----------*/
+    #home-three-blog-sec #ms_three_blog .nav-btn.prev-slide {
+        bottom: 0px;
+        left: 0;
+    }
+    #home-three-blog-sec #ms_three_blog .nav-btn.next-slide {
+        right: 0;
+        bottom: 0;
+    }
+    /*---------- Newsletter Section ----------*/
+    #home-three-newsletter-sec form button {
+        bottom: 0;
+        right: 15px;
+        padding: 15px 20px;
+    }
+
+}
+
+@media (max-width:376px) {
+    /*==================== 02. Homepage CSS ====================*/
+    /*---------- Testimonials Section ----------*/
+    #ms-testimonial-sec .nav-btn.next-slide {
+        bottom: 490px;
+    }
+
+    /*==================== 08. Shop Page CSS ====================*/
+    .ms-shop-box .ms-hover {
+        left: 15%;       
+    }
+    .ms-shop-box:hover .ms-hover {
+        left: 15%;
+    }
+    .ms-shop-box .ms-sold-out {
+        left: 32%;
+    }
+
+    /*==================== 10. Team Page CSS ====================*/
+    #team-cta-sec .special-left-image {
+        margin-top: -167px;
+    }
+    #team-cta-sec .special-left-image {
+        padding: 90px;
+    }
+
+    /*==================== 14. Homepage Three CSS ====================*/
+    /*---------- What is coronavirus Section ----------*/
+    #home-three-coronavirus-sec #home-3-blue-carousel .carousel-control-prev {
+        left: 265px;
+    }
+    /*---------- CTA Section ----------*/
+    #home-three-cta-sec .ms-spacer-30 {
+        height:0;
+    }
+    /*---------- Team Section ----------*/
+    #home-three-team-sec .three-team-box .hover-content {
+        top: 130px;
+    }
+    /*---------- Tracking Cases Section ----------*/
+    #home-three-tracking-sec img {
+        width: 50%;
+    }
+    #home-three-tracking-sec .ms-recovered {
+        top: 275px;
+        left: -220px;
+    }
+    #home-three-tracking-sec .ms-deaths {
+        top: -20px;
+        right: -215px;
+    }
+
+}
+
+@media (max-width:360px) {
+    /*==================== 02. Homepage CSS ====================*/
+    /*---------- Testimonials Section ----------*/
+    #ms-testimonial-sec .nav-btn.next-slide {
+        right: -230px;
+    }
+    #ms-testimonial-sec span {
+        left: 180px;
+    }
+
+    /*==================== 09. Shop Detail Page CSS ====================*/
+    #ms-shop-detail-section .carousel-item .thumb {
+        margin-right: 10px;
+    }
+
+    /*==================== 13. Homepage Two CSS ====================*/
+    /*---------- Blog Section CSS ----------*/
+    #home-two-blog-sec .ms-main-box .ms-blog-box .content-overlay .content-button {
+        left: 22%;
+    }
+    #home-two-blog-sec .ms-main-box:hover .ms-blog-box .content-overlay .content-button {
+        left: 22%;
+    }
+
+    /*==================== 14. Homepage Three CSS ====================*/
+    /*---------- What is coronavirus Section ----------*/
+    #home-three-coronavirus-sec #home-3-blue-carousel .carousel-control-prev {
+        left: 250px;
+    }
+    #home-three-coronavirus-sec #home-3-blue-carousel .carousel-control-next, 
+    #home-three-coronavirus-sec #home-3-blue-carousel .carousel-control-prev {
+        top: 430px;
+    }
+
+}
+
+@media (max-width:343px) {
+    #ms-testimonial-sec .nav-btn.next-slide {
+        bottom: 515px;
+    }
+
+    /*==================== 10. Team Page CSS ====================*/
+    #team-cta-sec .special-left-image {
+        padding: 70px;
+    }
+    #team-cta-sec .special-left-image {
+        margin-top: -139px;
+    }
+
+    /*==================== 14. Homepage Three CSS ====================*/
+    /*---------- Team Section ----------*/
+    #home-three-team-sec .three-team-box .hover-content {
+        top: 80px;
+    }
+    /*---------- Virus Spread Section ----------*/
+    #home-three-spread-sec .spread-box .three-title-box {
+        width: 100%;
+    }
+    /*---------- Tracking Cases Section ----------*/
+    #home-three-tracking-sec .ms-recovered {
+        top: 265px;
+        left: -200px;
+    }
+    #home-three-tracking-sec .ms-deaths {
+        top: -20px;
+        right: -195px;
+    }
+
+}
+
+@media (max-width:330px) {
+    #ms-testimonial-sec .nav-btn.next-slide {
+        padding: 22px 30px;
+    }
+
+    /*==================== 08. Shop Page CSS ====================*/
+    .ms-shop-box .ms-hover {
+        left: 8%;       
+    }
+    .ms-shop-box:hover .ms-hover {
+        left: 8%;
+    }
+    .ms-shop-box .ms-sold-out {
+        left: 28%;
+    }
+
+    /*==================== 14. Homepage Three CSS ====================*/
+    /*---------- What is coronavirus Section ----------*/
+    #home-three-coronavirus-sec #home-3-blue-carousel .carousel-control-next, 
+    #home-three-coronavirus-sec #home-3-blue-carousel .carousel-control-prev {
+        top: 360px;
+    }
+    #home-three-coronavirus-sec #home-3-blue-carousel .carousel-control-prev {
+        left: 220px;
+    }
+    
+}
+
+@media (min-width:768px) and (max-width:1198px) {
+    #ms-clients .ms-spacer-100 {
+        height: 30px;
+    }
+    #ms-clients .square-shadow.first-logo, #ms-clients .square-shadow.second-logo, #ms-clients .square-shadow.fourth-logo, #ms-clients .square-shadow.fifth-logo {
+        bottom: 0;
+    }
+    #ms-clients .square-shadow.fourth-logo, #ms-clients .square-shadow.fifth-logo {
+        top:30px;
+    }
+}
