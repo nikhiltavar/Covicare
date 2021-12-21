@@ -128,10 +128,9 @@
                                     <img src="/static/images/news-001.jpg" class="img-fluid" alt="News Image">
                                 </div>
                                 <div class="ms-content-area bg-white">
-                                    <span class="ms-title-15 me-4"><a href="#.">APRIL 11, 2020</a></span><span class="ms-title-15"><a href="#.">HEALTH</a>, <a href="#.">COVID-19</a></span>
-                                    <h4 class="fw-bold mt-3 mb-4 ms-news-title"><a href="news_detail.html">Doctor hold the antiseptic and masks in his hand</a></h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis 
-                                        ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit</p>
+                                    <span class="ms-title-15 me-4"><a href="#.">{{ news.date }}</a></span><span class="ms-title-15"><a href="#.">HEALTH</a>, <a href="#.">COVID-19</a></span>
+                                    <h4 class="fw-bold mt-3 mb-4 ms-news-title"><a href="news_detail.html">{{ news.title }}</a></h4>
+                                    <p>{{ news.desc }}</p>
                                     <a href="news_detail.html" class="btn ms-primary-btn mt-4">Read More</a>
                                 </div>
                             </article>

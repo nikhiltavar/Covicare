@@ -1,9 +1,11 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from .models import News, Tags
 
 def news(request):
-    return render(request, 'news/news.html')
+    news = News.objects.first()
+    data = {
+        'news':news
+    }
+    return render(request, 'news/news.html', data)
 
-def index(request):
-    return render(request, 'news/navbar.html')
-# Create your views here.
+
