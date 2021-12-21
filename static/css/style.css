@@ -212,7 +212,7 @@ header nav ul li a {
     -webkit-transition:  all 0.3s linear;
     font-weight: bold;}
 header nav ul li a:hover {
-    color:#fff;
+    color:rgb(197, 195, 195);
 }
 header .icons .ms-header-icon {
     color: #091e3f;
