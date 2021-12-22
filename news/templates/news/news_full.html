@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Coroso - Health & Covid19 HTML Template | News Full With Sidebar</title>
+    <title>Covicare</title>
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/png" href="/static/images/favicon.png">
     <!-- Custom Fonts Css -->
@@ -110,7 +111,7 @@
                 <div class="row">
                     <div class="col-12 text-white">
                         <h1 class="hero-text">News.</h1>
-                        <h5 ><a href="home_one.html" class="text-white">Home</a> - News Full With Sidebar</h5>
+                        <h5 ><a href="home_one.html" class="text-white">Home</a> - News Full</h5>
                     </div>
                 </div>
             </div>
@@ -118,20 +119,23 @@
 
         <!-- Blogs Section -->
         <section class="pad-100 mx-2">
-            <h2 class="d-none">Dummy Heading, not in use</h2>
+            <h2 class="d-none">Dummy heading, not in use</h2>
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-8">
+                    <div class="col-md-12">
                         <div class="primary-content-area text-center">
                             {% for i in articles %}
                             <article>
                                 <div class="ms-image-sec">
-                                    <img src="{{ i.media }}" height="570px" width="1170px" class="img-fluid" alt="News Image">
+                                    <img src="{{ i.media }}" height="470px" width="770px" class="img-fluid" alt="News Image">
                                 </div>
                                 <div class="ms-content-area bg-white">
-                                    <span class="ms-title-15 me-4"><a href="#.">{{ i.published_date | slice:"0:10" }}</a></span><span class="ms-title-15"><a href="#.">HEALTH</a>, <a href="#.">COVID-19</a></span>
-                                    <h4 class="fw-bold mt-3 mb-4 ms-news-title"><a href="news_detail.html">{{ i.title }}</a></h4>
+                                    <span class="ms-title-15 me-4">{{ i.published_date | slice:"0:10" }}</span><span class="ms-title-15"><a href="#.">HEALTH</a>, <a href="#.">COVID-19</a></span>
+                                    <h4 class="fw-bold mt-3 mb-4 ms-news-title">{{ i.title }}</h4>
                                     <p>{{ i.summary }}</p>
+                                    {% if i.author %}
+                                    <span class="ms-title-16 me-4">Author : {{ i.author }}, {{ i.clean_url | capfirst }}</span><br>
+                                    {% endif %}
                                     <a href="{{ i.link }}" class="btn ms-primary-btn mt-4">Read More</a>
                                 </div>
                             </article>
@@ -139,98 +143,6 @@
                             <div class="ms-spacer-30"></div>
                             <a href="news_grid.html" class="btn ms-primary-btn"><i class="fas fa-redo me-2"></i> More News</a>
                         </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <aside class="secondary-content-area">
-                            <section class="widget widget-search">
-                                <h2 class="d-none">Dummy Heading, not in use</h2>
-                                <form class="position-relative">
-                                    <input class="form-control" type="search" placeholder="Type here..." aria-label="Search">
-                                    <button class="btn ms-search-btn position-absolute" type="submit">Search</button>
-                                </form>
-                            </section>
-                            <section class="widget widget-post">
-                                <h4 class="fw-bold mb-4">Recent Posts</h4>
-                                <ul class="ps-0">
-                                    <li>
-                                        <div class="row">
-                                            <div class="col-3 col-md-2 col-lg-4">
-                                                <img src="/static/images/recent-post-001.jpg" class="img-fluid" alt="Image">
-                                            </div>
-                                            <div class="col-9 col-md-10 col-lg-8 ps-0">
-                                                <h5 class="fw-bold"><a href="news_detail.html">Dangerous virus samples</a></h5>
-                                                <span class="ms-title-15 me-3"><a href="#.">APRIL 11, 2020</a></span><span class="ms-title-15"><a href="#.">COVID-19</a></span>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="row">
-                                            <div class="col-3 col-md-2 col-lg-4">
-                                                <img src="/static/images/recent-post-002.jpg" class="img-fluid" alt="Image">
-                                            </div>
-                                            <div class="col-9 col-md-10 col-lg-8 ps-0">
-                                                <h5 class="fw-bold"><a href="news_detail.html">Public transport with surgical mask</a></h5>
-                                                <span class="ms-title-15 me-3"><a href="#.">APRIL 11, 2020</a></span><span class="ms-title-15"><a href="#.">COVID-19</a></span>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="row">
-                                            <div class="col-3 col-md-2 col-lg-4">
-                                                <img src="/static/images/recent-post-003.jpg" class="img-fluid" alt="Image">
-                                            </div>
-                                            <div class="col-9 col-md-10 col-lg-8 ps-0">
-                                                <h5 class="fw-bold"><a href="news_detail.html">Coronavirus inside human viral</a></h5>
-                                                <span class="ms-title-15 me-3"><a href="#.">APRIL 11, 2020</a></span><span class="ms-title-15"><a href="#.">COVID-19</a></span>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </section>
-                            <section class="widget widget-categories">
-                                <h4 class="fw-bold mb-4">Categories</h4>
-                                <ul class="ps-0">
-                                    <li class="py-3">
-                                        <span class="fw-bold"><a href="#.">Health</a></span>
-                                        <span class="fw-bold float-end color-text">(12)</span>
-                                    </li>
-                                    <li class="py-3">
-                                        <span class="fw-bold"><a href="#.">Corona Virus</a></span>
-                                        <span class="fw-bold float-end color-text">(08)</span>
-                                    </li>
-                                    <li class="py-3">
-                                        <span class="fw-bold"><a href="#.">COVID - 19</a></span>
-                                        <span class="fw-bold float-end color-text">(23)</span>
-                                    </li>
-                                    <li class="py-3">
-                                        <span class="fw-bold"><a href="#.">Prevention</a></span>
-                                        <span class="fw-bold float-end color-text">(43)</span>
-                                    </li>
-                                    <li class="py-3">
-                                        <span class="fw-bold"><a href="#.">Virus</a></span>
-                                        <span class="fw-bold float-end color-text">(16)</span>
-                                    </li>
-                                </ul>
-                            </section>
-                            <section class="widget widget-tags">
-                                <h4 class="fw-bold mb-4">Tags</h4>
-                                <ul class="ps-0">
-                                    <li class="d-inline"><a href="#." class="btn ms-tag-btn active">Global</a></li>
-                                    <li class="d-inline"><a href="#." class="btn ms-tag-btn">COVID - 19</a></li>
-                                    <li class="d-inline"><a href="#." class="btn ms-tag-btn">Virus</a></li>
-                                    <li class="d-inline"><a href="#." class="btn ms-tag-btn">WHO</a></li>
-                                    <li class="d-inline"><a href="#." class="btn ms-tag-btn">World Health</a></li>
-                                </ul>
-                            </section>
-                            <section class="widget">
-                                <div class="ms-checkup-bg text-center">
-                                    <img src="/static/images/white-logo-fav.png" class="img-fluid" alt="Image">
-                                    <p class="fw-bold text-white my-4">LET'S HELP YOU!</p>
-                                    <h3 class="text-white mb-5">Call For Free Checkup</h3>
-                                    <a href="contact.html" class="btn ms-secondary-btn"><i class="fas fa-phone-alt me-2"></i> Call For Help</a>
-                                </div>
-                            </section>
-                        </aside>
                     </div>
                 </div>
             </div>
@@ -353,5 +265,5 @@
     <script src="/static/js/theme.js"></script>    
 </body>
 
-<!-- Mirrored from html.webqoda.com/coroso/news_full_sidebar.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 17 Dec 2021 08:30:24 GMT -->
+
 </html> 

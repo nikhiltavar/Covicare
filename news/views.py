@@ -3,11 +3,21 @@ from .models import News, Tags
 import requests
 
 def news(request):
-    news = News.objects.first()
-    data = {
-        'news':news
+    url = "https://covid-19-news.p.rapidapi.com/v1/covid"
+    querystring = {"q":"covid","lang":"en","country":"in","page_size":"15","media":"True"}
+    headers = {
+    'x-rapidapi-host': "covid-19-news.p.rapidapi.com",
+    'x-rapidapi-key': "8200d19c55msh37593ee279e19c7p122d33jsna7c4444144f1"
     }
-    return render(request, 'news/news.html', data)
+    response = requests.request("GET", url, headers=headers, params=querystring)
+    data = response.json()  
+    articles = data['articles']
+    
+    context = {
+        'articles' : articles
+    }
+
+    return render(request, 'news/news_full.html', context)
 
 def apinews(request):
     url = "https://covid-19-news.p.rapidapi.com/v1/covid"

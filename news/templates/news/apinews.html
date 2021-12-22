@@ -12,11 +12,16 @@
 
 {% for i in articles %}
 <img src="{{ i.media }}" alt="" height="400px" width="600px">
+{% if i.author %}
 <p>{{ i.author }}</p>
+{% endif %}
 <p>{{ i.title }}</p>
-<p>{{ i.published_date }}</p>
+<p>{{ i.published_date | slice:"0:10" }}</p>
+<p>{{ i.published_date | slice:"10:" }}</p>
 <p>{{ i.summary }}</p>
 <a href="{{ i.link }}" target="_blank">Click Read More</a> 
+<br>
+<br>
 <br>
 
 {% endfor %}

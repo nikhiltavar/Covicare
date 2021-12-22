@@ -79,6 +79,12 @@ p {
     color: rgba(9, 30, 63, 0.7);
     font-weight: bold;
 }
+
+.ms-title-16 {
+    font-size: 16px;
+    color: rgba(9, 30, 63, 0.7);
+    font-weight: bold;
+}
 .ms-spacer-30, 
 .ms-spacer-40, 
 .ms-spacer-60, 
