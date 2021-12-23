@@ -136,12 +136,28 @@
                                     {% if i.author %}
                                     <span class="ms-title-16 me-4">Author : {{ i.author }}, {{ i.clean_url | capfirst }}</span><br>
                                     {% endif %}
-                                    <a href="{{ i.link }}" class="btn ms-primary-btn mt-4">Read More</a>
+                                    <a href="{{ i.link }}" class="btn ms-primary-btn mt-4" target="_blank">Read More</a>
                                 </div>
                             </article>
                             {% endfor %}
                             <div class="ms-spacer-30"></div>
-                            <a href="news_grid.html" class="btn ms-primary-btn"><i class="fas fa-redo me-2"></i> More News</a>
+                            {% if articles.has_previous %}
+                            <a href="/news/?page=1" class="btn ms-primary-btn"> First</a>
+                            <a href="/news/?page={{articles.previous_page_number}}" class="btn ms-primary-btn"> <i class="fas fa-arrow-left"></i></a>
+                            {% endif %}
+                            <!-- <a href="news_grid.html" class="btn ms-primary-btn"> 1</a>
+                            <a href="news_grid.html" class="btn ms-primary-btn"> 2</a>
+                            <a href="news_grid.html" class="btn ms-primary-btn"> 3</a>
+                            <a href="news_grid.html" class="btn ms-primary-btn"> 4</a>
+                            <a href="news_grid.html" class="btn ms-primary-btn"> 5</a>
+                            <a href="news_grid.html" class="btn ms-primary-btn"> 6</a>
+                            <a href="news_grid.html" class="btn ms-primary-btn"> 7</a>
+                            <a href="news_grid.html" class="btn ms-primary-btn"> 8</a>
+                            <a href="news_grid.html" class="btn ms-primary-btn"> 9</a> -->
+                            {% if articles.has_next %}
+                            <a href="/news/?page={{articles.next_page_number}}" class="btn ms-primary-btn"> <i class="fas fa-arrow-right"></i></a>
+                            <a href="/news/?page={{lastpage}}" class="btn ms-primary-btn"> Last</a>
+                            {% endif %}
                         </div>
                     </div>
                 </div>
@@ -238,7 +254,7 @@
                 <!-- <div class="ms-spacer-90"></div> -->
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start">
-                        <span class="copyright">copyright By @coroso - 2021</span>
+                        <span class="copyright">copyright By @covicare - 2021</span>
                     </div>
                     <div class="col-md-6 text-center text-md-end">
                         <a href="#." class="me-4">Privacy Policy</a>

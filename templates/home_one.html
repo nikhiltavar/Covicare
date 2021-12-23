@@ -188,23 +188,24 @@
                             <div class="ms-spacer-70"></div>
                             <div id="counter" class="row">
                                 <div class="col-6 mb-4 mb-lg-5">
-                                    <h3 class="fw-bold mb-0 counter-value" data-count="858892">0</h3>
+                                    <h3 class="fw-bold mb-0 counter-value" data-count="{{tracker.confirmed}}">0</h3>
                                     <h5 class="fw-bold">Confirmed Cases</h5>
                                 </div>
                                 <div class="col-6 mb-4 mb-lg-5">
-                                    <h3 class="fw-bold mb-0 counter-value" data-count="42367">0</h3>
+                                    <h3 class="fw-bold mb-0 counter-value" data-count="{{tracker.deaths}}">0</h3>
                                     <h5 class="fw-bold">Confirmed Deaths</h5>
                                 </div>
                                 <div class="col-6 mb-4 mb-lg-5">
-                                    <h3 class="fw-bold mb-0 counter-value" data-count="181010">0</h3>
+                                    <h3 class="fw-bold mb-0 counter-value" data-count="{{tracker.recovered}}">0</h3>
                                     <h5 class="fw-bold">Total Recovered</h5>
                                 </div>
                                 <div class="col-6 mb-4 mb-lg-5">
-                                    <h3 class="fw-bold mb-0 counter-value" data-count="204">0</h3>
-                                    <h5 class="fw-bold">Affected Countries</h5>
+                                    <h3 class="fw-bold mb-0 counter-value" data-count="{{tracker.critical}}">0</h3>
+                                    <h5 class="fw-bold">Critical</h5>
                                 </div>
                             </div>
-                            <span><i>* Last updated: December 02, 2021, 05:04 GMT</i></span>
+                            <span><i>* Last updated: {{ tracker.lastUpdate | slice:"0:10" }}
+                                    {{ tracker.lastUpdate | slice:"11:16" }} UTC</i></span>
                         </div>
                     </div>
                     <div class="col-md-6 px-0 px-lg-1">
