@@ -25,5 +25,6 @@ urlpatterns = [
     path('navbar/', views.navabr),
     path('footer/', views.footer),
     path('',include('news.urls')),
+    path('',include('blog.urls')),
     path('index', views.newindex),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT )

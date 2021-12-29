@@ -23,7 +23,7 @@ def news(request):
         'totalpagelist' : [n+1 for n in range(totalpages)]
     }
 
-    return render(request, 'news/news_full.html', context)
+    return render(request, 'news/news.html', context)
 
 
 

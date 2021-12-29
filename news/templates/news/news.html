@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+{% load static %}
+
+    {% block body %}
+
+        {% block wrapper %}
+
+             <!-- Body Wrapper -->
+            <div class="overflow-hidden grey-body-bg">
+
+        {% endblock %}
+        
+        {% block header %}
+        
+        <!-- Header Section -->
+        {% include 'includes/header.html' %}
+
+        {% endblock %}
+
+        <!-- Banner Section -->
+        <section class="inner-bnr extra-space">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-white">
+                        <h1 class="hero-text">News.</h1>
+                        <h5 ><a href="home_one.html" class="text-white">Home</a> - News Full</h5>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blogs Section -->
+        <section class="pad-100 mx-2">
+            <h2 class="d-none">Dummy heading, not in use</h2>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="primary-content-area text-center">
+                            {% for i in articles %}
+                            <article>
+                                <div class="ms-image-sec">
+                                    <img src="{{ i.media }}" height="470px" width="770px" class="img-fluid" alt="News Image">
+                                </div>
+                                <div class="ms-content-area bg-white">
+                                    <span class="ms-title-15 me-4">{{ i.published_date | slice:"0:10" }}</span><span class="ms-title-15"><a href="#.">HEALTH</a>, <a href="#.">COVID-19</a></span>
+                                    <h4 class="fw-bold mt-3 mb-4 ms-news-title">{{ i.title }}</h4>
+                                    <p>{{ i.summary }}</p>
+                                    {% if i.author %}
+                                    <span class="ms-title-16 me-4">Author : {{ i.author }}, {{ i.clean_url | capfirst }}</span><br>
+                                    {% endif %}
+                                    <a href="{{ i.link }}" class="btn ms-primary-btn mt-4" target="_blank">Read More</a>
+                                </div>
+                            </article>
+                            {% endfor %}
+                            <div class="ms-spacer-30"></div>
+                            {% if articles.has_previous %}
+                            <a href="/news/?page=1" class="btn ms-primary-btn"> First</a>
+                            <a href="/news/?page={{articles.previous_page_number}}" class="btn ms-primary-btn"> <i class="fas fa-arrow-left"></i></a>
+                            {% endif %}
+                            
+                            <a href="/news/?page={{articles.number}}" class="btn ms-primary-btn"> {{articles.number}}</a>
+                            
+                            <!-- <a href="news_grid.html" class="btn ms-primary-btn"> 4</a>
+                            <a href="news_grid.html" class="btn ms-primary-btn"> 5</a>
+                            <a href="news_grid.html" class="btn ms-primary-btn"> 6</a>
+                            <a href="news_grid.html" class="btn ms-primary-btn"> 7</a>
+                            <a href="news_grid.html" class="btn ms-primary-btn"> 8</a>
+                            <a href="news_grid.html" class="btn ms-primary-btn"> 9</a> -->
+                            {% if articles.has_next %}
+                            <a href="/news/?page={{articles.next_page_number}}" class="btn ms-primary-btn"> <i class="fas fa-arrow-right"></i></a>
+                            <a href="/news/?page={{lastpage}}" class="btn ms-primary-btn"> Last</a>
+                            {% endif %}
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Emergency Contact Section -->
+        <section id="ms-emergency-sec" class="bg-white pad-100">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <div class="bg-img text-white">
+                            <h2 class="fw-bold mb-3">Emergency Contact.</h2>
+                            <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h5>
+                            <div class="ms-spacer-30"></div>
+                            <a href="contact.html" class="btn ms-secondary-btn me-md-2 mb-3 mb-md-auto"><i class="fas fa-phone-alt me-2"></i> Call For Help</a>
+                            <a href="team.html" class="btn ms-secondary-btn mb-3 mb-md-auto"><i class="fas fa-user me-2"></i> Meet Doctor</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    {% endblock %}  
+        
+   
+
+  
+
+

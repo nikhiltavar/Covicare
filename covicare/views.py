@@ -21,7 +21,7 @@ def index(request):
     }
 
     
-    return render(request, 'home_one.html', context)
+    return render(request, 'home.html', context)
 def navabr(request):
     return render(request, 'header.html')
 def footer(request):
