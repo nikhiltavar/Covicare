@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import News, Tags
+
 import requests
 from django.core.paginator import Paginator
 

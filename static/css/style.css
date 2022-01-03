@@ -2592,3 +2592,128 @@ footer#footer-home-two p a:hover {
 
 } */
 
+/* 12. breadcrumb */
+.breadcrumb-area {
+    background-size: cover;
+    background-position: center center;
+  }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .breadcrumb-area {
+      padding-top: 100px;
+      padding-bottom: 100px;
+    }
+  }
+  @media (max-width: 767px) {
+    .breadcrumb-area {
+      padding-top: 80px;
+      padding-bottom: 80px;
+    }
+  }
+  
+  .breadcrumb-wrapper {
+    background: #ffffff;
+    display: inline-block;
+    padding: 27px 115px 21px 72px;
+    position: relative;
+  }
+  @media (max-width: 767px) {
+    .breadcrumb-wrapper {
+      padding: 65px 15px 60px;
+    }
+  }
+  .breadcrumb-wrapper::before {
+    position: absolute;
+    content: "";
+    background: #4e97fd;
+    height: 100%;
+    width: 6px;
+    left: 0;
+    top: 0;
+  }
+  
+  .breadcrumb-text h2 {
+    font-size: 75px;
+    font-weight: 500;
+    text-transform: capitalize;
+  }
+  @media only screen and (min-width: 992px) and (max-width: 1200px) {
+    .breadcrumb-text h2 {
+      font-size: 65px;
+    }
+  }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .breadcrumb-text h2 {
+      font-size: 45px;
+    }
+  }
+  @media (max-width: 767px) {
+    .breadcrumb-text h2 {
+      font-size: 35px;
+    }
+  }
+  
+  .breadcrumb-menu li {
+    display: inline-block;
+    position: relative;
+    padding-right: 0    px;
+  }
+  @media (max-width: 767px) {
+    .breadcrumb-menu li {
+      padding-right: 20px;
+    }
+  }
+  .breadcrumb-menu li::before {
+    content: "";
+    display: inline-block;
+    padding-bottom: 0;
+    position: absolute;
+    top: 4px;
+    left: -26px;
+    font-family: "Font Awesome 5 Pro";
+    color: #666666;
+    font-size: 18px;
+  }
+  @media (max-width: 767px) {
+    .breadcrumb-menu li::before {
+      left: -15px;
+      top: 2px;
+    }
+  }
+  .breadcrumb-menu li:first-child::before {
+    display: none;
+  }
+  .breadcrumb-menu li a {
+    color: #e4573d;
+    font-size: 24px;
+    text-transform: capitalize;
+    transition: all 0.3s ease 0s;
+    font-weight: 500;
+    padding-right: 10px;
+  }
+  @media (max-width: 767px) {
+    .breadcrumb-menu li a {
+      font-size: 20px;
+    }
+  }
+  .breadcrumb-menu li span {
+    color: #666666;
+    font-size: 24px;
+    text-transform: capitalize;
+    font-weight: 500;
+    padding-right: 89px;
+    padding-left: 4px;
+}
+  
+  @media (max-width: 767px) {
+    .breadcrumb-menu li span {
+      font-size: 20px;
+    }
+  }
+
+  .pb-125 {
+    padding-bottom: 100px;
+  }
+
+  .pt-125 {
+    padding-top: 100px;
+  }

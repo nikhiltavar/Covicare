@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+{% load static %}
+
+    {% block body %}
+
+        {% block wrapper %}
+
+             <!-- Body Wrapper -->
+            <div class="overflow-hidden">
+
+        {% endblock %}
+        
+        {% block header %}
+        
+        <!-- Header Section -->
+        {% include 'includes/header.html' %}
+
+        {% endblock %}
+        {% if messages %}
+                    <ul class="messages">
+                        {% for message in messages %}
+                        <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                        {% endfor %}
+                    </ul>
+        {% endif %}
+
+        <!-- Banner Section
+        <section class="inner-bnr extra-space">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-white">
+                        <h1 class="hero-text">News.</h1>
+                        <h5 ><a href="home_one.html" class="text-white">Home</a> - News Full</h5>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+        <!-- Contact Form Area -->
+        <section id="ms-form-sec">
+            <div class="contact-bnr pad-100">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h1 class="hero-text">Login Here</h1>
+                            
+                            <div class="ms-spacer-40"></div>
+                            <form method="POST" action="">
+                                {% csrf_token %}
+                                <div class="row">
+                                    <div class="form-group col-12 position-relative">
+                                        <input type="text" required="" name=username>
+                                        <span class="highlight"></span>
+                                        <span class="bar"></span>
+                                        <label>Username</label>
+                                    </div>
+                                    
+                                    <div class="form-group col-12 mt-3 mb-2 position-relative">
+                                        <input type="password" required="" name=password>
+                                        <span class="highlight"></span>
+                                        <span class="bar"></span>
+                                        <label>Password</label>
+                                    </div>
+                                    
+                                    <div class="mt-3 form-group col-md-12 position-relative">
+                                        <button type="submit" class="btn ms-primary-btn">SUBMIT</button>
+                                    </div>
+
+                                    <div class="mt-3 fs-4">
+                                        <small> Haven't Signed Up Yet?</small> </br>
+                                        <a class="fw-bold" style="color: #3625d3" href="/">Sign Up</a>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+        </section>
+
+        <!-- Emergency Contact Section -->
+        <section id="ms-emergency-sec" class="bg-white pad-100">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <div class="bg-img text-white">
+                            <h2 class="fw-bold mb-3">Emergency Contact.</h2>
+                            <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h5>
+                            <div class="ms-spacer-30"></div>
+                            <a href="contact.html" class="btn ms-secondary-btn me-md-2 mb-3 mb-md-auto"><i class="fas fa-phone-alt me-2"></i> Call For Help</a>
+                            <a href="team.html" class="btn ms-secondary-btn mb-3 mb-md-auto"><i class="fas fa-user me-2"></i> Meet Doctor</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    {% endblock %}  
+        
+   
+
+  
+
+

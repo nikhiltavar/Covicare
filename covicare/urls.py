@@ -19,12 +19,16 @@ from . import views
 from django.conf.urls.static import static
 from django.conf import settings
 
+
 urlpatterns = [
+    
     path('admin/', admin.site.urls),
+    path('tinymce/', include('tinymce.urls')),
     path('', views.index , name = 'home'),
     path('navbar/', views.navabr),
     path('footer/', views.footer),
     path('',include('news.urls')),
     path('',include('blog.urls')),
-    path('index', views.newindex),
+    path('login/', views.loginUser, name = 'login'),
+    path('logout/', views.logoutUser, name = 'logout'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT )
