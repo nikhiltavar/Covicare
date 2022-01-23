@@ -55,7 +55,7 @@
                 <div class="row">
                     <div class="col-lg-8">
                         <div class="primary-content-area text-center">
-                            {% for item in post %}
+                            {% for item in queryset %}
                             <article>
                                 <div class="ms-image-sec">
                                     <img src="{{ item.img.url }}" class="img-fluid" alt="News Image">
@@ -76,7 +76,7 @@
 
                             <!-- Pagination  -->
 
-                            {% if post.has_previous %}
+                            <!-- {% if post.has_previous %}
                             <a href="/blog/?page=1" class="btn ms-primary-btn"> First</a>
                             <a href="/blog/?page={{post.previous_page_number}}" class="btn ms-primary-btn"> <i class="fas fa-arrow-left"></i></a>
                             {% endif %}
@@ -86,7 +86,7 @@
                             {% if post.has_next %}
                             <a href="/blog/?page={{post.next_page_number}}" class="btn ms-primary-btn"> <i class="fas fa-arrow-right"></i></a>
                             <a href="/blog/?page={{lastpage}}" class="btn ms-primary-btn"> Last</a>
-                            {% endif %}
+                            {% endif %} -->
 
                         </div>
                     </div>

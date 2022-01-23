@@ -1,6 +1,9 @@
 from django.db import models
 from tinymce.models import HTMLField
 from django.contrib.auth import get_user_model
+from django.urls import reverse
+from autoslug import AutoSlugField
+
 
 User = get_user_model()
 
@@ -11,13 +14,13 @@ class Author(models.Model):
     def __str__(self):
         return self.user.username
 
-class Categary(models.Model):
+class Category(models.Model):
     name = models.CharField(max_length=20)
     
     def __str__(self):
         return self.name
     class Meta:
-        verbose_name_plural='Categary'
+        verbose_name_plural='Category'
 
 class Blog(models.Model):
     title = models.CharField(max_length=200)
@@ -25,12 +28,14 @@ class Blog(models.Model):
     created_date = models.DateTimeField(auto_now_add=True)
     updated_date = models.DateTimeField(auto_now=True)
     img = models.ImageField(upload_to='Blog_imgs')
-    categaries = models.ManyToManyField(Categary)
+    categories = models.ManyToManyField(Category)
     author = models.ForeignKey(Author, on_delete=models.CASCADE)
     featured = models.BooleanField()
+    slug = AutoSlugField(populate_from= 'title',   unique=True, null=True, default=None)
     
     def __str__(self):
         return self.title
     class Meta:
         verbose_name_plural='Blog'
- 
+
+  

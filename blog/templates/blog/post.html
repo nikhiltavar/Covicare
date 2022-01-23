@@ -1,0 +1,145 @@
+{% extends 'base.html' %}
+{% load static %}
+
+    {% block body %}
+
+        {% block wrapper %}
+
+             <!-- Body Wrapper -->
+            <div class="overflow-hidden grey-body-bg">
+
+        {% endblock %}
+        
+        {% block header %}
+        
+        <!-- Header Section -->
+        {% include 'includes/header.html' %}
+
+        {% endblock %}
+
+         <!-- breadcrumb-area-start -->
+         <div class="breadcrumb-area pt-125 pb-125" style="background-image:url(/static/images/doctor-reading-coronavirus-patient-medical-chart.jpg)">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="breadcrumb-wrapper">
+                            <div class="breadcrumb-text">
+                                <h2>BLOG</h2>
+                            </div>
+                            <ul class="breadcrumb-menu">
+                                <li><a href="index.html">home</a><i class="fas fa-arrow-right"></i></li>
+                                <li><span>BLOG</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    
+
+        <!-- Blogs Section -->
+        <section class="pad-100 mx-2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="primary-content-area text-center">
+                            <article class="no-hover-shadow ms-news-detail-page">
+                                <div class="ms-image-sec">
+                                    <img src="/static/images/news_detail_main_img.jpg" class="img-fluid" alt="News Main Image">
+                                </div>
+                                <div class="ms-content-area bg-white">
+                                    <span class="ms-title-15 me-4"><a href="#.">APRIL 11, 2020</a></span><span class="ms-title-15"><a href="#.">HEALTH</a>, <a href="#.">COVID-19</a></span>
+                                    <h4 class="fw-bold mt-3 ms-news-title">Doctor hold the antiseptic and masks in his hand</h4>
+                                    <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum 
+                                        suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ...</p>
+                                    <div class="row">
+                                        <div class="col-md-7">
+                                            <h5 class="fw-bold">Doctor hold the antiseptic and masks in his hand</h5>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum 
+                                                suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing 
+                                                elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ...</p>
+                                        </div>
+                                        <div class="col-md-5">
+                                            <img src="/static/images/news_detail_second_img.jpg" class="img-fluid" alt="Image">
+                                        </div>
+                                    </div>
+                                    <div class="grey-body-bg my-5 text-center">
+                                        <img src="/static/images/news_detail_quote.png" class="img-fluid" alt="Quote Icon Image">
+                                        <h4 class="mt-3">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum 
+                                            suspendisse ultrices gravida.” </h4>
+                                    </div>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse 
+                                        ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+                                </div>
+                            </article>
+                            <div class="row align-items-center">
+                                <div class="col-md-4 text-center text-md-start">
+                                    <a href="news_grid.html" class="btn ms-primary-btn">All News</a>
+                                </div>
+                                <div class="col-md-8 text-center text-md-end mt-4 mt-md-0">
+                                    <p class="fw-bold mb-0 d-inline me-4">Share the News:</p>
+                                    <a href="#." class="news-share-icon"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#." class="news-share-icon"><i class="fab fa-twitter"></i></a>
+                                    <a href="#." class="news-share-icon"><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                            <div class="ms-spacer-80"></div>
+                            
+                        </div>  
+                    </div>
+                    {% include "blog/sidebar.html" %}
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="ms-related-posts">
+                            <h2 class="fw-bold mb-4">More interesting news</h2>
+                            <article class="bg-white">
+                                <div class="row">
+                                    <div class="col-md-5 pe-md-0">
+                                        <div class="ms-image-sec">
+                                            <img src="/static/images/news_detail_001.jpg" class="img-fluid" alt="News Image">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-7 ps-md-0">
+                                        <div class="ms-content-area bg-white">
+                                            <span class="ms-title-15 me-4"><a href="#.">APRIL 11, 2020</a></span><span class="ms-title-15"><a href="#.">HEALTH</a>, <a href="#.">COVID-19</a></span>
+                                            <h4 class="fw-bold mt-3 ms-news-title"><a href="news_detail.html">Coronavirus pandemic. a disinfectant in a protective suit and mask sprays</a></h4>
+                                            <div class="ms-spacer-40"></div>
+                                            <a href="news_detail.html" class="btn ms-primary-btn mt-4">Read More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
+                         <div class="ms-spacer-30"></div>
+
+                  
+
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <!-- Emergency Contact Section -->
+        <section id="ms-emergency-sec" class="bg-white pad-100">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <div class="bg-img text-white">
+                            <h2 class="fw-bold mb-3">Emergency Contact.</h2>
+                            <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h5>
+                            <div class="ms-spacer-30"></div>
+                            <a href="contact.html" class="btn ms-secondary-btn me-md-2 mb-3 mb-md-auto"><i class="fas fa-phone-alt me-2"></i> Call For Help</a>
+                            <a href="team.html" class="btn ms-secondary-btn mb-3 mb-md-auto"><i class="fas fa-user me-2"></i> Meet Doctor</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+       
+        
+       
+
+    {% endblock %}  

@@ -1,0 +1,58 @@
+<div class="col-lg-4">
+    <aside class="secondary-content-area">
+        <section class="widget widget-search">
+            <h2 class="d-none">Dummy Heading, not in use</h2>
+            <form class="position-relative" action="{% url 'search' %}">
+                <input class="form-control" type="text" name="q" placeholder="Type here..." aria-label="Search" >
+                <button class="btn ms-search-btn position-absolute" type="submit">Search</button>
+            </form>
+        </section>
+        <section class="widget widget-post">
+            <h4 class="fw-bold mb-4">Recent Posts</h4>
+            <ul class="ps-0">
+                {% for item in latest %}    
+                <li>
+                    <div class="row">
+                        <div class="col-3 col-md-2 col-lg-4">
+                            <img src="{{ item.img.url }}" class="img-fluid" alt="Image">
+                        </div>
+                        <div class="col-9 col-md-10 col-lg-8 ps-0">
+                            <h5 class="fw-bold"><a href="news_detail.html">{{ item.title | truncatewords:6 }}</a></h5>
+                            <span class="ms-title-15 me-3"><a href="#.">{{ item.created_date | timesince }} ago</a></span><span class="ms-title-15"><a href="#.">COVID-19</a></span>
+                        </div>
+                    </div>
+                </li>
+                {% endfor %}
+            </ul>
+        </section>
+        <section class="widget widget-categories">
+            <h4 class="fw-bold mb-4">Categories</h4>
+            <ul class="ps-0">
+                {% for cat in category_count %}
+                <li class="py-3">
+                    <span class="fw-bold"><a href="#.">{{ cat.categories__name }}</a></span>
+                    <span class="fw-bold float-end color-text">{{ cat.categories__name__count }}</span>
+                </li>
+                {% endfor %}
+            </ul>
+        </section>
+        <!-- <section class="widget widget-tags">
+            <h4 class="fw-bold mb-4">Tags</h4>
+            <ul class="ps-0">
+                <li class="d-inline"><a href="#." class="btn ms-tag-btn active">Global</a></li>
+                <li class="d-inline"><a href="#." class="btn ms-tag-btn">COVID - 19</a></li>
+                <li class="d-inline"><a href="#." class="btn ms-tag-btn">Virus</a></li>
+                <li class="d-inline"><a href="#." class="btn ms-tag-btn">WHO</a></li>
+                <li class="d-inline"><a href="#." class="btn ms-tag-btn">World Health</a></li>
+            </ul>
+        </section> -->
+        <section class="widget">
+            <div class="ms-checkup-bg text-center">
+                <img src="/static/images/Health Care Logo.svg" class="img-fluid" alt="Image">
+                <p class="fw-bold text-white my-4">LET'S HELP YOU!</p>
+                <h3 class="text-white mb-5">Call For Free Checkup</h3>
+                <a href="contact.html" class="btn ms-secondary-btn"><i class="fas fa-phone-alt me-2"></i> Call For Help</a>
+            </div>
+        </section>
+    </aside>
+</div>
