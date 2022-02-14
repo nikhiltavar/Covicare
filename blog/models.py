@@ -29,7 +29,7 @@ class Blog(models.Model):
     updated_date = models.DateTimeField(auto_now=True)
     img = models.ImageField(upload_to='Blog_imgs')
     categories = models.ManyToManyField(Category)
-    author = models.ForeignKey(Author, on_delete=models.CASCADE)
+    author = models.ForeignKey(Author, on_delete=models.CASCADE , default='admin')
     featured = models.BooleanField()
     slug = AutoSlugField(populate_from= 'title',   unique=True, null=True, default=None)
     

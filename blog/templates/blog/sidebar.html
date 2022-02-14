@@ -17,8 +17,9 @@
                             <img src="{{ item.img.url }}" class="img-fluid" alt="Image">
                         </div>
                         <div class="col-9 col-md-10 col-lg-8 ps-0">
-                            <h5 class="fw-bold"><a href="news_detail.html">{{ item.title | truncatewords:6 }}</a></h5>
-                            <span class="ms-title-15 me-3"><a href="#.">{{ item.created_date | timesince }} ago</a></span><span class="ms-title-15"><a href="#.">COVID-19</a></span>
+                            <h5 class="fw-bold"><a href="/blog/post/{{ item.slug }}">{{ item.title | truncatewords:6 }}</a></h5>
+                            <span class="ms-title-15 me-3"><a href="#.">{{ item.created_date | timesince }} ago</a></span>
+                            <span class="ms-title-15"><a href="#.">COVID-19</a></span>
                         </div>
                     </div>
                 </li>

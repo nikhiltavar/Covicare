@@ -2,7 +2,31 @@ from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 from django.shortcuts import render, redirect
 from django.contrib import messages
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.decorators import login_required
 import requests
+from .forms import SignUpForm
+
+
+
+def signupUser(request):
+    if request.user.is_authenticated:
+        return redirect('home')
+    else:
+        form = SignUpForm()
+        if request.method == 'POST':
+            form = SignUpForm(request.POST)
+            if form.is_valid():
+                form.save()
+                return redirect('login')
+
+
+    context = {"form": form}
+    return render(request, 'signup.html', context)
+
+def userProfile(request):
+    pass
+
 
 def loginUser(request):
     context = {}
@@ -26,9 +50,11 @@ def loginUser(request):
 
     return render(request, 'login-page.html', context)
 
+@login_required (login_url='login')
 def logoutUser(request):
     logout(request)
-    return redirect('home')
+    return redirect('login')
+    
 
 
 def index(request):

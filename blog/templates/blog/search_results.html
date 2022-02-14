@@ -65,7 +65,7 @@
                                     {% for cat in item.categories.all %}
                                     <span class="ms-title-15"> <a href="#.">{{ cat.name }}</a>,</span>
                                     {% endfor %}
-                                    <h4 class="fw-bold mt-3 mb-4 ms-news-title"><a href="post/{{ item.slug }}">{{ item.title }}</a></h4>
+                                    <h4 class="fw-bold mt-3 mb-4 ms-news-title"><a href="/blog/post/{{ item.slug }}">{{ item.title }}</a></h4>
                                     <p>{{ item.desc | striptags | truncatewords:50 }}</p>
                                     <a href="/blog" class="btn ms-primary-btn mt-4">Read More</a>
                                 </div>

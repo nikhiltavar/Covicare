@@ -25,10 +25,12 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('tinymce/', include('tinymce.urls')),
     path('', views.index , name = 'home'),
-    path('navbar/', views.navabr),
+    # path('navbar/', views.navabr),
     path('footer/', views.footer),
     path('',include('news.urls')),
     path('',include('blog.urls')),
     path('login/', views.loginUser, name = 'login'),
     path('logout/', views.logoutUser, name = 'logout'),
+    path('signup/', views.signupUser, name = 'signup'),
+    path('profile/', views.userProfile, name = 'profile'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT )

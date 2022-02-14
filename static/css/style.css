@@ -493,7 +493,7 @@ footer ul li a:hover:before {
     top: 0;
 }
 footer ul li:nth-child(1) a:before{
-    background: #3b5999;
+    background: #333;
 }
 footer ul li:nth-child(2) a:before{
     background: #55acee;
@@ -1035,7 +1035,7 @@ footer .ms-primary-btn {
 
 /*==================== 06. Contact Page CSS ====================*/
 #ms-form-sec .contact-bnr {
-    background: url('../images/contact-girl-image.png') no-repeat center right;
+    background: url('../images/Security\ On-pana\ resized 2.png') no-repeat center right;
     background-position-x: 97%;
 }
 #ms-form-sec {
@@ -2717,3 +2717,5 @@ footer#footer-home-two p a:hover {
   .pt-125 {
     padding-top: 100px;
   }
+
+  

@@ -17,6 +17,68 @@
 
         {% endblock %}
 
+        <style>
+
+           
+            button {
+                border: none;
+                display: inline-block;
+                position: relative;
+                padding: 0.4em 1em;
+                font-size: 19px;
+                background: transparent;
+                cursor: pointer;
+                user-select: none;
+                overflow: hidden;
+                color: #091e3f;
+                z-index: 1;
+                font-family: inherit;
+                font-weight: 500;
+            }
+            
+            button span {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background: transparent;
+                z-index: -1;
+                border: 4px solid #091e3f;
+            }
+            
+            button span::before {
+                content: "";
+                display: inline-block;
+                position: absolute;
+                width: 8%;
+                height: 500%;
+                background: var(--lightgray);
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) rotate(-60deg);
+                transition: all 0.3s;
+            }
+            
+            button:hover span::before {
+                transform: translate(-50%, -50%) rotate(-90deg);
+                width: 100%;
+                background: #091e3f;
+            }
+            
+            button:hover {
+                color: white;
+            }
+            
+            button:active span::before {
+                background: #091e3f;
+            }
+
+           
+    
+
+        </style>
+
          <!-- breadcrumb-area-start -->
          <div class="breadcrumb-area pt-125 pb-125" style="background-image:url(/static/images/doctor-reading-coronavirus-patient-medical-chart.jpg)">
             <div class="container">
@@ -27,7 +89,7 @@
                                 <h2>BLOG</h2>
                             </div>
                             <ul class="breadcrumb-menu">
-                                <li><a href="index.html">home</a><i class="fas fa-arrow-right"></i></li>
+                                <li><a href="{% url 'home' %}">home</a><i class="fas fa-arrow-right"></i></li>
                                 <li><span>BLOG</span></li>
                             </ul>
                         </div>
@@ -46,43 +108,33 @@
                         <div class="primary-content-area text-center">
                             <article class="no-hover-shadow ms-news-detail-page">
                                 <div class="ms-image-sec">
-                                    <img src="/static/images/news_detail_main_img.jpg" class="img-fluid" alt="News Main Image">
+                                    <img src="{{ post.img.url }}" class="img-fluid" alt="News Main Image">
                                 </div>
                                 <div class="ms-content-area bg-white">
-                                    <span class="ms-title-15 me-4"><a href="#.">APRIL 11, 2020</a></span><span class="ms-title-15"><a href="#.">HEALTH</a>, <a href="#.">COVID-19</a></span>
-                                    <h4 class="fw-bold mt-3 ms-news-title">Doctor hold the antiseptic and masks in his hand</h4>
-                                    <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum 
-                                        suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ...</p>
-                                    <div class="row">
-                                        <div class="col-md-7">
-                                            <h5 class="fw-bold">Doctor hold the antiseptic and masks in his hand</h5>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum 
-                                                suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing 
-                                                elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ...</p>
-                                        </div>
-                                        <div class="col-md-5">
-                                            <img src="/static/images/news_detail_second_img.jpg" class="img-fluid" alt="Image">
-                                        </div>
-                                    </div>
-                                    <div class="grey-body-bg my-5 text-center">
-                                        <img src="/static/images/news_detail_quote.png" class="img-fluid" alt="Quote Icon Image">
-                                        <h4 class="mt-3">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum 
-                                            suspendisse ultrices gravida.” </h4>
-                                    </div>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse 
-                                        ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+                                    <span class="ms-title-15 me-4"><a href="#.">APRIL 11, 2020</a></span>
+                                        {% for cat in post.categories.all %}
+                                        <span class="ms-title-15"> <a href="#.">{{ cat }}</a></span>
+                                        {% endfor %}
+                                        <!-- <span class="ms-title-15"> <a href="{% url 'updatepost' slug=post.slug %}">Update</a></span> -->
+                                        <!-- <span class="ms-title-15"> <a href="{% url 'deletepost' slug=post.slug %}">Delete</a></span> -->
+                                        <!-- <a class="bn39" href="{% url 'deletepost' slug=post.slug %}"><span class="bn39span">Delete</span></a> -->
+                                    <h4 class="fw-bold mt-3 ms-news-title">{{ post.title }}</h4>
+                                    <p class="mb-5">{{ post.desc | safe }}</p>
+                                  
                                 </div>
                             </article>
                             <div class="row align-items-center">
-                                <div class="col-md-4 text-center text-md-start">
-                                    <a href="news_grid.html" class="btn ms-primary-btn">All News</a>
+                                <div class="col-md-6 text-center text-md-start">
+                                    <!-- <a href="{% url 'blog' %}" class="btn ms-primary-btn">All News</a> -->
+                                    
+                                    <a href="{% url 'blog' %}"><button>All News<span></span></button></a>
+                                    <a href="{% url 'deletepost' slug=post.slug %}"><button>Delete<span></span></button></a>
                                 </div>
-                                <div class="col-md-8 text-center text-md-end mt-4 mt-md-0">
+                                <div class="col-md-6 text-center text-md-end mt-4 mt-md-0">
                                     <p class="fw-bold mb-0 d-inline me-4">Share the News:</p>
-                                    <a href="#." class="news-share-icon"><i class="fab fa-facebook-f"></i></a>
-                                    <a href="#." class="news-share-icon"><i class="fab fa-twitter"></i></a>
-                                    <a href="#." class="news-share-icon"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="https://www.facebook.com/sharer.php?u=http://127.0.0.1:8000/blog/post/{{ post.slug }}" target="_blank"  class="news-share-icon"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="https://twitter.com/share?url=http://127.0.0.1:8000/blog/post/{{ post.slug }}&text={{ post.title }}" target="_blank" class="news-share-icon"><i class="fab fa-twitter"></i></a>
+                                    <a href="https://www.linkedin.com/shareArticle?url=http://127.0.0.1:8000/blog/post/{{ post.slug }}&title={{ post.title }}" target="_blank" class="news-share-icon"><i class="fab fa-linkedin-in"></i></a>
                                 </div>
                             </div>
                             <div class="ms-spacer-80"></div>
