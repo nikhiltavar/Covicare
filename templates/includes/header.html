@@ -35,7 +35,7 @@
                         <li class="nav-item"><a href="/">RESOURCES</a></li>
                         <li class="nav-item"><a href="{% url 'news' %}">NEWS</a></li>
                         <li class="nav-item"><a href="{% url 'blog' %}">BLOG</a></li>
-                        <li class="nav-item"><a href="/admin">ABOUT</a></li>
+                        <li class="nav-item"><a href="{% url 'shop' %}">ABOUT</a></li>
                         {% if request.user.is_authenticated %}
                         <li class="nav-item"><a href="{% url 'logout' %}">LOGOUT</a></li>
                         {% else %}
@@ -81,7 +81,7 @@
           </div>
           <div class="col-md-0 col-lg-2 d-flex align-items-center justify-content-end">
               <div class="icons d-none d-lg-block">
-                  <a href="#."><i class="fas fa-user ms-header-icon"></i></a>
+                  <a href="#."><i class="fas fa-user-circle ms-header-icon"></i></a>
                   <a href="cart.html"><i class="fas fa-shopping-cart ms-header-icon"></i></a>
               </div>
           </div>

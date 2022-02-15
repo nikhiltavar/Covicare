@@ -1,0 +1,86 @@
+/* large desktop :1700px. */
+@media (min-width: 1500px) and (max-width: 1800px) {
+
+
+
+}
+
+/* large desktop :1700px. */
+@media (min-width: 1500px) and (max-width: 1600px) {
+    .header-right-wrapper {
+        margin-right: 50px; 
+    }
+}
+
+
+/* Normal desktop :1200px. */
+@media (min-width: 1200px) and (max-width: 1500px) {
+   
+    
+
+
+
+}
+
+
+/* Normal desktop :1200px +. */
+@media (min-width: 1200px) and (max-width: 1260px) {
+    
+    
+}
+
+/* Normal desktop :992px. */
+@media (min-width: 992px) and (max-width: 1200px) {
+    
+    /* .section-title h2 {
+        font-size: 45px;
+        margin-bottom: 0;
+    } 
+    .services-text h4 {
+        font-size: 18px;
+    }
+    .service-box {
+        padding: 43px 15px 38px;
+    }
+    .team-text h3 {
+        font-size: 20px;
+    }
+    .team-text {
+        margin-right: 40px;
+    }
+    .footer-cta-text h3 {
+        font-size: 24px;
+    } */
+
+
+
+
+}
+
+ 
+/* Tablet desktop :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
+    
+}
+
+ 
+/* small mobile :320px. */
+@media (max-width: 767px) {
+    
+
+
+
+
+
+}
+ 
+/* Large Mobile :480px. */
+@media only screen and (min-width: 550px) and (max-width: 767px) {
+.slider-button a.white-btn {
+	margin-left: 0;
+	margin-top: 15px;
+}
+
+
+ 
+}
