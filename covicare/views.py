@@ -59,20 +59,22 @@ def logoutUser(request):
 
 def index(request):
 
-    url = "https://covid-19-data.p.rapidapi.com/country/code"
+    url = "https://coronavirus-smartable.p.rapidapi.com/stats/v1/IN/"
 
-    querystring = {"code":"in","format":"json"}
+    # querystring = {"country":"india","format":"json"}
 
     headers = {
-    'x-rapidapi-host': "covid-19-data.p.rapidapi.com",
+    'x-rapidapi-host': "coronavirus-smartable.p.rapidapi.com",
     'x-rapidapi-key': "8200d19c55msh37593ee279e19c7p122d33jsna7c4444144f1"
     }
 
-    response = requests.request("GET", url, headers=headers, params=querystring)
+    response = requests.request("GET", url, headers=headers)
     data = response.json()  
-    trackerData = data[0]
+   
+    # trackerData = data[1]
+    # print(trackerData)
     context = {
-        'tracker' : trackerData
+        # 'tracker' : trackerData
     }
 
     
