@@ -26,14 +26,18 @@
                             <div class="breadcrumb-text">
                                 <h2>BLOG</h2>
                             </div>
+                            {% if user.is_authenticated %}
                             <ul class="breadcrumb-menu">
                                 <li><a href="{% url 'createpost' %}">Create Post</a><i class="fas fa-plus"></i></li></ul>
+                            {% endif %}
                                 <!-- <li><span>BLOG</span></li> -->
                             </ul>
-                            <!-- <ul class="breadcrumb-menu">
+                            {% if user.is_not_authenticated %}
+                            <ul class="breadcrumb-menu">
                                 <li><a href="{% url 'home' %}">home</a><i class="fas fa-arrow-right"></i></li>
                                 <li><span>BLOG</span></li>
-                            </ul> -->
+                            </ul>
+                            {% endif %}
                         </div>
                     </div>
                 </div>
