@@ -297,22 +297,16 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
+                                                {% for item in items %}
                                                 <tr class="cart_item">
                                                     <td class="product-name">
-                                                        Vestibulum suscipit <strong class="product-quantity"> × 1</strong>
+                                                        {{ item.product.name }} <strong class="product-quantity"> × {{item.quantity}}</strong>
                                                     </td>
                                                     <td class="product-total">
-                                                        <span class="amount">$165.00</span>
+                                                        <span class="amount">${{ item.product.price }}</span>
                                                     </td>
                                                 </tr>
-                                                <tr class="cart_item">
-                                                    <td class="product-name">
-                                                        Vestibulum dictum magna <strong class="product-quantity"> × 1</strong>
-                                                    </td>
-                                                    <td class="product-total">
-                                                        <span class="amount">$50.00</span>
-                                                    </td>
-                                                </tr>
+                                                {% endfor %}
                                             </tbody>
                                             <tfoot>
                                                 <tr class="cart-subtotal">
@@ -339,7 +333,7 @@
                                                 </tr>
                                                 <tr class="order-total">
                                                     <th>Order Total</th>
-                                                    <td><strong><span class="amount">$215.00</span></strong>
+                                                    <td><strong><span class="amount">${{order.get_cart_total}}</span></strong>
                                                     </td>
                                                 </tr>
                                             </tfoot>

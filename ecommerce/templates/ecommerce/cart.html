@@ -54,28 +54,19 @@
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        {% for item in items %}
                                         <tr>
-                                            <td class="product-thumbnail"><a href="#"><img src="/static/ecom/imgecom/products/01.jpg"
+                                            <td class="product-thumbnail"><a href="#"><img src="{{ item.product.imageURL }}"
                                                         alt=""></a></td>
-                                            <td class="product-name"><a href="#">Bakix Furniture</a></td>
-                                            <td class="product-price"><span class="amount">$130.00</span></td>
+                                            <td class="product-name"><a href="#">{{ item.product.name }}</a></td>
+                                            <td class="product-price"><span class="amount">{{ item.product.price }}</span></td>
                                             <td class="product-quantity">
-                                                <div class="cart-plus-minus"><input type="text" value="1" /></div>
+                                                <div class="cart-plus-minus"><input type="text" value="{{item.quantity}}" /></div>
                                             </td>
-                                            <td class="product-subtotal"><span class="amount">$130.00</span></td>
+                                            <td class="product-subtotal"><span class="amount">{{ item.get_total }}</span></td>
                                             <td class="product-remove"><a href="#"><i class="fa fa-times"></i></a></td>
                                         </tr>
-                                        <tr>
-                                            <td class="product-thumbnail"><a href="#"><img src="/static/ecom/imgecom/products/02.jpg"
-                                                        alt=""></a></td>
-                                            <td class="product-name"><a href="#">Sujon Chair Set</a></td>
-                                            <td class="product-price"><span class="amount">$120.50</span></td>
-                                            <td class="product-quantity">
-                                                <div class="cart-plus-minus"><input type="text" value="1" /></div>
-                                            </td>
-                                            <td class="product-subtotal"><span class="amount">$120.50</span></td>
-                                            <td class="product-remove"><a href="#"><i class="fa fa-times"></i></a></td>
-                                        </tr>
+                                        {% endfor %}
                                     </tbody>
                                 </table>
                             </div>
@@ -99,8 +90,8 @@
                                     <div class="cart-page-total">
                                         <h2>Cart totals</h2>
                                         <ul class="mb-20">
-                                            <li>Subtotal <span>$250.00</span></li>
-                                            <li>Total <span>$250.00</span></li>
+                                            <li>All Items <span>{{order.get_cart_items}}</span></li>
+                                            <li>Total <span>${{order.get_cart_total}}</span></li>
                                         </ul>
                                         <a class="c-btn theme-btn" href="#">Proceed to checkout</a>
                                     </div>
