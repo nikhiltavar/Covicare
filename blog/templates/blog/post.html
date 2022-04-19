@@ -128,7 +128,9 @@
                                     <!-- <a href="{% url 'blog' %}" class="btn ms-primary-btn">All News</a> -->
                                     
                                     <a href="{% url 'blog' %}"><button>All News<span></span></button></a>
+                                    {% if user.is_admin %}
                                     <a href="{% url 'deletepost' slug=post.slug %}"><button>Delete<span></span></button></a>
+                                    {% endif %}
                                 </div>
                                 <div class="col-md-6 text-center text-md-end mt-4 mt-md-0">
                                     <p class="fw-bold mb-0 d-inline me-4">Share the News:</p>

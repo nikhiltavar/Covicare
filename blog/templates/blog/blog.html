@@ -29,10 +29,10 @@
                             {% if user.is_authenticated %}
                             <ul class="breadcrumb-menu">
                                 <li><a href="{% url 'createpost' %}">Create Post</a><i class="fas fa-plus"></i></li></ul>
-                            {% endif %}
+                            
                                 <!-- <li><span>BLOG</span></li> -->
                             </ul>
-                            {% if user.is_not_authenticated %}
+                            {% else %}
                             <ul class="breadcrumb-menu">
                                 <li><a href="{% url 'home' %}">home</a><i class="fas fa-arrow-right"></i></li>
                                 <li><span>BLOG</span></li>

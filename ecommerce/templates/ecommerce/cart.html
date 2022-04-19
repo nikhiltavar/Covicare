@@ -34,7 +34,40 @@
                 </div>
             </div>
             <!-- breadcrumb-area-end -->
-
+        <style>
+        
+        
+            .button-16 {
+                background-color: #f8f9fa;
+                border: 1px solid #f8f9fa;
+                border-radius: 4px;
+                color: #3c4043;
+                display: inline-block;
+                cursor: pointer;
+                font-family: arial,sans-serif;
+                font-size: 14px;
+                height: 36px;
+                line-height: 27px;
+                min-width: 54px;
+                padding: 0 16px;
+                text-align: center;
+                user-select: none;
+                -webkit-user-select: none;
+                touch-action: manipulation;
+                white-space: pre;
+              }
+              
+              .button-16:hover {
+                border-color: #dadce0;
+                box-shadow: rgba(0, 0, 0, .1) 0 1px 1px;
+                color: #202124;
+              }
+              
+              .button-16:focus {
+                border-color: #4285f4;
+                outline: none;
+              }
+        </style>
         <!-- Cart Area Strat-->
         <section class="cart-area pt-100 pb-100">
             <div class="container">
@@ -50,7 +83,7 @@
                                             <th class="product-price">Unit Price</th>
                                             <th class="product-quantity">Quantity</th>
                                             <th class="product-subtotal">Total</th>
-                                            <th class="product-remove">Remove</th>
+                                            <!-- <th class="product-remove">Remove</th> -->
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -60,11 +93,19 @@
                                                         alt=""></a></td>
                                             <td class="product-name"><a href="#">{{ item.product.name }}</a></td>
                                             <td class="product-price"><span class="amount">{{ item.product.price }}</span></td>
-                                            <td class="product-quantity">
-                                                <div class="cart-plus-minus"><input type="text" value="{{item.quantity}}" /></div>
+                                            <td class="quantity">
+                                                <div>
+                                                    <!-- <button class="button-14" role="button">Button 14</button> -->
+                                                    <button data-product={{item.product.id}} data-action="remove" class="button-16 update-cart" role="button"><</button>
+                                                    <!-- <a data-product={{item.product.id}} data-action="add" class="c-btn update-cart" href="#"><i class="fas fa-plus"></i></a> -->
+                                                    <p class="nikquant">{{item.quantity}} </p> 
+                                                    <!-- <img data-product="{{item.product.id}}" data-action="remove" class="c-btn update-cart" src="/static/ecom/imgecom/arrows/caret-down-solid.svg" width="20" height="25" alt=""> -->
+                                                    <button data-product={{item.product.id}} data-action="add" class="button-16 update-cart" role="button">></button>
+                                                    
+                                                </div>
                                             </td>
-                                            <td class="product-subtotal"><span class="amount">{{ item.get_total }}</span></td>
-                                            <td class="product-remove"><a href="#"><i class="fa fa-times"></i></a></td>
+                                            <td class="product-subtotal"><span class="amount">₹{{ item.get_total }}</span></td>
+                                            <!-- <td class="product-remove"><a href="#"><i class="fa fa-times"></i></a></td> -->
                                         </tr>
                                         {% endfor %}
                                     </tbody>
@@ -91,9 +132,13 @@
                                         <h2>Cart totals</h2>
                                         <ul class="mb-20">
                                             <li>All Items <span>{{order.get_cart_items}}</span></li>
-                                            <li>Total <span>${{order.get_cart_total}}</span></li>
+                                            <li>Total <span>₹{{order.get_cart_total}}</span></li>
                                         </ul>
-                                        <a class="c-btn theme-btn" href="#">Proceed to checkout</a>
+                                        {% if user.is_authenticated %}
+                                        <a class="c-btn theme-btn" href="{% url 'checkout'%}">Proceed to checkout</a>
+                                        {% else %}
+                                        <a class="c-btn theme-btn" href="{% url 'login'%}">Login to checkout</a>
+                                        {% endif%}
                                     </div>
                                 </div>
                             </div>
