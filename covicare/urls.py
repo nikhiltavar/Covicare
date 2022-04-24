@@ -30,6 +30,7 @@ urlpatterns = [
     path('',include('news.urls')),
     path('',include('blog.urls')),
     path('',include('ecommerce.urls')),
+    path('',include('resources.urls')),
     path('login/', views.loginUser, name = 'login'),
     path('logout/', views.logoutUser, name = 'logout'),
     path('signup/', views.signupUser, name = 'signup'),

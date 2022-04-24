@@ -1,0 +1,193 @@
+{% extends 'base.html' %}
+{% load static %}
+
+    {% block body %}
+
+        {% block wrapper %}
+
+             <!-- Body Wrapper -->
+            <div class="overflow-hidden grey-body-bg">
+
+        {% endblock %}
+        
+        {% block header %}
+        
+        <!-- Header Section -->
+        {% include 'includes/header.html' %}
+
+        {% endblock %}
+
+         <!-- breadcrumb-area-start -->
+         <div class="breadcrumb-area pt-125 pb-125" style="background-image:url(/static/images/doctor-reading-coronavirus-patient-medical-chart.jpg)">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="breadcrumb-wrapper">
+                            <div class="breadcrumb-text">
+                                <h2>BLOG</h2>
+                            </div>
+                            {% if user.is_authenticated %}
+                            <ul class="breadcrumb-menu">
+                                <li><a href="{% url 'createpost' %}">Create Post</a><i class="fas fa-plus"></i></li></ul>
+                            
+                                <!-- <li><span>BLOG</span></li> -->
+                            </ul>
+                            {% else %}
+                            <ul class="breadcrumb-menu">
+                                <li><a href="{% url 'home' %}">home</a><i class="fas fa-arrow-right"></i></li>
+                                <li><span>BLOG</span></li>
+                            </ul>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- breadcrumb-area-end -->
+
+        <!-- Banner Section -->
+        <!-- <section class="inner-bnr extra-space">
+
+            
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-white">
+                        <h1 class="hero-text">News.</h1>
+                        <h5 ><a href="home_one.html" class="text-white">Home</a> - News Full With Sidebar</h5>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+
+        <style>
+
+           
+            button {
+                border: none;
+                display: inline-block;
+                position: relative;
+                padding: 0.4em 1em;
+                font-size: 21px;
+                background: transparent;
+                cursor: pointer;
+                user-select: none;
+                overflow: hidden;
+                color: #091e3f;
+                z-index: 1;
+                font-family: inherit;
+                font-weight: 500;
+            }
+            
+            button span {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background: transparent;
+                z-index: -1;
+                border: 4px solid #091e3f;
+            }
+            
+            button span::before {
+                content: "";
+                display: inline-block;
+                position: absolute;
+                width: 8%;
+                height: 500%;
+                background: var(--lightgray);
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) rotate(-60deg);
+                transition: all 0.3s;
+            }
+            
+            button:hover span::before {
+                transform: translate(-50%, -50%) rotate(-90deg);
+                width: 100%;
+                background: #091e3f;
+            }
+            
+            button:hover {
+                color: white;
+            }
+            
+            button:active span::before {
+                background: #091e3f;
+            }
+
+           
+    
+
+        </style>
+        <!-- Blogs Section -->
+        <section class="pad-100 mx-2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="primary-content-area text-center">
+                            {% for item in post %}
+                            <article>
+                                <div class="ms-image-sec">
+                                    <img src="{{ item.img.url }}" class="img-fluid" alt="News Image">
+                                </div>
+                                <div class="ms-content-area bg-white">
+                                    <span class="ms-title-15 me-4"><i class="far fa-calendar-alt"></i><a href="#."> {{ item.created_date | timesince }} ago</a></span>
+                                    {% for cat in item.categories.all %}
+                                    <span class="ms-title-15"> <a href="#.">{{ cat.name }} | </a></span>
+                                    {% endfor %}
+                                    <span class="ms-title-15"> <a href="#.">Author name</a></span>
+                                    <h4 class="fw-bold mt-3 mb-4 ms-news-title"><a href="post/{{ item.slug }}">{{ item.title }}</a></h4>
+                                    <p>{{ item.desc | striptags | truncatewords:50 }}</p>
+                                    
+                                    <a href="post/{{ item.slug }}"><button>Read More<span></span></button></a>
+                                </div>
+                            </article>
+                            {% endfor %}
+
+                            <div class="ms-spacer-30"></div>
+
+                            <!-- Pagination  -->
+
+                            {% if post.has_previous %}
+                            <a href="/blog/?page=1" class=><button>First<span></span></button></a>
+                            <a href="/blog/?page={{post.previous_page_number}}"><button><i class="fas fa-arrow-left"></i><span></span></button> </a>
+                            {% endif %}
+                            
+                            <a href="/blog/?page={{post.number}}"><button>{{post.number}}<span></span></button></a>
+                            
+                            {% if post.has_next %}
+                            <a href="/blog/?page={{post.next_page_number}}" > <button><i class="fas fa-arrow-right"></i><span></span></button></a>
+                            <a href="/blog/?page={{lastpage}}"><button>Last<span></span></button></a>
+                            {% endif %}
+
+                            <div class="ms-spacer-30"></div>
+                        </div>
+                    </div>
+                    {% include "blog/sidebar.html" %}
+                </div>
+            </div>
+        </section>
+
+        <!-- Emergency Contact Section -->
+        <section id="ms-emergency-sec" class="bg-white pad-100">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <div class="bg-img text-white">
+                            <h2 class="fw-bold mb-3">Emergency Contact.</h2>
+                            <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h5>
+                            <div class="ms-spacer-30"></div>
+                            <a href="contact.html" class="btn ms-secondary-btn me-md-2 mb-3 mb-md-auto"><i class="fas fa-phone-alt me-2"></i> Call For Help</a>
+                            <a href="team.html" class="btn ms-secondary-btn mb-3 mb-md-auto"><i class="fas fa-user me-2"></i> Meet Doctor</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+       
+        
+       
+
+    {% endblock %}  
