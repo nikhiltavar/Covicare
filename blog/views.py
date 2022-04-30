@@ -82,7 +82,7 @@ def blogSearch(request):
 def blog(request):
     category_count = get_category_count()
     latest_post = Blog.objects.order_by('-created_date')[:3]
-    post = Blog.objects.all()
+    post = Blog.objects.order_by('-created_date')
     paginator = Paginator(post, 5)
     page_number = request.GET.get('page')
     finaldata = paginator.get_page(page_number)

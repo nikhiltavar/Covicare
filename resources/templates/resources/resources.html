@@ -18,26 +18,20 @@
         {% endblock %}
 
          <!-- breadcrumb-area-start -->
-         <div class="breadcrumb-area pt-125 pb-125" style="background-image:url(/static/images/doctor-reading-coronavirus-patient-medical-chart.jpg)">
+         <div class="breadcrumb-area pt-125 pb-125" style="background-image:url(/static/images/hospital.webp)">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-12">
                         <div class="breadcrumb-wrapper">
                             <div class="breadcrumb-text">
-                                <h2>BLOG</h2>
+                                <h2>Medical Centres</h2>
                             </div>
-                            {% if user.is_authenticated %}
-                            <ul class="breadcrumb-menu">
-                                <li><a href="{% url 'createpost' %}">Create Post</a><i class="fas fa-plus"></i></li></ul>
                             
-                                <!-- <li><span>BLOG</span></li> -->
-                            </ul>
-                            {% else %}
                             <ul class="breadcrumb-menu">
                                 <li><a href="{% url 'home' %}">home</a><i class="fas fa-arrow-right"></i></li>
                                 <li><span>BLOG</span></li>
                             </ul>
-                            {% endif %}
+                            
                         </div>
                     </div>
                 </div>
@@ -121,27 +115,37 @@
     
 
         </style>
+        
         <!-- Blogs Section -->
         <section class="pad-100 mx-2">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-8">
+                    <div class="col-lg-12">
                         <div class="primary-content-area text-center">
-                            {% for item in post %}
+                            <section class="widget widget-search">
+                                <h2 class="d-none">Dummy Heading, not in use</h2>
+                                <form class="position-relative" action="{% url 'search' %}">
+                                    <input class="form-control" type="text" name="q" placeholder="Search here..." aria-label="Search" >
+                                    <button class="btn ms-search-btn position-absolute" type="submit">Search</button>
+                                </form>
+                            </section>
+                            <div class="ms-spacer-30"></div>
+                            <div class="ms-spacer-30"></div>
+                            <div class="ms-spacer-30"></div>
+
+                            {% for item in centre %}     
                             <article>
-                                <div class="ms-image-sec">
-                                    <img src="{{ item.img.url }}" class="img-fluid" alt="News Image">
-                                </div>
+                                    <!-- <div class="ms-image-sec">
+                                        <img src="" class="img-fluid" alt="News Image">
+                                    </div> -->
                                 <div class="ms-content-area bg-white">
                                     <span class="ms-title-15 me-4"><i class="far fa-calendar-alt"></i><a href="#."> {{ item.created_date | timesince }} ago</a></span>
-                                    {% for cat in item.categories.all %}
-                                    <span class="ms-title-15"> <a href="#.">{{ cat.name }} | </a></span>
-                                    {% endfor %}
-                                    <span class="ms-title-15"> <a href="#.">Author name</a></span>
-                                    <h4 class="fw-bold mt-3 mb-4 ms-news-title"><a href="post/{{ item.slug }}">{{ item.title }}</a></h4>
+                                   
+                                    <!-- <span class="ms-title-15"> <a href="#.">Author name</a></span> -->
+                                    <h4 class="fw-bold mt-3 mb-4 ms-news-title"><a href="centre-details/{{ item.slug }}">{{ item.name }}</a></h4>
                                     <p>{{ item.desc | striptags | truncatewords:50 }}</p>
                                     
-                                    <a href="post/{{ item.slug }}"><button>Read More<span></span></button></a>
+                                    <a href="centre-details/{{ item.slug }}"><button>Read More<span></span></button></a>
                                 </div>
                             </article>
                             {% endfor %}
@@ -150,22 +154,22 @@
 
                             <!-- Pagination  -->
 
-                            {% if post.has_previous %}
+                            {% if centre.has_previous %}
                             <a href="/blog/?page=1" class=><button>First<span></span></button></a>
-                            <a href="/blog/?page={{post.previous_page_number}}"><button><i class="fas fa-arrow-left"></i><span></span></button> </a>
+                            <a href="/blog/?page={{centre.previous_page_number}}"><button><i class="fas fa-arrow-left"></i><span></span></button> </a>
                             {% endif %}
                             
-                            <a href="/blog/?page={{post.number}}"><button>{{post.number}}<span></span></button></a>
+                            <a href="/blog/?page={{centre.number}}"><button>{{centre.number}}<span></span></button></a>
                             
-                            {% if post.has_next %}
-                            <a href="/blog/?page={{post.next_page_number}}" > <button><i class="fas fa-arrow-right"></i><span></span></button></a>
+                            {% if centre.has_next %}
+                            <a href="/blog/?page={{centre.next_page_number}}" > <button><i class="fas fa-arrow-right"></i><span></span></button></a>
                             <a href="/blog/?page={{lastpage}}"><button>Last<span></span></button></a>
                             {% endif %}
 
                             <div class="ms-spacer-30"></div>
                         </div>
                     </div>
-                    {% include "blog/sidebar.html" %}
+                   
                 </div>
             </div>
         </section>

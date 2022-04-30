@@ -60,10 +60,10 @@
                                           </li> -->
 
                 <li class="nav-item"><a href="/">HOME</a></li>
-                <li class="nav-item"><a href="/">RESOURCES</a></li>
+                <li class="nav-item"><a href="{% url 'centres' %}">RESOURCES</a></li>
                 <li class="nav-item"><a href="{% url 'news' %}">NEWS</a></li>
                 <li class="nav-item"><a href="{% url 'blog' %}">BLOG</a></li>
-                <li class="nav-item"><a href="/">ABOUT</a></li>
+                <li class="nav-item"><a href="{% url 'shop' %}">SHOP</a></li>
                 {% if request.user.is_authenticated %}
                 <li class="nav-item"><a href="{% url 'logout' %}">LOGOUT</a></li>
                 {% else %}
@@ -72,9 +72,9 @@
                 <li class="nav-item">
                   <a href="/admin">CONTACT</a>
                 </li>
-                <!-- <li class="dropdown nav-item">
+                <li class="dropdown nav-item">
                                               <a class="dropdown-toggle" data-bs-toggle="dropdown" href="home_one.html" role="button"
-                                                  aria-haspopup="true" aria-expanded="false">PAGES</a>
+                                                  aria-haspopup="true" aria-expanded="false">MORE</a>
                                               <div class="dropdown-menu">
                                                   <a class="dropdown-item" href="team.html">OUR TEAM</a>
                                                   <a class="dropdown-item" href="faq.html">FAQ</a>
@@ -82,7 +82,7 @@
                                                   <a class="dropdown-item" href="404_error.html">404 ERROR</a>
                                                   <a class="dropdown-item" href="testimonial.html">TESTIMONIALS</a>
                                               </div>
-                                          </li> -->
+                                          </li>
                 <!-- <li class="dropdown nav-item">
                                               <a class="dropdown-toggle" data-bs-toggle="dropdown" href="{% url 'news' %}"
                                                   role="button" aria-haspopup="true" aria-expanded="false">NEWS</a>
@@ -141,10 +141,9 @@
               Coronavirus (Covid-19)
             </p>
             <h1 class="mb-0 hero-text">Stay Safe.</h1>
-            <h1 class="mb-4 hero-text">Stay Home.</h1>
+            <h1 class="mb-4 hero-text">Wear Mask.</h1>
             <h5 class="fw-bold">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt.
+              It's Not Over Yet!
             </h5>
             <div class="ms-spacer-30"></div>
             <a href="" class="btn ms-secondary-btn ms-hero-btn"
@@ -155,6 +154,46 @@
       </div>
     </div>
   </section>
+
+   <!-- Live Update Section -->
+   <section id="ms-update-sec" class="pad-97">
+    <div class="container">
+        <div class="live-update bg-white">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h2 class="fw-bold mb-5">Live Update</h2>
+                </div>
+                <div class="col-md-4 text-center mb-5 mb-md-0">
+                    <img src="/static/images/icon-01.png" class="img-fluid" alt="Icon">
+                    <p class="fw-bold mt-3 mb-0">Confirmed Cases</p>
+                    <span class="fw-bold blue-text">{{tracker.TotalCases}}</span>
+                </div>
+                <div class="col-md-4 text-center mb-5 mb-md-0">
+                    <img src="/static/images/icon-02.png" class="img-fluid" alt="Icon">
+                    <p class="fw-bold mt-3 mb-0">Total Recovered</p>
+                    <span class="fw-bold green-text">{{tracker.TotalRecovered}}</span>
+                </div>
+                <div class="col-md-4 text-center">
+                    <img src="/static/images/icon-03.png" class="img-fluid" alt="Icon">
+                    <p class="fw-bold mt-3 mb-0">Confirmed Deaths</p>
+                    <span class="fw-bold red-text">{{tracker.TotalDeaths}}</span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <p class="seperator-line mb-2">COVID-19</p>
+                <h2 class="fw-bold text-white mb-3">What is Coronavirus?</h2>
+                <p class="update-para">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum  dummy text.  ever since the 1500s, when an unknown 
+                    printer took a galley of type and scrambled it to make a type specimen book.</p>
+                <div class="ms-spacer-30"></div>
+                <a href="about.html" class="btn ms-red-btn ms-icon-btn">About More <img class="ps-2" src="/static/images/arrow_right_white.svg" width="35" alt="Icon"></a>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <div class="ms-spacer-30"></div>
 
   <!-- About Section -->
   <section id="ms-abt-sec">
@@ -270,206 +309,73 @@
     </div>
   </section>
 
-  <!-- Featured Products -->
-  <section id="ms-featured" class="ms-sec-pad">
-    <div class="container">
-      <div class="row">
-        <div class="offset-lg-2 col-lg-8 text-center">
-          <h2 class="fw-bold mb-0">Featured</h2>
-          <h2 class="fw-bold">Products.</h2>
-          <h5 class="mb-4">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </h5>
-        </div>
-      </div>
-      <div class="ms-spacer-30"></div>
-      <div class="row">
-        <div class="col-md-6 col-lg-4">
-          <a href="shop_detail.html">
-            <div class="ms-shop-box position-relative">
-              <img
-                src="/static/images/product-01.jpg"
-                class="img-fluid position-relative"
-                alt="Product Image"
-              />
-              <div class="ms-hover">
-                <span class="btn add-cart-btn">ADD TO CART - $49</span>
-              </div>
-              <div class="ms-box-content text-center">
-                <h4 class="fw-bold mb-0">Lorem Ipsum</h4>
-                <p>
-                  <i class="fas fa-star rating"></i
-                  ><i class="fas fa-star rating"></i
-                  ><i class="fas fa-star rating"></i
-                  ><i class="fas fa-star rating"></i
-                  ><i class="fas fa-star rating"></i>
-                  <span class="ms-2">449 Reviews</span>
-                </p>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <a href="shop_detail.html">
-            <div class="ms-shop-box position-relative">
-              <img
-                src="/static/images/product-02.jpg"
-                class="img-fluid position-relative"
-                alt="Product Image"
-              />
-              <div class="ms-hover">
-                <span class="btn add-cart-btn">ADD TO CART - $49</span>
-              </div>
-              <div class="ms-box-content text-center">
-                <h4 class="fw-bold mb-0">Lorem Ipsum</h4>
-                <p>
-                  <i class="fas fa-star rating"></i
-                  ><i class="fas fa-star rating"></i
-                  ><i class="fas fa-star rating"></i
-                  ><i class="fas fa-star rating"></i
-                  ><i class="fas fa-star-half rating"></i>
-                  <span class="ms-2">449 Reviews</span>
-                </p>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <a href="shop_detail.html">
-            <div class="ms-shop-box position-relative">
-              <img
-                src="/static/images/product-03.jpg"
-                class="img-fluid position-relative"
-                alt="Product Image"
-              />
-              <div class="ms-hover">
-                <span class="btn add-cart-btn">ADD TO CART - $49</span>
-              </div>
-              <div class="ms-box-content text-center">
-                <h4 class="fw-bold mb-0">Lorem Ipsum</h4>
-                <p>
-                  <i class="fas fa-star rating"></i
-                  ><i class="fas fa-star rating"></i
-                  ><i class="fas fa-star rating"></i
-                  ><i class="fas fa-star rating"></i
-                  ><i class="fas fa-star rating"></i>
-                  <span class="ms-2">449 Reviews</span>
-                </p>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="col-md-12 text-center">
-          <a href="shop.html" class="btn ms-primary-btn me-2">Shop All</a>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Protect Section -->
-  <section id="ms-protect-sec">
-    <div class="ms-bg-img"></div>
-    <div class="container">
-      <div class="protect-container">
-        <div class="row">
-          <div class="col-md-6 text-white">
-            <div class="protect-box">
-              <h2 class="fw-bold mb-0">Protect</h2>
-              <h2 class="fw-bold">Yourself.</h2>
-              <div class="ms-spacer-70"></div>
-              <div id="counter" class="row">
-                <div class="col-6 mb-4 mb-lg-5">
-                  <h3
-                    class="fw-bold mb-0 counter-value"
-                    data-count="{{tracker.TotalCases}}"
-                  >
-                  0
-                  </h3>
-                  <h5 class="fw-bold">Confirmed Cases</h5>
-                </div>
-                <div class="col-6 mb-4 mb-lg-5">
-                  <h3
-                    class="fw-bold mb-0 counter-value"
-                    data-count="{{tracker.TotalDeaths}}"
-                  >
-                  0
-                  </h3>
-                  <h5 class="fw-bold">Confirmed Deaths</h5>
-                </div>
-                <div class="col-6 mb-4 mb-lg-5">
-                  <h3
-                    class="fw-bold mb-0 counter-value"
-                    data-count="{{tracker.TotalRecovered}}"
-                  >
-                  0
-                  </h3>
-                  <h5 class="fw-bold">Total Recovered</h5>
-                </div>
-                <div class="col-6 mb-4 mb-lg-5">
-                  <h3
-                    class="fw-bold mb-0 counter-value"
-                    data-count="{{tracker.Serious_Critical}}">0
-                  </h3>
-                  <h5 class="fw-bold">Critical</h5>
-                </div>
-              </div>
-              <!-- <span><i>* Last updated: {{ update | slice:"0:10" }}
-                   {{ tracker.lastUpdate | slice:"11:16" }} UTC</i></span> -->
-            </div>
+
+ 
+
+<!-- Coronavirus Symptoms Section -->
+<section id="home-three-symptoms-sec" class="pad-100  pb-0">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-12 text-center">
+              <span class="three-subheading">SYMPTOMS</span>
+              <h2 class="fw-bold mb-4">Corona Virus Symptoms</h2>
           </div>
-          <div class="col-md-6 px-0 px-lg-1">
-            <div class="row text-white text-center g-0">
-              <div class="col-md-6">
-                <div class="icon-box avoid">
-                  <img
-                    src="/static/images/avoid-close-contact.png"
-                    class="img-fluid"
-                    alt="Image"
-                  />
-                  <h5 class="fw-bold mt-3 mb-1">Avoid close</h5>
-                  <h5 class="fw-bold">contact</h5>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="icon-box stay">
-                  <img
-                    src="/static/images/stay-at-home.png"
-                    class="img-fluid"
-                    alt="Image"
-                  />
-                  <h5 class="fw-bold mt-3 mb-1">Stay at</h5>
-                  <h5 class="fw-bold">home</h5>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="icon-box wear">
-                  <img
-                    src="/static/images/wear-facemask.png"
-                    class="img-fluid"
-                    alt="Image"
-                  />
-                  <h5 class="fw-bold mt-3 mb-1">Wear a</h5>
-                  <h5 class="fw-bold">Facemask</h5>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="icon-box clean">
-                  <img
-                    src="/static/images/clean-your-hands-often.png"
-                    class="img-fluid"
-                    alt="Image"
-                  />
-                  <h5 class="fw-bold mt-3 mb-1">Clean your</h5>
-                  <h5 class="fw-bold">hands often</h5>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
-    </div>
-  </section>
+      <div class="ms-spacer-80"></div>
+      <div class="row">
+          <div class="col-md-6 col-lg-4">
+              <div class="ms-three-symptom-box position-relative">
+                  <img src="/static/images/home_three_symptoms_001.png" class="img-fluid position-absolute symptom-img" alt="Image">
+                  <h4 class="fw-bold mb-4">Coughing</h4>
+                  <p class="mb-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum  dummy text.</p>
+                  <a href="https://en.wikipedia.org/wiki/Cough" target="_blank" class="fw-bold text-white">More <i class="fas fa-long-arrow-alt-right ms-right-arrow"></i></a>
+              </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+              <div class="ms-three-symptom-box position-relative">
+                  <img src="/static/images/home_three_symptoms_002.png" class="img-fluid position-absolute symptom-img" alt="Image">
+                  <h4 class="fw-bold mb-4">Pneumonio</h4>
+                  <p class="mb-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum  dummy text.</p>
+                  <a href="https://en.wikipedia.org/wiki/Pneumonia" target="_blank" class="fw-bold text-white">More <i class="fas fa-long-arrow-alt-right ms-right-arrow"></i></a>
+              </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+              <div class="ms-three-symptom-box position-relative">
+                  <img src="/static/images/home_three_symptoms_003.png" class="img-fluid position-absolute symptom-img" alt="Image">
+                  <h4 class="fw-bold mb-4">Vomiting</h4>
+                  <p class="mb-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum  dummy text.</p>
+                  <a href="https://en.wikipedia.org/wiki/Vomiting" target="_blank" class="fw-bold text-white">More <i class="fas fa-long-arrow-alt-right ms-right-arrow"></i></a>
+              </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+              <div class="ms-three-symptom-box position-relative">
+                  <img src="/static/images/home_three_symptoms_004.png" class="img-fluid position-absolute symptom-img" alt="Image">
+                  <h4 class="fw-bold mb-4">Fever</h4>
+                  <p class="mb-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum  dummy text.</p>
+                  <a href="https://en.wikipedia.org/wiki/Fever" target="_blank" class="fw-bold text-white">More <i class="fas fa-long-arrow-alt-right ms-right-arrow"></i></a>
+              </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+              <div class="ms-three-symptom-box position-relative">
+                  <img src="/static/images/home_three_symptoms_005.png" class="img-fluid position-absolute symptom-img" alt="Image">
+                  <h4 class="fw-bold mb-4">Shivering</h4>
+                  <p class="mb-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum  dummy text.</p>
+                  <a href="https://en.wikipedia.org/wiki/Shivering" target="_blank" class="fw-bold text-white">More <i class="fas fa-long-arrow-alt-right ms-right-arrow"></i></a>
+              </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+              <div class="ms-three-symptom-box position-relative">
+                  <img src="/static/images/home_three_symptoms_006.png" class="img-fluid position-absolute symptom-img" alt="Image">
+                  <h4 class="fw-bold mb-4">Diarrhea</h4>
+                  <p class="mb-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum  dummy text.</p>
+                  <a href="https://en.wikipedia.org/wiki/Diarrhea" target="_blank" class="fw-bold text-white">More <i class="fas fa-long-arrow-alt-right ms-right-arrow"></i></a>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
 
   <!-- Testimonials Section -->
   <section id="ms-testimonial-sec">
@@ -563,6 +469,68 @@
       </div>
     </div>
   </section>
+
+ 
+
+    <!-- New Blog section -->
+  <section id="home-two-blog-sec" class="pad-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <p class="seperator-line mb-2">OUR BLOG</p>
+                <h2 class="fw-bold mb-3">Update News</h2>
+            </div>
+        </div>
+        <div class="ms-spacer-30"></div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="ms-main-box position-relative">
+                    <div class="ms-blog-box">
+                        <div class="content-overlay">
+                            <div class="content-button">
+                                <a href="news_detail.html" class="btn ms-red-btn">Read Article</a>
+                            </div>
+                        </div>
+                        <img src="/static/images/home2-blog-01.jpg" class="img-fluid" alt="Image">                                
+                    </div>
+                    <h4 class="fw-bold mt-4"><a href="news_detail.html">Lorem ipsum is simply a dummy text of the printing</a></h4>
+                    <p class="ms-title-15 mb-0">APRIL 10,2020</p>
+                    <p class="ms-title-15 ms-vertical-text">Health, COVID-19</p>
+                </div>                        
+            </div>
+            <div class="col-md-4">
+                <div class="ms-main-box position-relative">
+                    <div class="ms-blog-box">
+                        <div class="content-overlay">
+                            <div class="content-button">
+                                <a href="news_detail.html" class="btn ms-red-btn">Read Article</a>
+                            </div>
+                        </div>
+                        <img src="/static/images/home2-blog-02.jpg" class="img-fluid" alt="Image">                                
+                    </div>
+                    <h4 class="fw-bold mt-4"><a href="news_detail.html">Lorem ipsum is simply a dummy text of the printing</a></h4>
+                    <p class="ms-title-15 mb-0">APRIL 10,2020</p>
+                    <p class="ms-title-15 ms-vertical-text">Health, COVID-19</p>
+                </div>                        
+            </div>
+            <div class="col-md-4">
+                <div class="ms-main-box position-relative">
+                    <div class="ms-blog-box">
+                        <div class="content-overlay">
+                            <div class="content-button">
+                                <a href="news_detail.html" class="btn ms-red-btn">Read Article</a>
+                            </div>
+                        </div>
+                        <img src="/static/images/home2-blog-03.jpg" class="img-fluid" alt="Image">                                
+                    </div>
+                    <h4 class="fw-bold mt-4"><a href="news_detail.html">Lorem ipsum is simply a dummy text of the printing</a></h4>
+                    <p class="ms-title-15 mb-0">APRIL 10,2020</p>
+                    <p class="ms-title-15 ms-vertical-text">Health, COVID-19</p>
+                </div>                        
+            </div>
+        </div>
+    </div>
+</section>
 
   <!-- News Feed -->
   <section id="ms-news" class="ms-sec-pad">

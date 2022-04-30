@@ -1,0 +1,114 @@
+{% extends 'base.html' %}
+{% load static %}
+
+    {% block body %}
+
+        {% block wrapper %}
+
+             <!-- Body Wrapper -->
+            <div class="overflow-hidden grey-body-bg">
+
+        {% endblock %}
+        
+        {% block header %}
+        
+        <!-- Header Section -->
+        {% include 'includes/header.html' %}
+
+        {% endblock %}
+
+         <!-- breadcrumb-area-start -->
+         <div class="breadcrumb-area pt-125 pb-125" style="background-image:url(/static/images/hospital.webp)">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="breadcrumb-wrapper">
+                            <div class="breadcrumb-text">
+                                <h2>Centres</h2>
+                            </div>
+                            <ul class="breadcrumb-menu">
+                                <li><a href="index.html">Search Results: </a>
+                                <!-- <li><span>Results</span></li> -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- breadcrumb-area-end -->
+
+        <!-- Banner Section -->
+        <!-- <section class="inner-bnr extra-space">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-white">
+                        <h1 class="hero-text">News.</h1>
+                        <h5 ><a href="home_one.html" class="text-white">Home</a> - News Full With Sidebar</h5>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+        <!-- Blogs Section -->
+        <section class="pad-100 mx-2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="primary-content-area text-center">
+                            {% for item in queryset %}
+                            <article>
+                                
+                                <div class="ms-content-area bg-white">
+                                    <span class="ms-title-15 me-4"><i class="far fa-calendar-alt"></i><a href="#."> {{ item.created_date | timesince }} ago</a></span>
+                            
+                                    <h4 class="fw-bold mt-3 mb-4 ms-news-title"><a href="centre-details/{{ item.slug }}">{{ item.name }}</a></h4>
+                                    <p>{{ item.desc | striptags | truncatewords:50 }}</p>
+                                    <a href="/centre/centre-details/{{ item.slug }}" class="btn ms-primary-btn mt-4">Read More</a>
+                                </div>
+                            </article>
+                            {% endfor %}
+
+                            <div class="ms-spacer-30"></div>
+
+                            <!-- Pagination  -->
+
+                            <!-- {% if post.has_previous %}
+                            <a href="/blog/?page=1" class="btn ms-primary-btn"> First</a>
+                            <a href="/blog/?page={{post.previous_page_number}}" class="btn ms-primary-btn"> <i class="fas fa-arrow-left"></i></a>
+                            {% endif %}
+                            
+                            <a href="/blog/?page={{post.number}}" class="btn ms-primary-btn"> {{post.number}}</a>
+                            
+                            {% if post.has_next %}
+                            <a href="/blog/?page={{post.next_page_number}}" class="btn ms-primary-btn"> <i class="fas fa-arrow-right"></i></a>
+                            <a href="/blog/?page={{lastpage}}" class="btn ms-primary-btn"> Last</a>
+                            {% endif %} -->
+
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- Emergency Contact Section -->
+        <section id="ms-emergency-sec" class="bg-white pad-100">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <div class="bg-img text-white">
+                            <h2 class="fw-bold mb-3">Emergency Contact.</h2>
+                            <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h5>
+                            <div class="ms-spacer-30"></div>
+                            <a href="contact.html" class="btn ms-secondary-btn me-md-2 mb-3 mb-md-auto"><i class="fas fa-phone-alt me-2"></i> Call For Help</a>
+                            <a href="team.html" class="btn ms-secondary-btn mb-3 mb-md-auto"><i class="fas fa-user me-2"></i> Meet Doctor</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+       
+        
+       
+
+    {% endblock %}  

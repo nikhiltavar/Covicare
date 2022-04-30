@@ -23,6 +23,7 @@ from django.conf import settings
 urlpatterns = [
     
     path('admin/', admin.site.urls),
+    path('staff/', admin.site.urls),
     path('tinymce/', include('tinymce.urls')),
     path('', views.index , name = 'home'),
     # path('navbar/', views.navabr),

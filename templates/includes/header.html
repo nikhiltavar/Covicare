@@ -32,10 +32,10 @@
                                                   </li> -->
         
                         <li class="nav-item"><a href="/">HOME</a></li>
-                        <li class="nav-item"><a href="/">RESOURCES</a></li>
+                        <li class="nav-item"><a href="{% url 'centres' %}">RESOURCES</a></li>
                         <li class="nav-item"><a href="{% url 'news' %}">NEWS</a></li>
                         <li class="nav-item"><a href="{% url 'blog' %}">BLOG</a></li>
-                        <li class="nav-item"><a href="{% url 'shop' %}">ABOUT</a></li>
+                        <li class="nav-item"><a href="{% url 'shop' %}">SHOP</a></li>
                         {% if request.user.is_authenticated %}
                         <li class="nav-item"><a href="{% url 'logout' %}">LOGOUT</a></li>
                         {% else %}

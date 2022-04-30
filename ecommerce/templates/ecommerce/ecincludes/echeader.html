@@ -1,12 +1,12 @@
 <!-- header-start -->
 <header>
-    <div class="header-top-area pl-165 pr-165">
+    <!-- <div class="header-top-area pl-165 pr-165">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-xl-8 col-lg-6 col-md-6">
                     <div class="header-top-wrapper">
                         <div class="header-top-info d-none d-xl-block f-left">
-                            <span><i class="fas fa-heart"></i> Welcome to Medibazae. We provides <a href="#">Covid-19 </a>medical accessories</span>
+                            <span><i class="fas fa-heart"></i> Welcome to Covicare. We provide <a href="#">Covid-19 </a>medical accessories</span>
                         </div>
                         <div class="header-link f-left">
                             <span><a href="#"><i class="fas fa-phone"></i> +123 (456) 7879</a></span>
@@ -19,14 +19,14 @@
                            <ul>
                                <li><a href="register.html"><i class="fas fa-user-circle"></i> My Account</a></li>
                                <li><a href="{% url 'cart' %}"><i class="fas fa-cart-plus"></i> Cart({{ cartitems }})</a></li>
-                               <!-- <li><a href="wishlist.html"><i class="fas fa-heart"></i> Wishlist</a></li> -->
+                               
                            </ul>
                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <div id="sticky-header" class="main-menu-area menu-01 pl-165 pr-165">
         <div class="container-fluid">
             <div class="row align-items-center">
@@ -36,7 +36,7 @@
                     </div>
                 </div>
                 <div class="col-xl-9 col-lg-9 d-none d-lg-block">
-                    <div class="header-right f-right">
+                    <!-- <div class="header-right f-right">
                         
                         <div class="header-search f-right d-none d-xl-block">
                             <form class="header-search-form">
@@ -44,50 +44,34 @@
                                 <button type="submit"><i class="fas fa-search"></i></button>
                             </form>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="main-menu">
                         <nav id="mobile-menu">
                             <ul>
-                                <li ><a href="index.html">home</a>
+                                <li ><a href="{% url 'home' %}">home</a>
                                     <ul class="sub-menu text-left">
                                         <li><a href="index.html">home 1</a></li>
                                         <li><a href="index-2.html">home 2</a></li>
                                         <li><a href="index-3.html">home 3</a></li>
                                     </ul>
                                 </li>
-                                <li class="active"><a href="shop-grid.html">Shop</a>
+                                <li class="active"><a href="shop-grid.html">Covid Centres</a>
                                     <ul class="sub-menu text-left">
                                         <li><a href="shop-grid.html">shop grid</a>
                                         <li><a href="shop-full-width.html">shop full width</a>
-                                        <li><a href="shop-04-column.html">shop 04 column</a>
-                                        <li><a href="shop-left-02-column.html">shop left 02 column</a>
-                                        <li><a href="shop-left-sidebar.html">shop left sidebar</a>
-                                        <li><a href="shop-right-sidebar.html">shop right sidebar</a>
-                                        <li><a href="product-details.html">product details</a>
-                                        <li><a href="wishlist.html">wishlist</a>
-                                        <li><a href="checkout.html">checkout</a>
-                                        <li><a href="cart.html">cart</a>
-                                        <li><a href="login.html">login</a>
-                                        <li><a href="register.html">register</a>
-
+                                        
                                     </ul>
                                 </li>
-                                <li><a href="shop-grid.html">Categories </a></li>
-                                <li><a href="blog-grid.html">Blog</a>
-                                    <ul class="sub-menu text-left">
-                                        <li><a href="blog-grid.html">blog grid</a></li>
-                                        <li><a href="blog-grid-sidebar.html">blog grid sidebar</a></li>
-                                        <li><a href="blog-standard.html">blog standardr</a></li>
-                                        <li><a href="blog-details.html">blog details</a></li>
-                                    </ul>
-                                </li>
+                                <li><a href="shop-grid.html">News</a></li>
+                                <li><a href="{% url 'blog' %}">Blog</a></li>
                                 <li><a href="#">pages</a>
                                     <ul class="sub-menu text-left">
                                         <li><a href="about.html">about</a></li>
                                         <li><a href="contact.html">contact</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="contact.html">contact</a></li>
+                                <li><a href="register.html"><i class="fas fa-user-circle"></i> My Account</a></li>
+                                <li><a href="{% url 'cart' %}"><i class="fas fa-cart-plus"></i> Cart({{ cartitems }})</a></li>
                               
                             </ul>
                         </nav>

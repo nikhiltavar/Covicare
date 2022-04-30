@@ -191,6 +191,11 @@ p {
     padding: 100px 0;
 }
 
+.pad-97 {
+    padding: 97px 0;
+}
+
+
 /*========== b. Header Section CSS ==========*/
 header {
     left: 0;
@@ -540,7 +545,7 @@ footer .ms-primary-btn {
     padding-top: 50px;
 }
 .ms-home-bnr {
-    background-image: url('../images/bnr-hero-image.png');
+    background-image: url('../images/Person with medical mask-bro (1).png');
     background-repeat: no-repeat;
     background-position: right center;
     height: 800px;
@@ -1518,7 +1523,7 @@ article.ms-news-detail-page {
 }
 /*---------- Live Update CSS ----------*/
 #ms-update-sec {
-    background: url('../images/doctor-img.png') no-repeat right #2a303a;
+    background: url('../images/Medium Shot Woman Wearing Protective Equipment PNG(1).png') no-repeat right #3625d3;
     padding-top: 0;
 }
 #ms-update-sec .live-update {

@@ -95,6 +95,15 @@ def updateItem(request):
 
     return JsonResponse('Item was added', safe=False)
 
+def productDetails(request, slug):
+    product_slug = Product.objects.get(slug=slug)
+    product = Product.objects.get(slug=slug)
+    context = {
+        'slug': slug,
+        'product':product,
+    }
+    return render(request, 'ecommerce/productdetails.html', context)
+
 def processOrder(request):
     print('Data:', request.body)
     transaction_id = datetime.datetime.now().timestamp()
