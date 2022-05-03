@@ -1,36 +1,5 @@
 @charset "UTF-8";
-/*====================================================== 
-@Template Name: Coroso - Health & Covid19 HTML Template
-@Author: WebQoda
-@Author URL: https://webqoda.com/
 
-====================Table Of Contents===================
-
-01. General CSS
-    a. Global CSS
-    b. Header Section
-    c. Footer Section
-    d. Inner Pages Banner Section
-    e. Preloader CSS
-02. Homepage One CSS
-03. About Page CSS
-04. 404 Error Page CSS
-05. FAQ Page CSS
-06. Contact Page CSS
-07. Cart Page CSS
-08. Shop Page CSS
-09. Shop Detail Page CSS
-10. Team Page CSS
-11. News Pages CSS
-12. News Detail Page CSS
-13. Homepage Two CSS
-14. Homepage Three CSS
-15. Testimonial Page CSS
-16. Landing Page CSS
-
-========================================================*/
-
-/*==================== 01. General CSS ====================*/
 
 /*========== a. Global CSS ==========*/
 body {
@@ -294,6 +263,7 @@ header .navbar-nav li.dropdown .dropdown-menu {
         top: 40px;
     }
 }
+
 
 /*---------- hamburger menu css ----------*/
 .navbar-toggler:focus {

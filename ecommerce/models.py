@@ -1,6 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import User
 from autoslug import AutoSlugField
+from tinymce.models import HTMLField
+
 
 
 class Customer (models.Model):
@@ -15,10 +17,17 @@ class Customer (models.Model):
 class Product(models.Model):
     name = models.CharField(max_length=200, null=True)
     price = models.FloatField()
+    created_date = models.DateTimeField(auto_now_add=True,null=True, blank=True)
     image = models.ImageField(null=True, blank=True, upload_to='shop_imgs')
+    image2 = models.ImageField(null=True, blank=True, upload_to='shop_imgs')
     digital = models.BooleanField(default=False,null=True, blank=True)
     slug = AutoSlugField(populate_from= 'name',   unique=True, null=True, default=None)
     desc = models.TextField(null=True, blank=True)
+    high = HTMLField()
+    covidEssentials = models.BooleanField(default=True)
+    equipments = models.BooleanField(default=True)
+    others = models.BooleanField(default=True)
+
     
 
 
@@ -31,6 +40,15 @@ class Product(models.Model):
     def imageURL(self):
         try:
             url = self.image.url
+        except:
+            url = ''
+        return url
+
+    
+    @property
+    def imageURL2(self):
+        try:
+            url = self.image2.url
         except:
             url = ''
         return url

@@ -3,6 +3,8 @@
 <div id="homepage-one" class="overflow-hidden">
   {% endblock %} {% block header %}
 
+
+
   <!-- Header Section -->
   <header class="position-absolute">
     <div class="container-fluid">
@@ -64,20 +66,17 @@
                 <li class="nav-item"><a href="{% url 'news' %}">NEWS</a></li>
                 <li class="nav-item"><a href="{% url 'blog' %}">BLOG</a></li>
                 <li class="nav-item"><a href="{% url 'shop' %}">SHOP</a></li>
-                {% if request.user.is_authenticated %}
-                <li class="nav-item"><a href="{% url 'logout' %}">LOGOUT</a></li>
-                {% else %}
-                <li class="nav-item"><a href="{% url 'login' %}">LOGIN</a></li>
-                {% endif %}
-                <li class="nav-item">
-                  <a href="/admin">CONTACT</a>
-                </li>
+              
+                <li class="nav-item"><a href="/admin">CONTACT</a></li>
                 <li class="dropdown nav-item">
                                               <a class="dropdown-toggle" data-bs-toggle="dropdown" href="home_one.html" role="button"
                                                   aria-haspopup="true" aria-expanded="false">MORE</a>
                                               <div class="dropdown-menu">
-                                                  <a class="dropdown-item" href="team.html">OUR TEAM</a>
-                                                  <a class="dropdown-item" href="faq.html">FAQ</a>
+                                                  {% if request.user.is_authenticated %}
+                                                  <a class="dropdown-item" href="{% url 'logout' %}">LOGOUT</a>
+                                                  {% else %}
+                                                  <a class="dropdown-item" href="{% url 'login' %}">LOGIN</a>
+                                                  {% endif %}
                                                   <a class="dropdown-item" href="cart.html">CART</a>
                                                   <a class="dropdown-item" href="404_error.html">404 ERROR</a>
                                                   <a class="dropdown-item" href="testimonial.html">TESTIMONIALS</a>
@@ -94,7 +93,7 @@
                                                   <a class="dropdown-item" href="news_list.html">NEWS LIST</a>
                                                   <a class="dropdown-item" href="news_list_sidebar.html">NEWS LIST WITH SIDEBAR</a>
                                                   <a class="dropdown-item" href="news_masonry.html">NEWS MASONRY</a>
-                                                  <a class="dropdown-item" href="news_detail.html">NEWS DETAIL</a>
+                                                  <a class="dropdown-item" href="/blog/post/{{ item.slug }}">NEWS DETAIL</a>
                                               </div>
                                           </li> -->
                 <!-- <li class="dropdown nav-item">
@@ -117,14 +116,11 @@
             justify-content-end
           "
         >
-          <div class="icons d-none d-lg-block">
-            <a href="#."
-              ><i class="fas fa-user ms-header-icon text-white"></i
-            ></a>
-            <a href="cart.html"
-              ><i class="fas fa-shopping-cart ms-header-icon text-white"></i
-            ></a>
-          </div>
+          <!-- <div class="rightheader d-none d-lg-block">
+            <a href="{% url 'shop' %}">LOGIN</a>
+            <a href="#."><i class="fas fa-user ms-header-icon text-white"></i></a>
+            <a href="cart.html"><i class="fas fa-shopping-cart ms-header-icon text-white"></i></a>
+          </div> -->
         </div>
       </div>
     </div>
@@ -353,7 +349,7 @@
                   <img src="/static/images/home_three_symptoms_004.png" class="img-fluid position-absolute symptom-img" alt="Image">
                   <h4 class="fw-bold mb-4">Fever</h4>
                   <p class="mb-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum  dummy text.</p>
-                  <a href="https://en.wikipedia.org/wiki/Fever" target="_blank" class="fw-bold text-white">More <i class="fas fa-long-arrow-alt-right ms-right-arrow"></i></a>
+                  <a href="https://www.mayoclinic.org/diseases-conditions/fever/symptoms-causes/syc-20352759" target="_blank" class="fw-bold text-white">More <i class="fas fa-long-arrow-alt-right ms-right-arrow"></i></a>
               </div>
           </div>
           <div class="col-md-6 col-lg-4">
@@ -369,7 +365,7 @@
                   <img src="/static/images/home_three_symptoms_006.png" class="img-fluid position-absolute symptom-img" alt="Image">
                   <h4 class="fw-bold mb-4">Diarrhea</h4>
                   <p class="mb-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum  dummy text.</p>
-                  <a href="https://en.wikipedia.org/wiki/Diarrhea" target="_blank" class="fw-bold text-white">More <i class="fas fa-long-arrow-alt-right ms-right-arrow"></i></a>
+                  <a href="https://www.mayoclinic.org/diseases-conditions/diarrhea/symptoms-causes/syc-20352241" target="_blank" class="fw-bold text-white">More <i class="fas fa-long-arrow-alt-right ms-right-arrow"></i></a>
               </div>
           </div>
       </div>
@@ -483,51 +479,23 @@
         </div>
         <div class="ms-spacer-30"></div>
         <div class="row">
+          {% for item in latest %} 
             <div class="col-md-4">
                 <div class="ms-main-box position-relative">
                     <div class="ms-blog-box">
                         <div class="content-overlay">
                             <div class="content-button">
-                                <a href="news_detail.html" class="btn ms-red-btn">Read Article</a>
+                                <a href="/blog/post/{{ item.slug }}" class="btn ms-red-btn">Read Article</a>
                             </div>
                         </div>
-                        <img src="/static/images/home2-blog-01.jpg" class="img-fluid" alt="Image">                                
+                        <img src="{{ item.img.url }}" height="300px" width="500px"  alt="Image">                                
                     </div>
-                    <h4 class="fw-bold mt-4"><a href="news_detail.html">Lorem ipsum is simply a dummy text of the printing</a></h4>
-                    <p class="ms-title-15 mb-0">APRIL 10,2020</p>
+                    <h4 class="fw-bold mt-4"><a href="/blog/post/{{ item.slug }}">{{ item.title | truncatewords:5 }}</a></h4>
+                    <p class="ms-title-15 mb-0">{{ item.created_date | timesince }} ago</p>
                     <p class="ms-title-15 ms-vertical-text">Health, COVID-19</p>
                 </div>                        
             </div>
-            <div class="col-md-4">
-                <div class="ms-main-box position-relative">
-                    <div class="ms-blog-box">
-                        <div class="content-overlay">
-                            <div class="content-button">
-                                <a href="news_detail.html" class="btn ms-red-btn">Read Article</a>
-                            </div>
-                        </div>
-                        <img src="/static/images/home2-blog-02.jpg" class="img-fluid" alt="Image">                                
-                    </div>
-                    <h4 class="fw-bold mt-4"><a href="news_detail.html">Lorem ipsum is simply a dummy text of the printing</a></h4>
-                    <p class="ms-title-15 mb-0">APRIL 10,2020</p>
-                    <p class="ms-title-15 ms-vertical-text">Health, COVID-19</p>
-                </div>                        
-            </div>
-            <div class="col-md-4">
-                <div class="ms-main-box position-relative">
-                    <div class="ms-blog-box">
-                        <div class="content-overlay">
-                            <div class="content-button">
-                                <a href="news_detail.html" class="btn ms-red-btn">Read Article</a>
-                            </div>
-                        </div>
-                        <img src="/static/images/home2-blog-03.jpg" class="img-fluid" alt="Image">                                
-                    </div>
-                    <h4 class="fw-bold mt-4"><a href="news_detail.html">Lorem ipsum is simply a dummy text of the printing</a></h4>
-                    <p class="ms-title-15 mb-0">APRIL 10,2020</p>
-                    <p class="ms-title-15 ms-vertical-text">Health, COVID-19</p>
-                </div>                        
-            </div>
+          {% endfor %} 
         </div>
     </div>
 </section>
@@ -555,12 +523,12 @@
                   </p>
                 </div>
                 <h3 class="fw-bold ms-news-title">
-                  <a href="news_detail.html"
+                  <a href="/blog/post/{{ item.slug }}"
                     >Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                     sed do</a
                   >
                 </h3>
-                <a href="news_detail.html">
+                <a href="/blog/post/{{ item.slug }}">
                   <div class="hover-icon">
                     <i class="bi bi-arrow-right"></i>
                   </div>
@@ -585,12 +553,12 @@
                   </p>
                 </div>
                 <h3 class="fw-bold ms-news-title">
-                  <a href="news_detail.html"
+                  <a href="/blog/post/{{ item.slug }}"
                     >Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                     sed do</a
                   >
                 </h3>
-                <a href="news_detail.html">
+                <a href="/blog/post/{{ item.slug }}">
                   <div class="hover-icon">
                     <i class="bi bi-arrow-right"></i>
                   </div>

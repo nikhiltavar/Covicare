@@ -6,6 +6,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
 import requests
 from .forms import SignUpForm
+from blog.models import Blog
 
 
 
@@ -58,6 +59,7 @@ def logoutUser(request):
 
 
 def index(request):
+    latest_post = Blog.objects.order_by('-created_date')[:3]
 
     url = "https://vaccovid-coronavirus-vaccine-and-treatment-tracker.p.rapidapi.com/api/npm-covid-data/country-report-iso-based/India/ind"
 
@@ -75,10 +77,13 @@ def index(request):
 
     context = {
         'tracker' : trackerData,
+        'latest' : latest_post,
     }
 
     
     return render(request, 'home.html', context)
+
+    
 def navabr(request):
     return render(request, 'header.html')
 def footer(request):

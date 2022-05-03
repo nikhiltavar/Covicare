@@ -3,6 +3,7 @@ from django.http import JsonResponse
 import json
 import datetime
 from .models import *
+from blog.models import Blog
 from .utils import cookieCart
 
 def shopHome(request):
@@ -16,11 +17,18 @@ def shopHome(request):
         cookieData = cookieCart(request)
         cartItems = cookieData['cartItems']
 
-    products = Product.objects.all()
+    products1 = Product.objects.filter(covidEssentials=True)
+    products2 = Product.objects.filter(equipments=True)
+    products3 = Product.objects.filter(others=True)
+    latest_post = Blog.objects.order_by('-created_date')[:3]
+
 
     context = { 
-        'products': products,
+        'products1': products1,
+        'products2': products2,
+        'products3': products3,
         'cartitems': cartItems,
+        'latest' : latest_post,
     }
     return render (request, 'ecommerce/shophome.html', context)
 
@@ -98,9 +106,11 @@ def updateItem(request):
 def productDetails(request, slug):
     product_slug = Product.objects.get(slug=slug)
     product = Product.objects.get(slug=slug)
+    latest_products = Product.objects.order_by('-created_date')[:3]
     context = {
         'slug': slug,
         'product':product,
+        'latest':latest_products,
     }
     return render(request, 'ecommerce/productdetails.html', context)
 
