@@ -2693,4 +2693,111 @@ footer#footer-home-two p a:hover {
     padding-top: 100px;
   }
 
+  /* Faq */
+.faq-tab .nav-link {
+    border-radius: 3px;
+    padding: 0.8rem 1rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+  }
+  .faq-tab .nav-pills .nav-link.active,
+  .faq-tab .nav-pills .show > .nav-link {
+    color: #ffffff;
+    background-color: #0d6bff;
+  }
   
+  .accordion-card {
+    margin-bottom: 30px;
+    background: #ffffff;
+    border-radius: 0.25rem;
+    overflow: hidden;
+  }
+  .accordion-card:last-child {
+    margin-bottom: 0;
+  }
+  .accordion-card .card-header {
+    padding: 0;
+    margin-bottom: 0;
+    background: #ffffff;
+    border-bottom: 0;
+  }
+  .accordion-card .card-header .btn {
+    color: inherit;
+    font-size: 1.125rem;
+    font-weight: 600;
+    width: 100%;
+    padding: 1.2rem 2rem;
+    text-align: left;
+    justify-content: space-between;
+    text-decoration: none;
+  }
+  .accordion-card .card-header .btn:focus {
+    box-shadow: none;
+  }
+  .accordion-card .card-header .btn .icon {
+    font-family: "Line Awesome Free";
+    font-weight: 900;
+    font-size: 1.5rem;
+    position: relative;
+    left: 0.5rem;
+  }
+  .accordion-card .card-header .btn .icon:before {
+    content: "";
+  }
+  .accordion-card .card-header .btn[aria-expanded=true] .icon:before {
+    content: "";
+  }
+  .accordion-card .card-header .btn .icon,
+  .accordion-card .card-header .btn i {
+    margin: 0;
+  }
+  .accordion-card .card-body {
+    padding: 0 2rem 1.5rem;
+  }
+  
+  .tab-content.ui-dark .accordion-card {
+    background: #19192c;
+  }
+  .tab-content.ui-dark .accordion-card .card-header {
+    background: #19192c;
+    color: #ffffff;
+  }
+  
+  @media (max-width: 767.98px) {
+    .nav {
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+    .nav .nav-link {
+      white-space: nowrap;
+      padding: 0.5rem 1rem;
+      font-size: 0.875rem;
+      background: #d9e8ff;
+      color: #0d6bff;
+      margin-right: 5px;
+      margin-bottom: 5px;
+    }
+    .nav .nav-link.active {
+      background: #0d6bff;
+      color: #ffffff;
+    }
+    .nav.ui-dark .nav-link {
+      color: #0d6bff;
+      background: #232341;
+    }
+    .nav.ui-dark .nav-link.active {
+      background: #0d6bff;
+      color: #ffffff;
+    }
+  
+    .accordion-card .card-header .btn {
+      font-size: 1rem;
+      padding: 0.75rem 1rem;
+    }
+    .accordion-card .card-body {
+      padding: 0 2rem 1.5rem;
+      font-size: 0.875rem;
+    }
+  }
