@@ -3,8 +3,13 @@
 <div id="homepage-one" class="overflow-hidden">
   {% endblock %} {% block header %}
 
-
-
+  <style>
+    user {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
   <!-- Header Section -->
   <header class="position-absolute">
     <div class="container-fluid">
@@ -62,26 +67,20 @@
                                           </li> -->
 
                 <li class="nav-item"><a href="/">HOME</a></li>
-                <li class="nav-item"><a href="{% url 'centres' %}">RESOURCES</a></li>
+                <li class="nav-item"><a href="{% url 'centres' %}">COVID CENTERS</a></li>
                 <li class="nav-item"><a href="{% url 'news' %}">NEWS</a></li>
                 <li class="nav-item"><a href="{% url 'blog' %}">BLOG</a></li>
                 <li class="nav-item"><a href="{% url 'shop' %}">SHOP</a></li>
-              
-                <li class="nav-item"><a href="/admin">CONTACT</a></li>
                 <li class="dropdown nav-item">
-                                              <a class="dropdown-toggle" data-bs-toggle="dropdown" href="home_one.html" role="button"
-                                                  aria-haspopup="true" aria-expanded="false">MORE</a>
-                                              <div class="dropdown-menu">
-                                                  {% if request.user.is_authenticated %}
-                                                  <a class="dropdown-item" href="{% url 'logout' %}">LOGOUT</a>
-                                                  {% else %}
-                                                  <a class="dropdown-item" href="{% url 'login' %}">LOGIN</a>
-                                                  {% endif %}
-                                                  <a class="dropdown-item" href="cart.html">CART</a>
-                                                  <a class="dropdown-item" href="404_error.html">404 ERROR</a>
-                                                  <a class="dropdown-item" href="testimonial.html">TESTIMONIALS</a>
-                                              </div>
-                                          </li>
+                  <a class="dropdown-toggle" data-bs-toggle="dropdown" href="home_one.html" role="button"
+                      aria-haspopup="true" aria-expanded="false">MORE</a>
+                  <div class="dropdown-menu">
+                      {% if request.user.is_authenticated %}
+                      <a class="dropdown-item" href="{% url 'logout' %}">LOGOUT</a>
+                      
+                      {% endif %}
+                      <a class="dropdown-item" href="cart.html">CART</a>
+                </li>
                 <!-- <li class="dropdown nav-item">
                                               <a class="dropdown-toggle" data-bs-toggle="dropdown" href="{% url 'news' %}"
                                                   role="button" aria-haspopup="true" aria-expanded="false">NEWS</a>
@@ -117,9 +116,14 @@
           "
         >
           <!-- <div class="rightheader d-none d-lg-block">
-            <a href="{% url 'shop' %}">LOGIN</a>
-            <a href="#."><i class="fas fa-user ms-header-icon text-white"></i></a>
-            <a href="cart.html"><i class="fas fa-shopping-cart ms-header-icon text-white"></i></a>
+            <a href="{% url 'shop' %}">LOGIN</a>-->
+            {% if request.user.is_authenticated %}
+            <a style="color: white; font-weight: bold;"><i class="fas fa-user ms-header-icon text-white"></i> {{request.user|capfirst}} </a>
+            {% else %}
+            <a style="color: white; font-weight: bold;" href="{% url 'login' %}"> LOGIN </a>
+            <a style="color: white; font-weight: bold; display: inline; padding-left: 11px;" href="{% url 'signup' %}"> SIGNUP </a>
+            {% endif %}
+            <!--<a href="cart.html"><i class="fas fa-shopping-cart ms-header-icon text-white"></i></a>
           </div> -->
         </div>
       </div>
@@ -139,7 +143,9 @@
             <h1 class="mb-0 hero-text">Stay Safe.</h1>
             <h1 class="mb-4 hero-text">Wear Mask.</h1>
             <h5 class="fw-bold">
-              It's Not Over Yet!
+            It's Not Over Yet!
+            Covid Battle is not over yet
+            Necessary Precautions should be taken
             </h5>
             <div class="ms-spacer-30"></div>
             <a href="" class="btn ms-secondary-btn ms-hero-btn"
@@ -180,10 +186,10 @@
             <div class="col-md-6">
                 <p class="seperator-line mb-2">COVID-19</p>
                 <h2 class="fw-bold text-white mb-3">What is Coronavirus?</h2>
-                <p class="update-para">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum  dummy text.  ever since the 1500s, when an unknown 
-                    printer took a galley of type and scrambled it to make a type specimen book.</p>
+                <p class="update-para">Coronaviruses are a type of virus. There are many different kinds, and some cause disease. A coronavirus identified in 2019, SARS-CoV-2, 
+                  has caused a pandemic of respiratory illness, called COVID-19.</p>
                 <div class="ms-spacer-30"></div>
-                <a href="about.html" class="btn ms-red-btn ms-icon-btn">About More <img class="ps-2" src="/static/images/arrow_right_white.svg" width="35" alt="Icon"></a>
+                <a href="https://www.hopkinsmedicine.org/health/conditions-and-diseases/coronavirus" target="_blank"  class="btn ms-red-btn ms-icon-btn">About More <img class="ps-2" src="/static/images/arrow_right_white.svg" width="35" alt="Icon"></a>
             </div>
         </div>
     </div>
@@ -200,14 +206,14 @@
             <h2 class="hero-text">About</h2>
             <h2 class="hero-text">Corona.</h2>
             <h4 class="fw-bold mb-4">
-              Coronavirus disease (COVID-19) is an infectious disease caused by
-              a newly discovered coronavirus.
+              Coronavirus disease (COVID-19) is an infectious disease caused 
+              by the SARS-CoV-2 virus.
             </h4>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
-              ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas
-              accumsan lacus vel facilisis.
+              The virus can spread from an infected person’s mouth or nose in
+              small liquid particles when they cough, sneeze, speak, sing or 
+              breathe. These particles range from larger respiratory droplets
+              to smaller aerosols.
             </p>
             <div class="ms-spacer-30"></div>
             <a
@@ -373,101 +379,6 @@
 </section>
 
 
-  <!-- Testimonials Section -->
-  <section id="ms-testimonial-sec">
-    <div class="bg-color"></div>
-    <div class="container">
-      <div class="testimonial-container">
-        <div class="row">
-          <div class="col-md-4 col-lg-3">
-            <h2 class="fw-bold mb-0">What</h2>
-            <h2 class="fw-bold mb-0">Our Client</h2>
-            <h2 class="fw-bold">Say.</h2>
-            <span class="fw-bold">NEXT</span>
-          </div>
-          <div class="col-md-8 col-lg-9">
-            <div class="owl-carousel">
-              <div class="item testimonial-box">
-                <div class="clearfix">
-                  <div class="img-area">
-                    <img
-                      src="/static/images/1.jpg"
-                      class="img-fluid"
-                      alt="Image"
-                    />
-                  </div>
-                  <div class="position-area">
-                    <h5 class="fw-bold mb-0">Dwyane John</h5>
-                    <p>creative designer</p>
-                  </div>
-                </div>
-                <div class="ms-spacer-60"></div>
-                <h4 class="fw-bold">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Quis ipsum suspendisse ultrices gravida. Risus commodo viverra
-                  maecenas accumsan lacus vel facilisis.
-                </h4>
-                <div class="ms-spacer-30"></div>
-                <a href="#." class="btn ms-primary-btn me-2">Full Story</a>
-              </div>
-              <div class="item testimonial-box">
-                <div class="clearfix">
-                  <div class="img-area">
-                    <img
-                      src="/static/images/2.jpg"
-                      class="img-fluid"
-                      alt="Image"
-                    />
-                  </div>
-                  <div class="position-area">
-                    <h5 class="fw-bold mb-0">Selena Gomez</h5>
-                    <p>creative designer</p>
-                  </div>
-                </div>
-                <div class="ms-spacer-60"></div>
-                <h4 class="fw-bold">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Quis ipsum suspendisse ultrices gravida. Risus commodo viverra
-                  maecenas accumsan lacus vel facilisis.
-                </h4>
-                <div class="ms-spacer-30"></div>
-                <a href="#." class="btn ms-primary-btn me-2">Full Story</a>
-              </div>
-              <div class="item testimonial-box">
-                <div class="clearfix">
-                  <div class="img-area">
-                    <img
-                      src="/static/images/1.jpg"
-                      class="img-fluid"
-                      alt="Image"
-                    />
-                  </div>
-                  <div class="position-area">
-                    <h5 class="fw-bold mb-0">Nikhil Tavar</h5>
-                    <p>creative designer</p>
-                  </div>
-                </div>
-                <div class="ms-spacer-60"></div>
-                <h4 class="fw-bold">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Quis ipsum suspendisse ultrices gravida. Risus commodo viverra
-                  maecenas accumsan lacus vel facilisis.
-                </h4>
-                <div class="ms-spacer-30"></div>
-                <a href="#." class="btn ms-primary-btn me-2">Full Story</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
- 
-
     <!-- New Blog section -->
   <section id="home-two-blog-sec" class="pad-100">
     <div class="container">
@@ -500,159 +411,8 @@
     </div>
 </section>
 
-  <!-- News Feed -->
-  <section id="ms-news" class="ms-sec-pad">
-    <h2 class="d-none">Dummy Heading, not in use</h2>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8">
-          <article class="no-hover-shadow">
-            <div class="row">
-              <div class="col-4 col-md-2 pe-1">
-                <img
-                  src="/static/images/news-01.png"
-                  class="img-fluid"
-                  alt="Image"
-                />
-              </div>
-              <div class="col-8 col-md-10">
-                <div class="meta-data">
-                  <p class="mb-2">
-                    <a href="#.">APRIL 11,2020</a>
-                    <span class="ms-3"><a href="#.">STUDIO</a></span>
-                  </p>
-                </div>
-                <h3 class="fw-bold ms-news-title">
-                  <a href="/blog/post/{{ item.slug }}"
-                    >Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    sed do</a
-                  >
-                </h3>
-                <a href="/blog/post/{{ item.slug }}">
-                  <div class="hover-icon">
-                    <i class="bi bi-arrow-right"></i>
-                  </div>
-                </a>
-              </div>
-            </div>
-          </article>
-          <article class="no-hover-shadow">
-            <div class="row">
-              <div class="col-4 col-md-2 pe-1">
-                <img
-                  src="/static/images/news-02.png"
-                  class="img-fluid"
-                  alt="Image"
-                />
-              </div>
-              <div class="col-8 col-md-10">
-                <div class="meta-data">
-                  <p class="mb-2">
-                    <a href="#.">APRIL 11,2020</a>
-                    <span class="ms-3"><a href="#.">STUDIO</a></span>
-                  </p>
-                </div>
-                <h3 class="fw-bold ms-news-title">
-                  <a href="/blog/post/{{ item.slug }}"
-                    >Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    sed do</a
-                  >
-                </h3>
-                <a href="/blog/post/{{ item.slug }}">
-                  <div class="hover-icon">
-                    <i class="bi bi-arrow-right"></i>
-                  </div>
-                </a>
-              </div>
-            </div>
-          </article>
-        </div>
-        <div class="col-lg-4">
-          <h2 class="fw-bold mb-0">News</h2>
-          <h2 class="fw-bold">Feed.</h2>
-          <h5>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </h5>
-          <div class="ms-spacer-30"></div>
-          <a href="news_full_sidebar.html" class="btn ms-primary-btn me-2"
-            >Continue Reading</a
-          >
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Clients Section -->
-  <section id="ms-clients">
-    <div class="container">
-      <div class="row">
-        <div class="offset-md-2 col-md-8 text-center">
-          <h2 class="fw-bold mb-0">Our</h2>
-          <h2 class="fw-bold">Clients.</h2>
-          <h5>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </h5>
-          <div class="bottom-shadow p-3">
-            <img
-              src="/static/images/1.png"
-              class="img-fluid"
-              alt="Logo Image"
-            />
-          </div>
-        </div>
-      </div>
-      <div class="ms-spacer-100"></div>
-      <div class="row">
-        <div class="col-6 col-sm-6 col-md-4 col-xl-auto">
-          <div class="square-shadow p-0 first-logo text-center">
-            <img
-              src="/static/images/clinent-logosad-1.png"
-              class="img-fluid"
-              alt="Logo Image"
-            />
-          </div>
-        </div>
-        <div class="col-6 col-sm-6 col-md-4 col-xl-auto">
-          <div class="square-shadow p-0 second-logo text-center">
-            <img
-              src="/static/images/clinent-logoq-2.png"
-              class="img-fluid"
-              alt="Logo Image"
-            />
-          </div>
-        </div>
-        <div class="col-6 col-sm-6 col-md-4 col-xl-auto">
-          <div class="square-shadow p-0 third-logo text-center">
-            <img
-              src="/static/images/clinent-logoq-3.png"
-              class="img-fluid"
-              alt="Logo Image"
-            />
-          </div>
-        </div>
-        <div class="col-6 col-sm-6 col-md-4 col-xl-auto">
-          <div class="square-shadow p-0 fourth-logo text-center">
-            <img
-              src="/static/images/clinent-logoq-4.png"
-              class="img-fluid"
-              alt="Logo Image"
-            />
-          </div>
-        </div>
-        <div class="col-6 col-sm-6 col-md-4 col-xl-auto">
-          <div class="square-shadow p-0 fifth-logo text-center">
-            <img
-              src="/static/images/clinent-logoq1-5.png"
-              class="img-fluid"
-              alt="Logo Image"
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+
 
   <!-- Contact Section -->
   <section id="ms-contact-sec">
@@ -666,13 +426,13 @@
           <div class="contact-info">
             <div class="row">
               <div class="col-md-6">
-                <p class="mb-2">Emergency Contact</p>
-                <h5 class="fw-bold mb-0"><a href="#.">+1 234 567 890</a></h5>
+                <p class="mb-2">Covid Helpline</p>
+                <h5 class="fw-bold mb-0"><a href="#.">1075</a></h5>
               </div>
               <div class="col-md-6">
                 <p class="mb-2">Emergency Contact</p>
                 <h5 class="fw-bold mb-0">
-                  <a href="mailto:nikhiltavarcr7@gmail.com">nikhil@gmail.com</a>
+                  <a href="mailto:ncov2019@gov.in">NCOV2019@gov.in</a>
                 </h5>
               </div>
             </div>

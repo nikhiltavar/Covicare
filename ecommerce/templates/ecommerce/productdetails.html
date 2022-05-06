@@ -78,11 +78,12 @@
                                    
                                     <div class="product-action-details ">
                                         <div class="product-details-action">
-                                            <form action="#">
+                                            
+                                
                                                 <div class="details-cart-btn">
-                                                    <button class="c-btn red-btn">add to cart <i class="far fa-plus"></i></button>
+                                                    <a data-product={{product.id}} data-action="add" class="c-btn red-btn update-cart" href="{% url 'cart' %}">Add to cart </a>
                                                 </div>
-                                            </form>
+                                            
                                         </div>
                                     </div>
                                   

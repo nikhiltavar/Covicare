@@ -85,7 +85,7 @@ def updateItem(request):
     print('Action:', action)
     print('productId:', productId)
 
-    customer = request.user.customer
+    customer = request.user.customer                                                        
     product = Product.objects.get(id=productId)
     order, created = Order.objects.get_or_create(customer=customer, complete=False)
 
@@ -104,13 +104,26 @@ def updateItem(request):
     return JsonResponse('Item was added', safe=False)
 
 def productDetails(request, slug):
+
     product_slug = Product.objects.get(slug=slug)
     product = Product.objects.get(slug=slug)
     latest_products = Product.objects.order_by('-created_date')[:3]
+
+    if request.user.is_authenticated:
+        customer = request.user.customer
+        order, created = Order.objects.get_or_create(customer=customer, complete=False)
+        items = order.orderitem_set.all()
+        cartItems = order.get_cart_items
+    else:
+        cookieData = cookieCart(request)                                                                                                            
+        cartItems = cookieData['cartItems']
+
+
     context = {
         'slug': slug,
         'product':product,
         'latest':latest_products,
+        'cartitems': cartItems,
     }
     return render(request, 'ecommerce/productdetails.html', context)
 

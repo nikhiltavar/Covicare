@@ -12748,7 +12748,7 @@ label {
 }
 .main-menu ul li a {
   display: block;
-  font-size: 16px;
+  font-size: 18px;
   padding: 39px 0;
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
@@ -12757,7 +12757,7 @@ label {
   line-height: 1;
   position: relative;
   text-transform: capitalize;
-  color: #9b9b9b;
+  color: #0a1f40;
   font-weight: 600;
 }
 .main-menu ul li a i {
@@ -12770,7 +12770,7 @@ label {
   color: #3625d3;
 }
 .main-menu ul li:hover > a {
-  color: #3625d3;
+  color: #e4573d;
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1600px) {

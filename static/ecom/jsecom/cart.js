@@ -17,7 +17,7 @@ for (i = 0; i < updateBtns.length; i++) {
   
 
 function addCookieItem(productId, action) {
-    console.log('Not login nhai')
+    console.log('Not login')
 
     if (action == 'add'){
         if (cart[productId] == undefined){
@@ -79,4 +79,22 @@ function updateUserOrder(productId, action){
             console.log('Data:', data)
             location.reload()
         });
+
+        var url = 'update_item_slug/'
+        fetch(url, {
+            method: 'POST',
+            headers:{
+            'Content-Type':'application/json',
+            'X-CSRFToken':csrftoken
+            },
+            body:JSON.stringify({'productId':productId, 'action':action})
+        })
+        .then ((response) => {
+            return response.json();
+        })
+        .then((data) => {
+            console.log('Data:', data)
+            location.reload()
+        });
+
 }            

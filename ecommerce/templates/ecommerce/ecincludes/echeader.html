@@ -48,30 +48,12 @@
                     <div class="main-menu">
                         <nav id="mobile-menu">
                             <ul>
-                                <li ><a href="{% url 'home' %}">home</a>
-                                    <ul class="sub-menu text-left">
-                                        <li><a href="index.html">home 1</a></li>
-                                        <li><a href="index-2.html">home 2</a></li>
-                                        <li><a href="index-3.html">home 3</a></li>
-                                    </ul>
-                                </li>
-                                <li class="active"><a href="shop-grid.html">Covid Centres</a>
-                                    <ul class="sub-menu text-left">
-                                        <li><a href="shop-grid.html">shop grid</a>
-                                        <li><a href="shop-full-width.html">shop full width</a>
-                                        
-                                    </ul>
-                                </li>
-                                <li><a href="shop-grid.html">News</a></li>
-                                <li><a href="{% url 'blog' %}">Blog</a></li>
-                                <li><a href="#">pages</a>
-                                    <ul class="sub-menu text-left">
-                                        <li><a href="about.html">about</a></li>
-                                        <li><a href="contact.html">contact</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="register.html"><i class="fas fa-user-circle"></i> My Account</a></li>
-                                <li><a href="{% url 'cart' %}"><i class="fas fa-cart-plus"></i> Cart({{ cartitems }})</a></li>
+                                <li ><a href="{% url 'home' %}">HOME</a></li>
+                                <li ><a href="{% url 'centres' %}">COVID CENTERS</a></li>
+                                <li><a href="{% url 'news' %}">NEWS</a></li>
+                                <li><a href="{% url 'blog' %}">BLOG</a></li>
+                                <li><a href="#">pages</a></li>
+                                <li><a href="{% url 'cart' %}"><i class="fas fa-cart-plus"></i> CART ({{ cartitems }})</a></li>
                               
                             </ul>
                         </nav>
