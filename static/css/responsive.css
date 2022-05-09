@@ -1,7 +1,7 @@
-/*==================== Media Queries for all the devices ====================*/
+
 
 @media (max-width:1600px) {
-    /*==================== 02. Homepage CSS ====================*/
+    
     /*---------- Banner Section ----------*/
     .ms-home-bnr {
         background-size: 45%;
@@ -16,18 +16,18 @@
         padding: 70px 0px 60px 00px;
     }
 
-    /*==================== 03. About Page CSS ====================*/
+    
     #ms-symptoms-sec .special-image {
         padding: 200px;
         margin-top: -220px;
     }
 
-    /*==================== 08. Shop Page CSS ====================*/
+    
     #ms-special-product .special-image {
         background-size: 55%;
     }
 
-    /*==================== 10. Team Page CSS ====================*/
+    
     #team-cta-sec {
         margin: 60px 0 100px;
     }
@@ -37,24 +37,22 @@
         margin-top: -412px;
     }
 
-    /*==================== 13. Homepage Two CSS ====================*/
-    /*---------- Prevention Section ----------*/
+    
     #ms-prevention-sec .side-image {
         left: 1000px;
         bottom: 50px;
     }
-    /*---------- Shop Section ----------*/
+   
     #ms-shop-sec .ms-shop-box .ms-hover {
         left: 18%;
     }
-    /*---------- Team Section ----------*/
+    
     #home-two-team-sec {
         padding-left: 30px;
         padding-right: 30px;
     }
 
-    /*==================== 14. Homepage Three CSS ====================*/
-    /*---------- Slider Section CSS ----------*/
+   
     #ms-hero-slider .carousel-caption h5 {
         padding-right: 15%;
         padding-left: 15%;
@@ -77,18 +75,17 @@
 }
 
 @media (max-width:1400px) {
-    /*==================== 03. About Page CSS ====================*/
+   
     #ms-disease-sec .floating-img {
         left: 100px;
     }
 
-    /*==================== 10. Team Page CSS ====================*/
+   
     #team-cta-sec .special-left-image {
         margin-top: -388px;
     }
 
-    /*==================== 14. Homepage Three CSS ====================*/
-    /*---------- Slider Section CSS ----------*/
+   
     #ms-hero-slider .carousel-caption {
         right: 20%;
         left: 20%;
@@ -97,8 +94,7 @@
 }
 
 @media (max-width:1300px) {
-    /*==================== 02. Homepage CSS ====================*/
-    /*---------- Banner Section ----------*/
+    
     .ms-home-bnr {
         height: 700px;
     }
@@ -114,12 +110,12 @@
         padding-right: 60px;
     }
 
-    /*==================== 03. About Page CSS ====================*/
+    
     #ms-disease-sec .floating-img {
         left: 70px;
     }
 
-    /*==================== 10. Team Page CSS ====================*/
+    
     #team-cta-sec .ms-bg {
         padding: 100px 90px;
     }
@@ -130,8 +126,7 @@
         margin-top: -362px;
     }
 
-    /*==================== 13. Homepage Two CSS ====================*/
-    /*---------- Prevention Section ----------*/
+    
     #ms-prevention-sec .side-image {
         left: 920px;
         bottom: 70px;
@@ -144,7 +139,7 @@
         left: 19%;
     }
 
-    /*==================== 14. Homepage Three CSS ====================*/
+    
     /*---------- Our Blog Section ----------*/
     #home-three-blog-sec #ms_three_blog .nav-btn.next-slide {
         right: -755px;
@@ -153,7 +148,7 @@
 }
 
 @media (max-width:1200px) {
-    /*==================== 01. General CSS ====================*/
+    
     h2 {
         font-size: 40px;
     }
@@ -161,7 +156,7 @@
         margin: 0 40px;
     }
 
-    /*==================== 02. Homepage CSS ====================*/
+    
     /*---------- Banner Section ----------*/
     .ms-home-bnr {
         height: 600px;
@@ -193,7 +188,7 @@
         padding-top: 20px;
     }
 
-    /*==================== 03. About Page CSS ====================*/
+    
     #ms-disease-sec .floating-img {
         left: 30px;
     }
@@ -223,7 +218,7 @@
         padding: 40px;
     }
 
-    /*==================== 06. Contact Page CSS ====================*/
+    
     #ms-form-sec .contact-bnr {
         background-size: 50%;
     }
@@ -231,7 +226,7 @@
         padding-bottom: 100px;
     }
 
-    /*==================== 08. Shop Page CSS ====================*/
+    
     .ms-shop-box .ms-hover {
         left: 10%;
         bottom: 28%;        
@@ -252,7 +247,7 @@
         padding: 240px;
     }   
     
-    /*==================== 09. Shop Detail Page CSS ====================*/
+
     #ms-shop-detail-section .carousel-item .thumb {
         width: 31.5%;
     }
@@ -260,7 +255,7 @@
         height: 30px;
     }
 
-    /*==================== 10. Team Page CSS ====================*/
+    
     #team-cta-sec .special-left-image {
         margin-top: -294px;
         padding: 170px;
@@ -272,17 +267,17 @@
         margin: 0 0 50px;
     }
 
-    /*==================== 11. News Full Sidebar Page CSS ====================*/
+   
     aside {
         padding-left: 0;
     }
 
-    /*==================== 12. News Detail Page CSS ====================*/
+ 
     article .ms-spacer-40 {
         height: 0px;
     }
     
-    /*==================== 13. Homepage Two CSS ====================*/
+   
     /*---------- Banner Section CSS ----------*/
     #home-two-bnr {
         padding: 300px 0 200px 0;
@@ -335,7 +330,7 @@
         left:8.5%;
     }
 
-    /*==================== 14. Homepage Three CSS ====================*/
+    
     /*---------- Header CSS ----------*/
     #homepage-three .ms-header-bg nav ul li:last-child a {
         padding: 24px 30px;
@@ -381,7 +376,7 @@
 }
 
 @media (max-width:800px) {
-    /*==================== 01. General CSS ====================*/
+    
     h2 {
         font-size: 36px;
     }
@@ -403,7 +398,7 @@
         margin: 0 15px;
     }
 
-    /*==================== 02. Homepage CSS ====================*/
+    
     /*---------- Banner Section ----------*/
     .hero-text {
         font-size: 50px;
@@ -442,7 +437,7 @@
         left: 10px;
     }
     
-    /*==================== 03. About Page CSS ====================*/
+   
     #ms-disease-sec .floating-img {
         width: 40%;
         left: 350px;
@@ -486,14 +481,13 @@
         padding: 60px;
     }
 
-    /*==================== 04. 404 Error Page CSS ====================*/
     
-    /*==================== 05. FAQ Page CSS ====================*/
+    
+    
     .accordion {
         padding: 0;
     }
 
-    /*==================== 06. Contact Page CSS ====================*/
     #ms-form-sec {
         padding-bottom: 0px;
     }
@@ -504,7 +498,7 @@
         margin-top: 80px;
     }
 
-    /*==================== 08. Shop Page CSS ====================*/
+    */
     .ms-shop-box .ms-hover {
         left: 14%;
         bottom: 28%;        
@@ -517,7 +511,7 @@
         margin: 60px 0 100px 0;
     }
 
-    /*==================== 09. Shop Detail Page CSS ====================*/
+
     #ms-shop-detail-section h3 {
         font-size: 28px;
     }
@@ -528,7 +522,7 @@
         padding-left: 20px;
     }
 
-    /*==================== 10. Team Page CSS ====================*/
+    */
     #team-cta-sec .ms-bg {
         padding: 50px 90px;
     }
@@ -537,7 +531,7 @@
         padding: 120px;
     }
 
-    /*==================== 11. News Full Sidebar Page CSS ====================*/
+   
     article .ms-content-area {
         padding: 30px;
     }
@@ -548,7 +542,7 @@
         margin-top: 80px;
     }
 
-    /*==================== 13. Homepage Two CSS ====================*/
+    
     /*---------- Symptoms Section CSS ----------*/
     #home-two-corona-symptom .first-img {
         width: 45%;
@@ -615,13 +609,13 @@
         padding: 80px 0 15px;
     }
 
-    /*==================== 15. Testimonial Page CSS ====================*/
+   
     .ms-testimonial-box .ms-border-radius {
         width: 50%;
         margin-bottom: 20px;
     }
 
-    /*==================== 14. Homepage Three CSS ====================*/
+    
     /*---------- Header CSS ----------*/
     #homepage-three header {
         padding: 20px;
@@ -763,7 +757,7 @@
 }
 
 @media (max-width:767px) {
-    /*==================== 01. General CSS ====================*/
+    
     h2 {
         font-size: 30px;
     }
@@ -813,7 +807,7 @@
         line-height: 2;
     }
 
-    /*==================== 02. Homepage CSS ====================*/
+    
     /*---------- Banner Section ----------*/
     .hero-text {
         font-size: 45px;
@@ -880,7 +874,7 @@
         margin-top: 30px;
     }
 
-    /*==================== 03. About Page CSS ====================*/
+    
     .cases {
         margin-top: 50px;
     }
@@ -910,7 +904,7 @@
         padding: 50px 20px;
     }
 
-    /*==================== 06. Contact Page CSS ====================*/
+    
     #ms-form-sec .contact-bnr {
         background-size: 80%;
         background-position-x: 50%;
@@ -933,7 +927,7 @@
         margin-bottom: 60px;
     }
 
-    /*==================== 08. Shop Page CSS ====================*/
+    */
     .ms-shop-box img {
         width: 100%;
     }
@@ -960,7 +954,7 @@
         padding: 120px 50px 60px;
     }
 
-    /*==================== 09. Shop Detail Page CSS ====================*/
+    
     #ms-shop-detail-section .special-pad {
         padding-top: 50px;
     }
@@ -968,7 +962,7 @@
         font-size: 24px;
     }
 
-    /*==================== 10. Team Page CSS ====================*/
+    */
     #team-cta-sec .ms-bg {
         padding: 40px 40px 200px 40px;
     }
@@ -978,7 +972,7 @@
         padding: 100px;
     }
 
-    /*==================== 11. News Page CSS ====================*/
+    */
     aside .widget {
         margin-bottom: 50px;
     }
@@ -986,7 +980,7 @@
         font-size: 24px;
     }
     
-    /*==================== 13. Homepage Two CSS ====================*/
+    
     /*---------- Header CSS ----------*/
     #homepage-three header nav button {
         bottom: 30px;
@@ -1085,7 +1079,7 @@
         height: 30px;
     } 
 
-    /*==================== 14. Homepage Three CSS ====================*/
+    
     /*---------- Slider Section CSS ----------*/
     #ms-hero-slider .carousel-caption {
         left: 5%;
@@ -1210,13 +1204,13 @@
 }
 
 @media (max-width:376px) {
-    /*==================== 02. Homepage CSS ====================*/
+    
     /*---------- Testimonials Section ----------*/
     #ms-testimonial-sec .nav-btn.next-slide {
         bottom: 490px;
     }
 
-    /*==================== 08. Shop Page CSS ====================*/
+    */
     .ms-shop-box .ms-hover {
         left: 15%;       
     }
@@ -1227,7 +1221,7 @@
         left: 32%;
     }
 
-    /*==================== 10. Team Page CSS ====================*/
+    */
     #team-cta-sec .special-left-image {
         margin-top: -167px;
     }
@@ -1235,7 +1229,7 @@
         padding: 90px;
     }
 
-    /*==================== 14. Homepage Three CSS ====================*/
+    
     /*---------- What is coronavirus Section ----------*/
     #home-three-coronavirus-sec #home-3-blue-carousel .carousel-control-prev {
         left: 265px;
@@ -1264,7 +1258,7 @@
 }
 
 @media (max-width:360px) {
-    /*==================== 02. Homepage CSS ====================*/
+    
     /*---------- Testimonials Section ----------*/
     #ms-testimonial-sec .nav-btn.next-slide {
         right: -230px;
@@ -1273,12 +1267,12 @@
         left: 180px;
     }
 
-    /*==================== 09. Shop Detail Page CSS ====================*/
+    
     #ms-shop-detail-section .carousel-item .thumb {
         margin-right: 10px;
     }
 
-    /*==================== 13. Homepage Two CSS ====================*/
+    
     /*---------- Blog Section CSS ----------*/
     #home-two-blog-sec .ms-main-box .ms-blog-box .content-overlay .content-button {
         left: 22%;
@@ -1287,7 +1281,7 @@
         left: 22%;
     }
 
-    /*==================== 14. Homepage Three CSS ====================*/
+    
     /*---------- What is coronavirus Section ----------*/
     #home-three-coronavirus-sec #home-3-blue-carousel .carousel-control-prev {
         left: 250px;
@@ -1304,7 +1298,7 @@
         bottom: 515px;
     }
 
-    /*==================== 10. Team Page CSS ====================*/
+    */
     #team-cta-sec .special-left-image {
         padding: 70px;
     }
@@ -1312,7 +1306,7 @@
         margin-top: -139px;
     }
 
-    /*==================== 14. Homepage Three CSS ====================*/
+    
     /*---------- Team Section ----------*/
     #home-three-team-sec .three-team-box .hover-content {
         top: 80px;
@@ -1338,7 +1332,7 @@
         padding: 22px 30px;
     }
 
-    /*==================== 08. Shop Page CSS ====================*/
+    */
     .ms-shop-box .ms-hover {
         left: 8%;       
     }
@@ -1349,7 +1343,7 @@
         left: 28%;
     }
 
-    /*==================== 14. Homepage Three CSS ====================*/
+    
     /*---------- What is coronavirus Section ----------*/
     #home-three-coronavirus-sec #home-3-blue-carousel .carousel-control-next, 
     #home-three-coronavirus-sec #home-3-blue-carousel .carousel-control-prev {

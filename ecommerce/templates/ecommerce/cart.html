@@ -104,7 +104,7 @@
                                                     
                                                 </div>
                                             </td>
-                                            <td class="product-subtotal"><span class="amount">₹{{ item.get_total }}</span></td>
+                                            <td class="product-subtotal"><span class="amount">INR {{ item.get_total }}</span></td>
                                             <!-- <td class="product-remove"><a href="#"><i class="fa fa-times"></i></a></td> -->
                                         </tr>
                                         {% endfor %}
@@ -132,7 +132,7 @@
                                         <h2>Cart totals</h2>
                                         <ul class="mb-20">
                                             <li>All Items <span>{{order.get_cart_items}}</span></li>
-                                            <li>Total <span>₹{{order.get_cart_total}}</span></li>
+                                            <li>Total <span>INR {{order.get_cart_total}}</span></li>
                                         </ul>
                                         {% if user.is_authenticated %}
                                         <a class="c-btn theme-btn" href="{% url 'checkout'%}">Proceed to checkout</a>
@@ -149,91 +149,7 @@
         </section>
         <!-- Cart Area End-->
 
-            <!-- instagram-area-start -->
-            <div class="instagram-area pl-130 pr-130">
-                <div class="container-fluid">
-                    <div class="row instagram-active">
-                        <div class="col-xl-2 p-0">
-                            <div class="instagram-wrapper">
-                                <div class="instagram-img">
-                                    <a href="#"><img src="/static/ecom/imgecom/instagram/01.jpg" alt="">
-                                        <div class="instagram-icon">
-                                            <i class="fab fa-instagram"></i>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-2 p-0">
-                            <div class="instagram-wrapper">
-                                <div class="instagram-img">
-                                    <a href="#"><img src="/static/ecom/imgecom/instagram/02.jpg" alt="">
-                                        <div class="instagram-icon">
-                                            <i class="fab fa-instagram"></i>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-2 p-0">
-                            <div class="instagram-wrapper">
-                                <div class="instagram-img">
-                                    <a href="#"><img src="/static/ecom/imgecom/instagram/03.jpg" alt="">
-                                        <div class="instagram-icon">
-                                            <i class="fab fa-instagram"></i>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-2 p-0">
-                            <div class="instagram-wrapper">
-                                <div class="instagram-img">
-                                    <a href="#"><img src="/static/ecom/imgecom/instagram/04.jpg" alt="">
-                                        <div class="instagram-icon">
-                                            <i class="fab fa-instagram"></i>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-2 p-0">
-                            <div class="instagram-wrapper">
-                                <div class="instagram-img">
-                                    <a href="#"><img src="/static/ecom/imgecom/instagram/05.jpg" alt="">
-                                        <div class="instagram-icon">
-                                            <i class="fab fa-instagram"></i>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-2 p-0">
-                            <div class="instagram-wrapper">
-                                <div class="instagram-img">
-                                    <a href="#"><img src="/static/ecom/imgecom/instagram/06.jpg" alt="">
-                                        <div class="instagram-icon">
-                                            <i class="fab fa-instagram"></i>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-2 p-0">
-                            <div class="instagram-wrapper">
-                                <div class="instagram-img">
-                                    <a href="#"><img src="/static/ecom/imgecom/instagram/01.jpg" alt="">
-                                        <div class="instagram-icon">
-                                            <i class="fab fa-instagram"></i>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- instagram-area-end -->
+           
 
         </main>
 

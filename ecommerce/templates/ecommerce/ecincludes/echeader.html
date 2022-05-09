@@ -32,7 +32,7 @@
             <div class="row align-items-center">
                 <div class="col-xl-3 col-lg-3">
                     <div class="logo">
-                        <a href="index.html"><img src="/static/images/3cropped.png" alt=""  class="pl-60 pr-60" /></a>
+                        <a href="{% url 'home' %}"><img src="/static/images/3cropped.png" alt=""  class="pl-60 pr-60" /></a>
                     </div>
                 </div>
                 <div class="col-xl-9 col-lg-9 d-none d-lg-block">
@@ -48,11 +48,10 @@
                     <div class="main-menu">
                         <nav id="mobile-menu">
                             <ul>
-                                <li ><a href="{% url 'home' %}">HOME</a></li>
+                                <li ><a href="{% url 'shop' %}">SHOP</a></li>
                                 <li ><a href="{% url 'centres' %}">COVID CENTERS</a></li>
                                 <li><a href="{% url 'news' %}">NEWS</a></li>
                                 <li><a href="{% url 'blog' %}">BLOG</a></li>
-                                <li><a href="#">pages</a></li>
                                 <li><a href="{% url 'cart' %}"><i class="fas fa-cart-plus"></i> CART ({{ cartitems }})</a></li>
                               
                             </ul>
