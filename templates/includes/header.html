@@ -31,17 +31,21 @@
                                                       </div>
                                                   </li> -->
         
-                        <li class="nav-item"><a href="/">HOME</a></li>
-                        <li class="nav-item"><a href="{% url 'centres' %}">RESOURCES</a></li>
-                        <li class="nav-item"><a href="{% url 'news' %}">NEWS</a></li>
-                        <li class="nav-item"><a href="{% url 'blog' %}">BLOG</a></li>
-                        <li class="nav-item"><a href="{% url 'shop' %}">SHOP</a></li>
-                        {% if request.user.is_authenticated %}
-                        <li class="nav-item"><a href="{% url 'logout' %}">LOGOUT</a></li>
-                        {% else %}
-                        <li class="nav-item"><a href="{% url 'login' %}">LOGIN</a></li>
-                        {% endif %}
-                        <li class="nav-item"><a href="/admin">CONTACT</a></li>
+                                                  <li class="nav-item"><a href="/">HOME</a></li>
+                                                  <li class="nav-item"><a href="{% url 'centres' %}">COVID CENTERS</a></li>
+                                                  <li class="nav-item"><a href="{% url 'news' %}">NEWS</a></li>
+                                                  <li class="nav-item"><a href="{% url 'blog' %}">BLOG</a></li>
+                                                  <li class="nav-item"><a href="{% url 'shop' %}">SHOP</a></li>
+                                                  <li class="dropdown nav-item">
+                                                    <a class="dropdown-toggle" data-bs-toggle="dropdown" href="home_one.html" role="button"
+                                                        aria-haspopup="true" aria-expanded="false">MORE</a>
+                                                    <div class="dropdown-menu">
+                                                        {% if request.user.is_authenticated %}
+                                                        <a class="dropdown-item" href="{% url 'logout' %}">LOGOUT</a>
+                                                        
+                                                        {% endif %}
+                                                        <a class="dropdown-item" href="{% url 'cart' %}">CART</a>
+                                                  </li>
                         <!-- <li class="dropdown nav-item">
                                                       <a class="dropdown-toggle" data-bs-toggle="dropdown" href="home_one.html" role="button"
                                                           aria-haspopup="true" aria-expanded="false">PAGES</a>
@@ -81,9 +85,12 @@
           </div>
           <div class="col-md-0 col-lg-2 d-flex align-items-center justify-content-end">
               <div class="icons d-none d-lg-block">
-                  <a href="#."><i class="fas fa-user-circle ms-header-icon"></i></a>
-                  <a href="cart.html"><i class="fas fa-shopping-cart ms-header-icon"></i></a>
-              </div>
+                {% if request.user.is_authenticated %}
+                <a style="color: #091e3f; font-weight: bold;"><i class="fas fa-user ms-header-icon"></i> {{request.user|capfirst}} </a>
+                {% else %}
+                <a style="color: #091e3f; font-weight: bold;" href="{% url 'login' %}"> LOGIN </a>
+                <a style="color: #091e3f; font-weight: bold; display: inline; padding-left: 11px;" href="{% url 'signup' %}"> SIGNUP </a>
+                {% endif %}
           </div>
       </div>       
   </div>    
