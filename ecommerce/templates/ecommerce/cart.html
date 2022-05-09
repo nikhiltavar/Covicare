@@ -25,7 +25,7 @@
                                     <h2>cart</h2>
                                 </div>
                                 <ul class="breadcrumb-menu">
-                                    <li><a href="index.html">home</a></li>
+                                    <li style="padding-right: 0px;"><a href="{% url 'shop' %}">shop </a><i class="fas fa-arrow-right"></i></li>
                                     <li><span>cart</span></li>
                                 </ul>
                             </div>
@@ -89,9 +89,9 @@
                                     <tbody>
                                         {% for item in items %}
                                         <tr>
-                                            <td class="product-thumbnail"><a href="#"><img src="{{ item.product.imageURL }}"
+                                            <td class="product-thumbnail"><a href="/shop/productdetails/{{ item.product.slug }}"><img src="{{ item.product.imageURL }}"
                                                         alt=""></a></td>
-                                            <td class="product-name"><a href="#">{{ item.product.name }}</a></td>
+                                            <td class="product-name"><a href="/shop/productdetails/{{ item.product.slug }}">{{ item.product.name }}</a></td>
                                             <td class="product-price"><span class="amount">{{ item.product.price }}</span></td>
                                             <td class="quantity">
                                                 <div>

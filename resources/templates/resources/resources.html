@@ -155,15 +155,15 @@
                             <!-- Pagination  -->
 
                             {% if centre.has_previous %}
-                            <a href="/blog/?page=1" class=><button>First<span></span></button></a>
-                            <a href="/blog/?page={{centre.previous_page_number}}"><button><i class="fas fa-arrow-left"></i><span></span></button> </a>
+                            <a href="/centre/?page=1" class=><button>First<span></span></button></a>
+                            <a href="/centre/?page={{centre.previous_page_number}}"><button><i class="fas fa-arrow-left"></i><span></span></button> </a>
                             {% endif %}
                             
-                            <a href="/blog/?page={{centre.number}}"><button>{{centre.number}}<span></span></button></a>
+                            <a href="/centre/?page={{centre.number}}"><button>{{centre.number}}<span></span></button></a>
                             
                             {% if centre.has_next %}
-                            <a href="/blog/?page={{centre.next_page_number}}" > <button><i class="fas fa-arrow-right"></i><span></span></button></a>
-                            <a href="/blog/?page={{lastpage}}"><button>Last<span></span></button></a>
+                            <a href="/centre/?page={{centre.next_page_number}}" > <button><i class="fas fa-arrow-right"></i><span></span></button></a>
+                            <a href="/centre/?page={{lastpage}}"><button>Last<span></span></button></a>
                             {% endif %}
 
                             <div class="ms-spacer-30"></div>

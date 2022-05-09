@@ -10,45 +10,37 @@
         <div class="row mt-5">
             <div class="col-6 col-md-3 mb-4 mb-md-auto">
                 <h5 class="text-white fw-bold mb-4">General Inquiries</h5>
-                <p><a href="mailto:singh.makhan24@gmail.com">info@coroso.com</a></p>
+                <p><a href="mailto:">/a></p>
                 <p><a href="tel:+12345671313">+1 234 567 1313</a></p>
                 <p>1525 Saint Marys, Chicago</p>
                 <p>New York</p>
             </div>
             <div class="col-6 col-md-3 mb-4 mb-md-auto">
-                <h5 class="text-white fw-bold mb-4">About Us</h5>
-                <p><a href="home_one.html">Home V1</a></p>
-                <p><a href="home_two.html">Home V2</a></p>
-                <p><a href="faq.html">FAQs</a></p>
-                <p><a href="contact.html">Contact Us</a></p>
+                <h5 class="text-white fw-bold mb-4">Services</h5>
+                <p><a href="{% url 'centres' %}">Covid Centres</a></p>
+                <p><a href="{% url 'blog' %}">Blog</a></p>
+                <p><a href="{% url 'news' %}">News</a></p>
+                <p><a href="{% url 'shop' %}">Shop</a></p>
             </div>
             <div class="col-6 col-md-3">
-                <h5 class="text-white fw-bold mb-4">Resources</h5>
-                <p><a href="news_grid.html">News Grid</a></p>
-                <p><a href="news_full.html">News Full</a></p>
-                <p><a href="news_full_sidebar.html">News Full Sidebar</a></p>
-                <p><a href="news_detail.html">News Detail</a></p>
+                <h5 class="text-white fw-bold mb-4">Blogs</h5>
+                
+                <p><a href="/blog/post/keeping-kids-healthy-going-back-to-school">Keeping Kids Healthy Going Back …</a></p>
+                <p><a href="/blog/post/poverty-and-food-insecurity-could-grow-dramaticall">Poverty and food insecurity could …</a></p>
+                <p><a href="/blog/post/trust-in-science-and-in-government-plays-a-crucial">Trust in science and in …</a></p>
+                <p><a href="/blog/post/social-safety-nets-are-crucial-to-the-covid-19-res">Social safety nets are crucial …</a></p>
+                
             </div>
             <div class="col-6 col-md-3">
                 <h5 class="text-white fw-bold mb-4">Products</h5>
-                <p><a href="shop.html">Shop Page</a></p>
-                <p><a href="shop_detail.html">Shop Detail</a></p>
-                <p><a href="team.html">Team</a></p>
-                <p><a href="cart.html">Cart</a></p>
+                <p><a href="/shop/productdetails/lab-n95-face-mask">Lab N95 Face Mask</a></p>
+                <p><a href="/shop/productdetails/covid-19-hand-gloves">Covid -19 Hand Gloves</a></p>
+                <p><a href="/shop/productdetails/hand-sanitizer-covid-19">Ciphands Antiseptic Hand Sanitizer</a></p>
+                <p><a href="/shop/productdetails/medical-thermometer">Omron MC-246 Thermometer</a></p>
             </div>
         </div>
         <div class="ms-spacer-60"></div>
-        <div class="row">
-            <div class="offset-lg-3 col-lg-6">
-                <h2 class="text-white fw-bold text-center mb-4">Subscribe to Newsletter</h2>
-                <form class="form-group mb-0 position-relative">
-                    <div class="form-group mb-0">
-                        <input type="email" placeholder="Enter your email...">
-                    </div>
-                    <button type="submit" class="btn ms-primary-btn position-absolute"><i class="far fa-envelope-open me-2"></i>Subscribe</button>
-                </form>                        
-            </div>
-        </div>
+        
         <!-- <div class="ms-spacer-70"></div> -->
         <div class="row my-5">
             <div class="offset-md-3 col-md-6">
@@ -71,11 +63,10 @@
         <!-- <div class="ms-spacer-90"></div> -->
         <div class="row">
             <div class="col-md-6 text-center text-md-start">
-                <span class="copyright">Copyright By @Covicare - 2022</span>
+                <span style="color: #ffffff;" class="copyright">Copyright By @Covicare - 2022</span>
             </div>
             <div class="col-md-6 text-center text-md-end">
-                <a href="#." class="me-4">Privacy Policy</a>
-                <a href="#.">Terms & Conditions</a>
+                <a style="color: #ffffff;" class="me-4">Made With 💗 In India</a>
             </div>
         </div>
     </div>

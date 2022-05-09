@@ -17745,7 +17745,6 @@ ul.cat li a:hover {
   }
 }
 .breadcrumb-menu li::before {
-  content: "";
   display: inline-block;
   padding-bottom: 0;
   position: absolute;

@@ -60,6 +60,8 @@ def logoutUser(request):
 
 def index(request):
     latest_post = Blog.objects.order_by('-created_date')[:3]
+    footer_post = Blog.objects.order_by('-created_date')[:4]
+
 
     url = "https://vaccovid-coronavirus-vaccine-and-treatment-tracker.p.rapidapi.com/api/npm-covid-data/country-report-iso-based/India/ind"
 
@@ -78,6 +80,7 @@ def index(request):
     context = {
         'tracker' : trackerData,
         'latest' : latest_post,
+        'footer' : footer_post,
     }
 
     
