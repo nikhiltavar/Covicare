@@ -125,19 +125,87 @@
                                     <span class="ms-title-15 me-4"><a href="#.">APRIL 11, 2020</a></span>
                         
                                     <h4 class="fw-bold mt-3 ms-news-title">{{ centre.name }}</h4>
-                                    <p class="mb-5">{{ centre.desc | safe }}</p>
-                                    <h5>Beds availability : {{centre.availableBeds}}</h5>
+                                    <p class="mb-5" style="font-size: 21px;">{{ centre.desc | safe }}</p>
+                                    <!-- <h5>Total Patients Intake : {{centre.totalPatients}}</h5>
+                                    <h5>Total Beds : {{centre.totalBeds}}</h5>
+                                    <h5>Available Beds : {{centre.availableBeds}}</h5>
+                                    <h5>Total Ventilators : {{centre.totalVentillators}}</h5>
+                                    <h5>Available Ventilators : {{centre.availableVentillators}}</h5>
+                                    <h5>Total Infusion Pumps : {{centre.totalInfusionPump}}</h5>
+                                    <h5>Available Infusion Pumps : {{centre.availableInfusionPump}}</h5>
+                                    <h5>Total Oxygen Delivery Devices : {{centre.totalO2Delivery}}</h5>
+                                    <h5>Available Oxygen Delivery Devices : {{centre.availableO2Delivery}}</h5>
+                                    <h5>Available Oxygen Cylinders : {{centre.O2cylinder}}</h5> -->
                                   
                                 </div>
+                                <div class="ms-spacer-30 second"></div>
+
+                                <form action="#">
+                                    <div class="table-content table-responsive">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th style="font-size: 21px;" class="cart-product-name">Resources</th>
+                                                    <th style="font-size: 21px;"class="product-price">Quantity</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                               
+                                                <tr>
+                                                    <td class="product-name"><a>Total Patients Intake</a></td>
+                                                    <td class="product-price"><span class="amount">{{centre.totalPatients}}</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="product-name"><a>Total Beds</a></td>
+                                                    <td class="product-price"><span class="amount">{{centre.totalBeds}}</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="product-name"><a>Available Beds</a></td>
+                                                    <td class="product-price"><span class="amount">{{centre.availableBeds}}</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="product-name"><a>Total Ventilators</a></td>
+                                                    <td class="product-price"><span class="amount">{{centre.totalVentillators}}</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="product-name"><a>Available Ventilators</a></td>
+                                                    <td class="product-price"><span class="amount">{{centre.availableVentillators}}</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="product-name"><a>Total Infusion Pumps</a></td>
+                                                    <td class="product-price"><span class="amount">{{centre.totalInfusionPump}}</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="product-name"><a>Available Infusion Pumps</a></td>
+                                                    <td class="product-price"><span class="amount">{{centre.availableInfusionPump}}</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="product-name"><a>Total Oxygen Delivery Devices</a></td>
+                                                    <td class="product-price"><span class="amount">{{centre.totalO2Delivery}}</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="product-name"><a>Available Oxygen Delivery Devices</a></td>
+                                                    <td class="product-price"><span class="amount">{{centre.availableO2Delivery}}</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="product-name"><a>Available Oxygen Cylinders</a></td>
+                                                    <td class="product-price"><span class="amount">{{centre.O2cylinder}}</span></td>
+                                                </tr>
+                                            
+                                                
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    
+                                    
+                                </form>
                             </article>
                             <div class="row align-items-center">
                                 <div class="col-md-6 text-center text-md-start">
                                     <!-- <a href="{% url 'blog' %}" class="btn ms-primary-btn">All News</a> -->
                                     
-                                    <a href="{% url 'blog' %}"><button>All News<span></span></button></a>
-                                    {% if user.is_admin %}
-                                    <a href="{% url 'deletepost' slug=post.slug %}"><button>Delete<span></span></button></a>
-                                    {% endif %}
+                                    <a href="{% url 'centres' %}"><button>All Centres<span></span></button></a>
+                                
                                 </div>
                                
                             </div>

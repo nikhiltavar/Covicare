@@ -15290,8 +15290,8 @@ img.secondary-img {
 }
 
 .table-content table td.product-name {
-  font-size: 16px;
-  font-weight: 400;
+  font-size: 21px;
+  font-weight: 401;
   text-transform: capitalize;
 }
 
@@ -15333,7 +15333,8 @@ img.secondary-img {
   border-top: medium none;
   padding: 20px 10px;
   vertical-align: middle;
-  font-size: 16px;
+  font-size: 21px;
+  font-weight: 401;
 }
 
 .table-content table th, .table-content table td {
